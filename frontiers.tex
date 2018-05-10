@@ -1,29 +1,43 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% This is just an example/guide for you to refer to when submitting manuscripts to Frontiers, it is not mandatory to use Frontiers .cls files nor frontiers.tex  %
-% * <acercyc@gmail.com> 2018-04-10T06:46:45.496Z:
-%
-% > nor frontiers.tex  %
-% > % This will only generate the Manuscript, the final article will be typeset by Frontiers after acceptance.
-%
-% ^.
-% This will only generate the Manuscript, the final article will be typeset by Frontiers after acceptance.   
-%                                              %
-%                                                                                                                                                         %
-% When submitting your files, remember to upload this *tex file, the pdf generated with it, the *bib file (if bibliography is not within the *tex) and all the figures.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%% Version 3.3 Generated 2018/01/26 %%%
 %%% You will need to have the following packages installed: datetime, fmtcount, etoolbox, fcprefix, which are normally inlcuded in WinEdt. %%%
 %%% In http://www.ctan.org/ you can find the packages and how to install them, if necessary. %%%
 %%%  NB logo1.jpg is required in the path in order to correctly compile front page header %%%
 
-\documentclass[utf8]{frontiersSCNS} % for Science, Engineering and Humanities and Social Sciences articles
+\documentclass[utf8]{frontiersSCNS} 
+% for Science, Engineering and Humanities and Social Sciences articles
 %\documentclass[utf8]{frontiersHLTH} % for Health articles
 %\documentclass[utf8]{frontiersFPHY} % for Physics and Applied Mathematics and Statistics articles
-
 %\setcitestyle{square} % for Physics and Applied Mathematics and Statistics articles
+
+% ============================================================================ %
+%                                     Macro                                    %
+% ============================================================================ %
+\newcommand{\rewrite}[1]{\textcolor{ForestGreen}{\textit{"#1"}}}
+\newcommand{\temp}[1]{\textcolor{Plum}{[[ #1 ]]\newline}}
+
+
+% ============================================================================ %
+%                                   Packages                                   %
+% ============================================================================ %
 \usepackage{url,hyperref,lineno,microtype,subcaption}
+
 \usepackage[onehalfspacing]{setspace}
+
+\usepackage{todonotes}
+
+\usepackage{xcolor}
+
+\usepackage[margin=2in]{geometry}
+
+
+% ============================================================================ %
+
+
+% ============================================================================ %
+%                             Math request package                             %
+% ============================================================================ %
+
+% ============================================================================ %
 
 \linenumbers
 
@@ -35,7 +49,6 @@
 \def\firstAuthorLast{Sample {et~al.}} %use et al only if is more than 1 author
 \def\Authors{Acer Y.C. Chang\,$^{1,*}$, Co-Author\,$^{2}$ and Ryota Kanai\,$^{1}$}
 % Affiliations should be keyed to the author's name with superscript numbers and be listed as follows: Laboratory, Institute, Department, Organization, City, State abbreviation (USA, Canada, Australia), and Country (without detailed address information such as city zip codes or street names).
-% If one of the authors has a change of address, list the new address below the correspondence details using a superscript symbol and use the same symbol to indicate the author in the author list.
 \def\Address{ARAYA, Inc., Tokyo, Japan}
 % The Corresponding Author should be marked with an asterisk
 % Provide the exact contact address (this time including street name and city zip code) and email of the corresponding author
@@ -43,7 +56,6 @@
 \def\corrAuthor{Corresponding Author}
 
 \def\corrEmail{acercyc@araya.org}
-
 
 
 
@@ -65,10 +77,7 @@
 \begin{abstract}
 Neural systems process information through different levels of organisation in a hierarchical manner. Information at lower levels is finer-grained and can be coarse-grained for higher level computation. However, one is aware of information processed only at specific levels.
 Theorists have addressed this issue. For example, the intermediate level theory of consciousness suggests that the intermediate level seems to be privileged with respect to consciousness. It is true that we do not experience information processed by individual neurons which is always highly noisy. Besides, we have no conscious experience from interpersonal activities albeit massive interactions among individuals. Instead, neurophysiological evidence has been showing that conscious experience tends to covary with information encoded in coarse-grained neural states such as neural population codes. 
-We hypothesise that, through coarse-graining, neural systems construct a non-trivial information closure representation which represents deterministic dynamics of external environments. Information closure characterises that future states of a system can be deterministically predicted by its past states without information outside the system. Therefore, coarse-grained information encoded within the representation is sufficient to deterministically determine its future states without accessing fine-grained information processed at lower levels. There are significant advantages to construct the information closure representation in neural systems including increasing robustness against noise within fine-grained information processing, providing reliable information for future prediction, and alleviating computational cost for computing sensory data. 
 We argue that the neural states within the scope of the information closure determine the contents of consciousness and brain processes outside apart from the representations of that level  remain unconscious. This argument suggests a distinction between conscious and unconscious processing and provides a generic computational framework. Finally, using the deep learning network, we can measure information closure in deep hidden layers. Our preliminary results show that information closure representation emerged after learning. We further decoded the information from the representation and compared it with human conscious perception. 
-
-\section{}
 
 \tiny
  \keyFont{ \section{Keywords:} theory of Consciousness, information closure, neural coarse-graining, level of analysis, keyword, keyword, keyword, keyword} %All article types: you may provide up to 8 keywords; at least 5 are mandatory.
@@ -77,65 +86,195 @@ We argue that the neural states within the scope of the information closure dete
 % ============================================================================ %
 %                                     Start                                    %
 % ============================================================================ %
+
 \section{Introduction}
 
 
-\section{Information Closure}
-
-\section{Mathematical definition}
-
 \section{neural coarse-graining}
+%TODO Single neurons are noisy 
 
-\section{Relations to conscious perception phenomena}
 
+
+%TODO Population coding
+* \rewrite{Neural population code: the set of response features of a population of neurons that carry all information about the considered stimuli. These f
+	
+eatures consist of spatio-temporal sequences of action potentials distributed across neurons and/or time.}
+	
+		> The diverse response selectivity of sensory neurons
+		> \rewrite{How a neural population represents information is partly determined by the diverse selectivity of individual neurons \cite{Shamir2014}}
+	
+
+		% ============================================================================ %
+		% review ref
+		% ============================================================================ %
+		% \cite{Stanley2013}		
+		% \cite{QuianQuiroga2009}
+		
+	
+	%TODO sensory hierarchy
+		* Sensors can only receive partial information
+		* Through coarse-graining, higher level cortical areas can integrate those partial information to infer hidden causes. 
+
+
+
+
+
+	\subsection{The advantage of NCG}
+		\subsubsection{Resist to noise}
+		\subsubsection{Operate on deterministic and abstract level}
+		\subsubsection{Predictive power}
+		\subsubsection{Reduce energy cost}	
+	
+
+\section{Non-trivial Information Closure}
+	
+
+	% ============================== what is closure ============================= %
+	\rewrite{Our theoretical interest concerns the type of system that is a unity for and by itself and not only for an external observer distinguishing some entity from the rest of the world. This requires a system that can be described as a whole without reference to its environment. In systems theory, this property is usually referred to as closure.}\citep{BERTSCHINGER.2006}
+	
+	\rewrite{These concepts of closure play an important role in the architecture of systems theory, because they are used to
+		1. define the system (in distinction to its environment) and to 
+		2. explain the autonomy of the system.
+	}
+
+	\begin{quotation}
+		Informational closure: The higher process is informationally closed, i.e., there is no information flow from the lower to the higher level. Knowledge of the microstate will not improve predictions of the macrostate \citep[p. 4]{PFANTE.2014}.
+	\end{quotation}
+
+
+	% ======================= trivial informational closure ====================== %
+	\rewrite{A system that is independent from its environment trivially achieves informational closure.}
+	\citep{BERTSCHINGER.2006}
+
+
+
+	\subsection{Mathematical definition of information closure}
+		\rewrite{The notion of informational closure refers to a situation where the information flow between the environment and the system tends to zero.
+		}
+		
+		
+		\cite{BERTSCHINGER.2006} suggests that information closure can be defined as the degree of information flow between environment and the system. 
+		
+		\begin{equation}
+			\left.\begin{array} { r l } { J _ { n } ( E \rightarrow S ) } & { = M I ( S _ { n + 1} ; E _ { n } | S _ { n } ) } \\ { } & { = H ( S _ { n + 1} | S _ { n } ) - H ( S _ { n + 1} | S _ { n } ,E _ { n } ) } \\ { } & { = H ( E _ { n } | S _ { n } ) - H ( E _ { n } | S _ { n } ,S _ { n + 1} ) } \\ { } & { = H ( E _ { n } | S _ { n } ) - H ( E _ { n } | S _ { n } ,S _ { n + 1} ) } \end{array} \right.
+		\end{equation}
+	
+	
+	
+		% =============================== Decompose IC =============================== %				
+%		\begin{align}
+%			M I ( S _ { n + 1} ; E _ { n } | S _ { n } ) = M I ( S _ { n + 1} ; E _ { n } ) - ( M I ( S _ { n + 1} ; S _ { n } ) - M I ( S _ { n + 1} ; S _ { n } | E _ { n } ) )
+%		\end{align}
+	
+	
+	\subsection{Non-trivial information closure}
+	Information closure could be trivial. That is, when a system is fully independent from the environment, no information can flow into the system from the environment and also leak to the environment from the system. 
+	
+	Equa. xxxx shows the mathematical description of trivial information closure. When mutual information between the environment and system future state close to 0, and the system transition is independent from the environment, the system can reach informational closure. However, such systems do not have any functional meaning and evolutional advantages. \\
+	Therefore, it's important to ensure the informational closure that the system reach is non-trivial.\\
+	
+	\temp{cite 2006 and nic's paper}
+	To achieve non-trivial information closure, \\
+	\citep{BERTSCHINGER.2006}\\
+	\citep{guttenberg2016neural}
+	
+	
+		% ============================================================================ %
+		%                           I don't know what happen                           %
+		% ============================================================================ %		
+%		\begin{equation}	
+%			\begin{align}
+%				{ M I ( S _ { n + 1} ; E _ { n } ) } &= 0&\textmd{and}\\ 
+%				M I ( S _ { n + 1} ; S _ { n } ) - M I ( S _ { n + 1} ; S _ { n } | E _ { n } ) &= 0
+%			\end{align}
+%		\end{equation}
+		% ???????????????????????????????????????????????????????????????????????????? %
+	
+	
+	\subsection{how to achieve information closure}
+	\rewrite{This demonstrates that a system exhibiting certain internal regularities as measured by $A^* = MI(Sn+1; Sn)$ can achieve informational closure either by gaining information about the environment or by increased autonomy, i.e. by becoming unpredictable or uncontrollable from the
+		(13) environment. Therefore, information about the environment, i.e. modeling, and autonomy can be considered as complementary strategies for achieving informational closure.}
+	
+	\subsection{information closure and Level Identification}	
+
+	
+	
+\section{My claim of consciousness}
+	* We claim that the coarse-grained state in the information closure determines contents of consciousness. 
+	* It's important that not the neural states but the coarse-grained state determine contents of consciousness. 
+	
+	
+	% ============================================================================ %
+	%                         Information and system theory                        %
+	%                                                                              %
+	% ============================================================================ %
+	\subsection{Information and system theory}
+		\temp{Closure can define a system, consciousness is information}
+		\temp{Could be linked to system theory, but may need help}
+		
+		\rewrite{This self-referential distinction from its environment therefore gives rise to the specific autonomy of such a system. Consequently, in systems theory, closure properties and autonomy are considered to be closely related concepts which are both at the heart of defining the system itself.
+		}
+	
+
+\section{Biological Evidence of information closure in neural system}
+
+	% Internal self-predictive mechanism	
+	\cite{sederberg2018learning}
+
+
+\section{Relation to empirical findings}
+	\subsection{Explain normal and abnormal conscious/non-conscious experience}
+	
+%		Binocular rivalry
+%		Hallucinations
+%		subliminal perception
+%		blindsight    
+%		reflex is nonconscious
+%		Procedure memory is state dependent
+%		from conscious to unconscious processes
+%		What happen to lesion
+%		Sleep         
+
+%		Perceptual overflow
+%		Discrete vs continuous
+%		Trace conditioning and delay conditioning
+%		agnosia
+
+
+%		Attention
+%		Top-down attention
+
+	\subsection{Deterministic vs probabilistic}
+	\cite{dehaene2017consciousness}
+	\cite{vul2008temporal, moreno2011bayesian, asplund2014attentional, vul2009attention}
+	
 \section{Comparison with other theories}
+	\subsection{Intermediate Level Theory}
+	\subsection{Global Workspace}
+	
+
+	\subsubsection{Ignition in GWT}
+ 	\temp{Explain ignite}
+	
+	
+	\subsection{Sensorimotor contingency}
+	\subsection{IIT}
+	\subsection{Internal simulation and self-modeling}
+
+\section{counterintuitive prediction}
+	% To make a closure, we may discard some information! But what info?
+	% Critical prediction that can test the the theory and IIT: CUT! Split brain
+
+\section{Evolution of conscious mind}
+	\cite{dennett2008kinds}
 
 \section{Conclusion}
+	NCC: To find NCC, it's not about where and when, it's about scale and level of discription
 
 
 % ============================================================================ %
 %                                      End                                     %
 % ============================================================================ %
-
-
-\subsection{Equations}
-Equations should be inserted in editable format from the equation editor.
-
-\begin{equation}
-\sum x+ y =Z\label{eq:01}
-\end{equation}
-
-\subsection{Figures}
-Frontiers requires figures to be submitted individually, in the same order as they are referred to in the manuscript. Figures will then be automatically embedded at the bottom of the submitted manuscript. Kindly ensure that each table and figure is mentioned in the text and in numerical order. Figures must be of sufficient resolution for publication \href{http://home.frontiersin.org/about/author-guidelines#ResolutionRequirements}{see here for examples and minimum requirements}. Figures which are not according to the guidelines will cause substantial delay during the production process. Please see \href{http://home.frontiersin.org/about/author-guidelines#GeneralStyleGuidelinesforFigures}{here} for full figure guidelines. Cite figures with subfigures as figure \ref{fig:2}B.
-
-
-\subsubsection{Permission to reuse and Copyright}
-Permission must be obtained for use of copyrighted material from other sources (including the web). Please note that it is compulsory to follow figure instructions. 
-
-\subsection{Tables}
-Tables should be inserted at the end of the manuscript. Please build your table directly in LaTeX.Tables provided as jpeg/tiff files will not be accepted. Please note that very large tables (covering several pages) cannot be included in the final PDF for reasons of space. These tables will be published as \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} on the online article page at the time of acceptance. The author will be notified during the typesetting of the final article if this is the case. 
-
-\section{Nomenclature}
-
-\subsection{Resource Identification Initiative}
-To take part in the Resource Identification Initiative, please use the corresponding catalog number and RRID in your current manuscript. For more information about the project and for steps on how to search for an RRID, please click \href{http://www.frontiersin.org/files/pdf/letter_to_author.pdf}{here}.
-
-\subsection{Life Science Identifiers}
-Life Science Identifiers (LSIDs) for ZOOBANK registered names or nomenclatural acts should be listed in the manuscript before the keywords. For more information on LSIDs please see \href{http://www.frontiersin.org/about/AuthorGuidelines#InclusionofZoologicalNomenclature}{Inclusion of Zoological Nomenclature} section of the guidelines.
-
-
-\section{Additional Requirements}
-
-For additional requirements for specific article types and further information please refer to \href{http://www.frontiersin.org/about/AuthorGuidelines#AdditionalRequirements}{Author Guidelines}.
-
-\section*{Conflict of Interest Statement}
-%All financial, commercial or other relationships that might be perceived by the academic community as representing a potential conflict of interest must be disclosed. If no such relationship exists, authors will be asked to confirm the following statement: 
-
-The authors declare that the research was conducted in the absence of any commercial or financial relationships that could be construed as a potential conflict of interest.
-
-\section*{Author Contributions}
-
-The Author Contributions section is mandatory for all articles, including articles by sole authors. If an appropriate statement is not provided on submission, a standard one will be inserted during the production process. The Author Contributions statement must describe the contributions of individual authors referred to by their initials and, in doing so, all authors agree to be accountable for the content of the work. Please see  \href{http://home.frontiersin.org/about/author-guidelines#AuthorandContributors}{here} for full authorship criteria.
 
 \section*{Funding}
 Details of all funding sources should be provided, including grant numbers if applicable. Please ensure to add all necessary funding information, as after publication this is no longer possible.
@@ -145,10 +284,6 @@ This is a short text to acknowledge the contributions of specific colleagues, in
 
 \section*{Supplemental Data}
  \href{http://home.frontiersin.org/about/author-guidelines#SupplementaryMaterial}{Supplementary Material} should be uploaded separately on submission, if there are Supplementary Figures, please include the caption in the same file as the figure. LaTeX Supplementary Material templates can be found in the Frontiers LaTeX folder.
-
-\section*{Data Availability Statement}
-The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF REPOSITORY] [LINK].
-% Please see the availability of data guidelines for more information, at https://www.frontiersin.org/about/author-guidelines#AvailabilityofData
 
 \bibliographystyle{frontiersinSCNS_ENG_HUMS} % for Science, Engineering and Humanities and Social Sciences articles, for Humanities and Social Sciences articles please include page numbers in the in-text citations
 %\bibliographystyle{frontiersinHLTH&FPHY} % for Health, Physics and Mathematics articles
@@ -171,18 +306,5 @@ The datasets [GENERATED/ANALYZED] for this study can be found in the [NAME OF RE
 \end{center}
 \caption{ Enter the caption for your figure here.  Repeat as  necessary for each of your figures}\label{fig:1}
 \end{figure}
-
-
-\begin{figure}[h!]
-\begin{center}
-\includegraphics[width=15cm]{logos}
-\end{center}
-\caption{This is a figure with sub figures, \textbf{(A)} is one logo, \textbf{(B)} is a different logo.}\label{fig:2}
-\end{figure}
-
-%%% If you are submitting a figure with subfigures please combine these into one image file with part labels integrated.
-%%% If you don't add the figures in the LaTeX files, please upload them when submitting the article.
-%%% Frontiers will add the figures at the end of the provisional pdf automatically
-%%% The use of LaTeX coding to draw Diagrams/Figures/Structures should be avoided. They should be external callouts including graphics.
 
 \end{document}
