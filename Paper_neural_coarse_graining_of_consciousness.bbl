@@ -1,0 +1,97 @@
+\begin{thebibliography}{}
+
+\bibitem[\protect\citename{Asplund {\em et~al.}, }2014]{asplund2014attentional}
+Asplund, Christopher~L, Fougnie, Daryl, Zughni, Samir, Martin, Justin~W, \&
+  Marois, Ren{\'e}. 2014.
+\newblock The attentional blink reveals the probabilistic nature of discrete
+  conscious perception.
+\newblock {\em Psychological science}, {\bf 25}(3), 824--831.
+
+\bibitem[\protect\citename{BERTSCHINGER {\em et~al.}, }2006]{BERTSCHINGER.2006}
+BERTSCHINGER, NILS, OLBRICH, ECKEHARD, AY, NIHAT, \& JOST, J{\"U}RGEN. 2006.
+\newblock Information and closure in systems theory.
+\newblock {\em the Proceedings of the 7Th German Workshop of Artificial Life},
+  26--28.
+
+\bibitem[\protect\citename{Binder {\em et~al.}, }2009]{binder2009encyclopedia}
+Binder, Marc~D, Hirokawa, Nobutaka, \& Windhorst, Uwe. 2009.
+\newblock Encyclopedia of neuroscience.
+
+\bibitem[\protect\citename{Dehaene {\em et~al.},
+  }2017]{dehaene2017consciousness}
+Dehaene, Stanislas, Lau, Hakwan, \& Kouider, Sid. 2017.
+\newblock What is consciousness, and could machines have it?
+\newblock {\em Science}, {\bf 358}(6362), 486--492.
+
+\bibitem[\protect\citename{Dennett, }2008]{dennett2008kinds}
+Dennett, Danile~C. 2008.
+\newblock {\em Kinds of minds: Toward an understanding of consciousness}.
+\newblock Basic Books.
+
+\bibitem[\protect\citename{Eurich \& Wilke, }2000]{eurich2000multidimensional}
+Eurich, Christian~W, \& Wilke, Stefan~D. 2000.
+\newblock Multidimensional encoding strategy of spiking neurons.
+\newblock {\em Neural Computation}, {\bf 12}(7), 1519--1529.
+
+\bibitem[\protect\citename{Guttenberg {\em et~al.},
+  }2016]{guttenberg2016neural}
+Guttenberg, Nicholas, Biehl, Martin, \& Kanai, Ryota. 2016.
+\newblock Neural Coarse-Graining: Extracting slowly-varying latent degrees of
+  freedom with neural networks.
+\newblock {\em arXiv preprint arXiv:1609.00116}.
+
+\bibitem[\protect\citename{Jackendoff, }1987]{jackendoff1987consciousness}
+Jackendoff, Ray. 1987.
+\newblock {\em Consciousness and the computational mind.}
+\newblock The MIT Press.
+
+\bibitem[\protect\citename{Moreno-Bote {\em et~al.}, }2011]{moreno2011bayesian}
+Moreno-Bote, Rub{\'e}n, Knill, David~C, \& Pouget, Alexandre. 2011.
+\newblock Bayesian sampling in visual perception.
+\newblock {\em Proceedings of the National Academy of Sciences}, {\bf 108}(30),
+  12491--12496.
+
+\bibitem[\protect\citename{Palmer {\em et~al.}, }2015]{Palmer2015}
+Palmer, Stephanie~E., Marre, Olivier, Berry, Michael~J., \& Bialek, William.
+  2015.
+\newblock {Predictive information in a sensory population}.
+\newblock {\em Proceedings of the National Academy of Sciences}, {\bf 112}(22),
+  6908--6913.
+
+\bibitem[\protect\citename{PFANTE {\em et~al.}, }2014]{PFANTE.2014}
+PFANTE, OLIVER, BERTSCHINGER, NILS, OLBRICH, ECKEHARD, AY, NIHAT, \& JOST,
+  J{\"U}RGEN. 2014.
+\newblock COMPARISON BETWEEN DIFFERENT METHODS OF LEVEL IDENTIFICATION.
+\newblock {\em Advances in Complex Systems}, {\bf 17}(02), 1450007.
+
+\bibitem[\protect\citename{Prinz, }2007]{prinz2007intermediate}
+Prinz, Jesse. 2007.
+\newblock The intermediate level theory of consciousness.
+\newblock {\em The Blackwell companion to consciousness},  257--271.
+
+\bibitem[\protect\citename{Sederberg {\em et~al.},
+  }2018]{sederberg2018learning}
+Sederberg, Audrey~J, MacLean, Jason~N, \& Palmer, Stephanie~E. 2018.
+\newblock Learning to make external sensory stimulus predictions using internal
+  correlations in populations of neurons.
+\newblock {\em Proceedings of the National Academy of Sciences},  201710779.
+
+\bibitem[\protect\citename{Shamir, }2014]{Shamir2014}
+Shamir, Maoz. 2014.
+\newblock {Emerging principles of population coding: In search for the neural
+  code}.
+\newblock {\em Current Opinion in Neurobiology}, {\bf 25}, 140--148.
+
+\bibitem[\protect\citename{Vul {\em et~al.}, }2008]{vul2008temporal}
+Vul, Edward, Nieuwenstein, Mark, \& Kanwisher, Nancy. 2008.
+\newblock Temporal selection is suppressed, delayed, and diffused during the
+  attentional blink.
+\newblock {\em Psychological Science}, {\bf 19}(1), 55--61.
+
+\bibitem[\protect\citename{Vul {\em et~al.}, }2009]{vul2009attention}
+Vul, Edward, Hanus, Deborah, \& Kanwisher, Nancy. 2009.
+\newblock Attention as inference: selection is probabilistic; responses are
+  all-or-none samples.
+\newblock {\em Journal of Experimental Psychology: General}, {\bf 138}(4), 546.
+
+\end{thebibliography}
