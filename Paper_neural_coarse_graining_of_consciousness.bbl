@@ -7,6 +7,12 @@ Asplund, Christopher~L, Fougnie, Daryl, Zughni, Samir, Martin, Justin~W, \&
   conscious perception.
 \newblock {\em Psychological science}, {\bf 25}(3), 824--831.
 
+\bibitem[\protect\citename{Banks, }2009]{banks2009encyclopedia}
+Banks, William~P. 2009.
+\newblock {\em Encyclopedia of consciousness}.
+\newblock  Vol. 1.
+\newblock Academic Press.
+
 \bibitem[\protect\citename{BERTSCHINGER {\em et~al.}, }2006]{BERTSCHINGER.2006}
 BERTSCHINGER, NILS, OLBRICH, ECKEHARD, AY, NIHAT, \& JOST, J{\"U}RGEN. 2006.
 \newblock Information and closure in systems theory.
@@ -18,10 +24,14 @@ Binder, Marc~D, Hirokawa, Nobutaka, \& Windhorst, Uwe. 2009.
 \newblock Encyclopedia of neuroscience.
 
 \bibitem[\protect\citename{Dehaene {\em et~al.},
-  }2017]{dehaene2017consciousness}
-Dehaene, Stanislas, Lau, Hakwan, \& Kouider, Sid. 2017.
+  }2017a]{dehaene2017consciousness}
+Dehaene, Stanislas, Lau, Hakwan, \& Kouider, Sid. 2017a.
 \newblock What is consciousness, and could machines have it?
 \newblock {\em Science}, {\bf 358}(6362), 486--492.
+
+\bibitem[\protect\citename{Dehaene {\em et~al.}, }2017b]{Dehaene2017}
+Dehaene, Stanislas, Lau, Hakwan, \& Kouider, Sid. 2017b.
+\newblock {What is consciousness, and could machines have it?}
 
 \bibitem[\protect\citename{Dennett, }2008]{dennett2008kinds}
 Dennett, Danile~C. 2008.
@@ -44,6 +54,11 @@ Guttenberg, Nicholas, Biehl, Martin, \& Kanai, Ryota. 2016.
 Jackendoff, Ray. 1987.
 \newblock {\em Consciousness and the computational mind.}
 \newblock The MIT Press.
+
+\bibitem[\protect\citename{Lau \& Rosenthal, }2011]{lau2011empirical}
+Lau, Hakwan, \& Rosenthal, David. 2011.
+\newblock Empirical support for higher-order theories of conscious awareness.
+\newblock {\em Trends in cognitive sciences}, {\bf 15}(8), 365--373.
 
 \bibitem[\protect\citename{Moreno-Bote {\em et~al.}, }2011]{moreno2011bayesian}
 Moreno-Bote, Rub{\'e}n, Knill, David~C, \& Pouget, Alexandre. 2011.
@@ -68,6 +83,11 @@ PFANTE, OLIVER, BERTSCHINGER, NILS, OLBRICH, ECKEHARD, AY, NIHAT, \& JOST,
 Prinz, Jesse. 2007.
 \newblock The intermediate level theory of consciousness.
 \newblock {\em The Blackwell companion to consciousness},  257--271.
+
+\bibitem[\protect\citename{Rosenthal, }2005]{rosenthal2005consciousness}
+Rosenthal, David~M. 2005.
+\newblock {\em Consciousness and mind}.
+\newblock Oxford University Press.
 
 \bibitem[\protect\citename{Sederberg {\em et~al.},
   }2018]{sederberg2018learning}
