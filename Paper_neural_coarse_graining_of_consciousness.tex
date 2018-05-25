@@ -42,6 +42,15 @@
 \usepackage{tcolorbox}
 
 
+% Meaning of colours --------------------------------------------------------- %
+%	Red: Important and Critical
+%	Orange: Todo
+%	Blue: Topic and Guideline
+%	Purple: Murmur, talking to myself
+%	Green: Question, Call for help, Open for opinions and comments
+%	Brown: Need Wording 
+% ---------------------------------------------------------------------------- %
+
 
 % Real content
 	% Finished part
@@ -56,7 +65,18 @@
 % Funcitonal content
 	% Quotes
 		\newcommand{\rewrite}[1]{\textcolor{ForestGreen}{\textit{"#1"}}\newline}
+		
 	% todo
+	
+	% Highlight
+		\newcommand{\highlight}[2][Yellow]{\colorbox{#2}}
+	
+		% Highlight and comment
+		\newcommand{\highlightAndComment}[3][Yellow]{\todo[color=#1]{#3}\colorbox{#1}{#2}}
+	
+	% rewording
+		\newcommand{\rewording}[1]{\textcolor{RawSienna}{[[ REWORDING | #1 ]]}}
+		
 	% Need reference 
 		\newcommand{\needref}[1]{%
 			\ifthenelse{\equal{#1}{}}{%
@@ -82,9 +102,12 @@
 		
 	% guildline and direction
 		\newcommand{\toWrite}[1]{\noindent
-			\textcolor{Cyan}{\textbf{[[ #1 ]]}\newline}}
+			\textcolor{Cyan}{\textbf{[[ #1 ]]}}}
+		
 	% call for help
+		\newcommand{\callforhelp}[1]{\todo[color=SpringGreen]{#1}}
 		\newcommand{\martin}[1]{\todo[color=SpringGreen]{@Martin:\\#1}}
+		
 
 
 
@@ -110,7 +133,7 @@
 	\tableofcontents
 	
 	\begin{abstract}
-		Neural systems process information through different levels of organisation in a hierarchical manner. Information at lower levels is finer-grained and can be coarse-grained for higher level computation. However, one is aware of information processed only at specific levels. Theorists have addressed this issue. For example, the intermediate level theory of consciousness suggests that the intermediate level seems to be privileged with respect to consciousness. It is true that we do not experience information processed by individual neurons which is always highly noisy. Besides, we have no conscious experience from interpersonal activities albeit massive interactions among individuals. Instead, neurophysiological evidence has been showing that conscious experience tends to covary with information encoded in coarse-grained neural states such as neural population codes. We argue that the neural states within the scope of the information closure determine the contents of consciousness and brain processes outside apart from the representations of that level remain unconscious. This argument suggests a distinction between conscious and unconscious processing and provides a generic computational framework. Finally, using the deep learning network, we can measure information closure in deep hidden layers. Our preliminary results show that information closure representation emerged after learning. We further decoded the information from the representation and compared it with human conscious perception. \needref{}
+		Neural systems process information through different levels of organisation in a hierarchical manner. Information at lower levels is finer-grained and can be coarse-grained for higher level computation. However, one is aware of information processed only at specific levels. Theorists have addressed this issue. For example, the intermediate level theory of consciousness suggests that the intermediate level seems to be privileged with respect to consciousness. It is true that we do not experience information processed by individual neurons which is always highly noisy. Besides, we have no conscious experience from interpersonal activities albeit massive interactions among individuals. Instead, neurophysiological evidence has been showing that conscious experience tends to covary with information encoded in coarse-grained neural states such as neural population codes. We argue that the neural states within the scope of the information closure determine the contents of consciousness and brain processes outside apart from the representations of that level remain unconscious. This argument suggests a distinction between conscious and unconscious processing and provides a generic computational framework. Finally, using the deep learning network, we can measure information closure in deep hidden layers. Our preliminary results show that information closure representation emerged after learning. We further decoded the information from the representation and compared it with human conscious perception.
 	\end{abstract}
 	
 	
@@ -121,25 +144,206 @@
 	%                                     Start                                    %
 	% ============================================================================ %
 	
+	
 	\section{Introduction}
 	
 		\begin{ants}
+			
+			%% Story about a cell
+				@ Imagining you are a neuron in (a human) Bill's brain. Your "responsibility" is to collect neurotransmitters from dendrites, accumulate membrane potential, and finally send a signal to your colleagues through an action potential. 
+				
+				@ You have no idea about whether you are involved in an information processing chain for Bill to see or catch  a ball. 
+				
+				@ All you have to do is receiving, computing, and outputting information. 
+			
+				@ Strikingly, not only you are ignorance of Bill's intention but also Bill has no conscious awareness of your behaviour. If your work contributes some part of Bill's conscious perception or intention to act. 
+			
+			
+			%% scale
+				@ \rewording{
+					It seems that we cannot consciously access information at all scale. We can only be aware of information processed at a certain level of coarse-graining in the neural system.}
+				
+				@ Information processing of individual neurons are highly noisy. Neurons fires all the time. However, those massive action potentials do not appear in our conscious contents. 
+				
+				@ Don't even mention ion channel dynamic. 
+			
+				@ We also lake of experience of whole brain operation. Some parts of our brains process in an unconscious way.
+			
+				@ We don't have experience of inter-individual super-consciousness 
+
+			
+			%% our argument
+				@ In this article, we argue that consciousness \highlightAndComment[YellowGreen]{correlates}{Is this proper?} information processing at a certain coarse-graining level which form information closure. More specifically, the conscious level is determined by the level of information closure and conscious contents is determined by the states of information closure. 
+				
+				@ We first introduce non-trivial information closure and its importance for human scale agents. 
+				
+				@ We then presume that through neural coarse-graining the human brain achieves a non-trivial information closure \highlightAndComment[YellowOrange]{realm}{Need to unify this term} at a specific macroscopic level. 
+				
+				@ We then argue that consciousness levels and contents are determines the state of consciousness for both levels and contents. 
+				
+				@ We then discuss how this theory can concisely explain empirical results from previous studies and integrate several current major theories of consciousness. 
+				
+				@ We finally provide theory predictions testable approaches. 
+				
+			%% Advantage 
+				@ This framework provides a concise and quantifiable explanation for all current major theories of consciousness. 
+				
+				@ This framework provides a more fundamental understanding about why some neural process are conscious but others are not.  
+				
+				
+			
+			
+		\end{ants}
+
+	
+	
+		==================================================
+		\begin{ants}
+			
+			@ consciousness is information
+			
+			@ conscious contents
+				@@ \toWrite{lower level}
+				@@ Information processing of individual neurons are noisy.
+				@@ We don't have conscious content changes when individual neurons fire action potentials. 				
+				@@ Don't even mention ion channel dynamic. 
+				
+				
+				@@ \toWrite{Higher-level dynamic}
+
+				
+				
+				
+				
+			
 			@ For human, physics at our body scale are nearly follow classic physics, which is deterministic. 
 			
 			
+			@ \toWrite{Human tendency for active prediction }
+				@@ \cite{Stahl2015} \rewrite{
+					Given the overwhelming quantity of information available from the environment, how do young learners know what to learn about and what to ignore? We found that 11-month-old infants (N = 110) used violations of prior expectations as special opportunities for learning. The infants were shown events that violated expectations about object behavior or events that were nearly identical but did not violate expectations. The sight of an object that violated expectations enhanced learning and promoted information-seeking behaviors; specifically, infants learned more effectively about objects that committed violations, explored those objects more, and engaged in hypothesis-testing behaviors that reflected the particular kind of violation seen. Thus, early in life, expectancy violations offer a wedge into the problem of what to learn.}
+			
 			@ Intuitive physics \needref{Intuitive physics}
+			
+			@ However, sensory signal are always noisy. 			
 			
 			
 			@ We propose that consciousness is not related to particular neural architectures or location of the neural system.
 			
-			@ We argue that consciousness corresponds to information processing at a certain coarse-graining level which form information closure. 
+
 		\end{ants}
 	
+	
+	
+	
+	
+	
+
+	\section{\martin{todo}Non-trivial Information Closure}
+		\begin{ants}
+			
+		\end{ants}
+		
+		
+		% ============================== what is closure ============================= %
+		\rewrite{
+			Our theoretical interest concerns the type of system that is a unity for and by itself and not only for an external observer distinguishing some entity from the rest of the world. This requires a system that can be described as a whole without reference to its environment. In systems theory, this property is usually referred to as closure.
+		}\citep{BERTSCHINGER.2006}
+		
+		
+		\rewrite{
+			These concepts of closure play an important role in the architecture of systems
+			theory, because they are used to
+			1. define the system (in distinction to its environment) and to 
+			2. explain the autonomy of the system.
+		}
+		
+		
+		\begin{quotation}
+			Informational closure: The higher process is informationally closed, i.e., there is no information flow from the lower to the higher level. Knowledge of the microstate will not improve predictions of the macrostate \citep[p. 4]{PFANTE.2014}.
+		\end{quotation}
+		
+		
+		% ======================= trivial informational closure ====================== %
+		\rewrite{A system that is independent from its environment trivially achieves informational 
+			closure.}
+		\citep{BERTSCHINGER.2006}
+		
+		
+		
+		\subsection{Mathematical definition of information closure}
+		\rewrite{
+			The notion of informational closure refers to a situation where the information flow between the environment and the system tends to zero.
+		}\cite{BERTSCHINGER.2006}
+		
+		suggests that information closure can be defined as the degree of information flow between environment and the system. 
+		
+		
+		\begin{equation}
+		\left.\begin{array} { r l } { J _ { n } ( E \rightarrow S ) } & { = M I ( S _ { n + 1} ; E _ { n } | S _ { n } ) } \\ { } & { = H ( S _ { n + 1} | S _ { n } ) - H ( S _ { n + 1} | S _ { n } ,E _ { n } ) } \\ { } & { = H ( E _ { n } | S _ { n } ) - H ( E _ { n } | S _ { n } ,S _ { n + 1} ) } \\ { } & { = H ( E _ { n } | S _ { n } ) - H ( E _ { n } | S _ { n } ,S _ { n + 1} ) } \end{array} \right.
+		\end{equation}
+		
+		
+		
+		% =============================== Decompose IC =============================== %				
+		%		\begin{align}
+		%			M I ( S _ { n + 1} ; E _ { n } | S _ { n } ) = M I ( S _ { n + 1} ; E _ { n } ) - ( M I 
+		%( S _ { n + 1} ; S _ { n } ) - M I ( S _ { n + 1} ; S _ { n } | E _ { n } ) )
+		%		\end{align}
+		
+		
+		\subsection{Non-trivial information closure}
+		Information closure could be trivial. That is, when a system is fully independent from the environment, no information can flow into the system from the environment and also leak to the environment from the system. Equa. xxxx shows the mathematical description of trivial information closure. When mutual information between the environment and system future state close to 0, and the system transition is independent from the environment, the system can reach informational closure. However, such systems do not have any functional meaning and evolutional advantages.
+		
+		Therefore, it's important to ensure the informational closure that the system reach is non-trivial.
+		
+		\todo{cite 2006 and nic's paper}
+		To achieve non-trivial information closure
+		\citep{BERTSCHINGER.2006}\\
+		\citep{guttenberg2016neural}
+		
+		
+		% ============================================================================ %
+		%                           I don't know what happen                           %
+		% ============================================================================ %		
+		%		\begin{equation}	
+		%			\begin{align}
+		%				{ M I ( S _ { n + 1} ; E _ { n } ) } &= 0&\textmd{and}\\ 
+		%				M I ( S _ { n + 1} ; S _ { n } ) - M I ( S _ { n + 1} ; S _ { n } | E _ { n } ) &= 0
+		%			\end{align}
+		%		\end{equation}
+		% ???????????????????????????????????????????????????????????????????????????? %
+		
+		
+		\subsection{how to achieve non-trivial information closure}
+		* Through coarse-graining
+		* Accurately model deterministic environment 
+		\rewrite{
+			This demonstrates that a system exhibiting certain internal regularities as measured by $A^* = MI(Sn+1; Sn)$ can achieve informational closure either by gaining information about the environment or by increased autonomy, i.e. by becoming unpredictable or uncontrollable from the (13) environment. Therefore, information about the environment, i.e. modeling, and autonomy can be considered as complementary strategies for achieving informational closure.}
+		* by Action 
+		
+		\subsection{information closure and Level Identification}	
+		
+		
+		\subsection{Biological Creature may try to achieve closure even the environment is not }
+
+
+
+
+
 
 	\section{neural coarse-graining}
 	
 		\begin{ants}
-			@ \rewrite{Coarse-graining: a method of reducing the complexity of a system by treating groups of atoms/molecules as single quasi-particles CG: coarse-grained}
+			@ Definition of coarse-graining
+				@ \rewrite{Coarse-graining: a method of reducing the complexity of a system by treating groups of atoms/molecules as single quasi-particles CG: coarse-grained}
+				
+				
+				@ \rewrite{a number of different microstates,First, typically a number of different microstates, will realize the same value of the macro-variables of upper level causal theories. 
+				}
+			
+			@ One consequence of coarse-graining is that it makes it permissible to ignore certain causal factors that would be relevant at more fine-grained level of description. \cite{price2007causation}
+			
 			
 		\end{ants}
 	
@@ -161,7 +365,7 @@
 		\subsection{firing rate coding}
 		
 			\begin{ants}
-				
+			
 				@ temporal coarse-graining
 				
 			\end{ants}
@@ -221,104 +425,47 @@
 			\martin{todo}
 			
 			
-	\section{Non-trivial Information Closure} 
-		\martin{todo}
 
-		% ============================== what is closure ============================= %
-		\rewrite{
-			Our theoretical interest concerns the type of system that is a unity for and by itself and not only for an external observer distinguishing some entity from the rest of the world. This requires a system that can be described as a whole without reference to its environment. In systems theory, this property is usually referred to as closure.
-		}\citep{BERTSCHINGER.2006}
-		
-		
-		\rewrite{
-			These concepts of closure play an important role in the architecture of systems
-			theory, because they are used to
-			1. define the system (in distinction to its environment) and to 
-			2. explain the autonomy of the system.
-		}
-		
-		
-		\begin{quotation}
-			Informational closure: The higher process is informationally closed, i.e., there is no information flow from the lower to the higher level. Knowledge of the microstate will not improve predictions of the macrostate \citep[p. 4]{PFANTE.2014}.
-		\end{quotation}
-		
-		
-		% ======================= trivial informational closure ====================== %
-		\rewrite{A system that is independent from its environment trivially achieves informational 
-			closure.}
-		\citep{BERTSCHINGER.2006}
-		
-		
-		
-		\subsection{Mathematical definition of information closure}
-			\rewrite{
-				The notion of informational closure refers to a situation where the information flow between the environment and the system tends to zero.
-			}\cite{BERTSCHINGER.2006}
-		
-			suggests that information closure can be defined as the degree of information flow between environment and the system. 
-	
-		
-		\begin{equation}
-			 \left.\begin{array} { r l } { J _ { n } ( E \rightarrow S ) } & { = M I ( S _ { n + 1} ; E _ { n } | S _ { n } ) } \\ { } & { = H ( S _ { n + 1} | S _ { n } ) - H ( S _ { n + 1} | S _ { n } ,E _ { n } ) } \\ { } & { = H ( E _ { n } | S _ { n } ) - H ( E _ { n } | S _ { n } ,S _ { n + 1} ) } \\ { } & { = H ( E _ { n } | S _ { n } ) - H ( E _ { n } | S _ { n } ,S _ { n + 1} ) } \end{array} \right.
-		\end{equation}
-		
-		
-		
-		% =============================== Decompose IC =============================== %				
-		%		\begin{align}
-		%			M I ( S _ { n + 1} ; E _ { n } | S _ { n } ) = M I ( S _ { n + 1} ; E _ { n } ) - ( M I 
-		%( S _ { n + 1} ; S _ { n } ) - M I ( S _ { n + 1} ; S _ { n } | E _ { n } ) )
-		%		\end{align}
-		
-		
-		\subsection{Non-trivial information closure}
-			Information closure could be trivial. That is, when a system is fully independent from the environment, no information can flow into the system from the environment and also leak to the environment from the system. Equa. xxxx shows the mathematical description of trivial information closure. When mutual information between the environment and system future state close to 0, and the system transition is independent from the environment, the system can reach informational closure. However, such systems do not have any functional meaning and evolutional advantages.
-			
-			Therefore, it's important to ensure the informational closure that the system reach is non-trivial.
-		
-			\todo{cite 2006 and nic's paper}
-			To achieve non-trivial information closure
-			\citep{BERTSCHINGER.2006}\\
-			\citep{guttenberg2016neural}
-		
-		
-			% ============================================================================ %
-			%                           I don't know what happen                           %
-			% ============================================================================ %		
-			%		\begin{equation}	
-			%			\begin{align}
-			%				{ M I ( S _ { n + 1} ; E _ { n } ) } &= 0&\textmd{and}\\ 
-			%				M I ( S _ { n + 1} ; S _ { n } ) - M I ( S _ { n + 1} ; S _ { n } | E _ { n } ) &= 0
-			%			\end{align}
-			%		\end{equation}
-			% ???????????????????????????????????????????????????????????????????????????? %
-		
-		
-		\subsection{how to achieve non-trivial information closure}
-			* Through coarse-graining
-			* Accurately model deterministic environment 
-				\rewrite{
-					This demonstrates that a system exhibiting certain internal regularities as measured by $A^* = MI(Sn+1; Sn)$ can achieve informational closure either by gaining information about the environment or by increased autonomy, i.e. by becoming unpredictable or uncontrollable from the (13) environment. Therefore, information about the environment, i.e. modeling, and autonomy can be considered as complementary strategies for achieving informational closure.}
-			* by Action 
-		
-		\subsection{information closure and Level Identification}	
-		
-		
-		\subsection{Biological Creature may try to achieve closure even the environment is not }
-		
 	\section{A neural coarse graining theory of consciousness}
-		* We claim that the coarse-grained state in the information closure determines contents of 
-		consciousness. 
-		* It's important that not the neural states but the coarse-grained state determine contents
-		of consciousness. 
+		\toWrite{Need to describe my intuition more concretely }
+	
+	
+		\begin{ants}
+			@ We claim that the coarse-grained state in the information closure determines contents of consciousness. 
+			
+			@ It's important that not the neural states but the coarse-grained state determine contents of consciousness. 
+			
+			@ Consciousness is information 
+				@@ Information is level-dependent.
+				
+				@@ Information is different at microscopic and macroscopic levels
+				
+				@@ Consciousness must be level-dependent 		
+				
+			
+			@ \rewrite{
+				This illustrates how coarse-graining allows the formulation of incomplete generalizations that are relatively invariant, although at the cost of predictive precision regarding fine-grained details.} \cite{price2007causation}
+			
+				@@ conscious perception are very stable and time invariant.
+				@@ Conscious perception is informative but we loss all the precise information about the states at microscopic level. 
+
+		\end{ants}
 		   
 		
 		\subsection{Measure of conscious level}
 		\subsection{Conscious contents}
-		\subsection{Sensory hierarchy and neural coarse-graining}
+		\subsection{Sensory hierarchy and neural coarse-graining
+			\todo[color=Red]{This is super important. I need to deal with this very carefully.}}
 		
 			\begin{ants}
 				@ Of course, from evolutional perspective, neural system should develop a better hardware to support neural coarse-graining
+				
+				
+				@ It is possible that the neural system represents higher-level information processing by low level physical subtract. For example, studies have found representation for summery statistics of signal and neural. population.\needref{neural representation for summery statistics}\\
+				From this point of view, sensory hierarchy may extend along with levels of coarse-graining.
+				
+				
+				
 			\end{ants}
 
 
@@ -338,43 +485,53 @@
 		
 	\section{Biological Evidence of information closure in neural system}
 		
+		\begin{ants}		
+			% ============================================================================ %
+			%                             sederberg2018learning                            %
+			% ============================================================================ %
+			
+			% Internal self-predictive mechanism	
+			@ Recent biological evidence suggests that low-level neurons encodes predictive information about external  and 
+			
+			@ \toWrite{
+				need to say this is exactly the non-trivial information closure, and refer to equation XXX}
+			
+			@ \cite{sederberg2018learning}
+			@ \rewrite{
+				in recordings of populations of RGCs of salamander retina driven by a simple stimulus with partially predictable dynamics, joint activity patterns transmit information that is predictive of future stimuli }
+			
+			@ \rewrite{
+				We examined whether the temporal correlations within populations of RGCs can be used to guide the search for readouts of predictive information.}
+			
+			@ \rewrite{
+				We showed that groups of cells with high external, stimulus-predictive information also had high internal predictive information on two classes of stimuli, }
+			
+			@ \rewrite{
+				Very simple learning rules could find near-optimal readouts of predictive information without any external instructive signal. This suggests that bottom-up prediction may play an important role in sensory processing}
+			
+			@ \rewrite{
+				Internal predictive information can guide stimulus prediction without explicit reference to stimulus parameters.}
+			
+			@ \rewrite{
+				Word–word internal predictive information is correlated with word–stimulus predictive information across sets of four cells.}
+			
+			@ They also showed generalization of internal predictability across stimulus. This suggests .... what?
+			
+			@ \rewrite{
+				The generalization of internal predictability across stimulus classes partially reflects the ability of the retina to adapt to the statistics of stimuli}
+			
+			
+			@ \cite{Palmer2015}
+			@ \rewrite{
+				Groups of cells in the retina carry information about the future state of their own activity, and we show that this information can be compressed further and encoded by downstream predictor neurons that exhibit feature selectivity that would support predictive computations.}
+			
+			@ \rewrite{
+				It seems natural to phrase the problem of prediction in relation to the visual stimulus, as in Fig. 3, but the brain has no direct access to visual stimuli except that provided by the retina. Could the brain learn, in an unsupervised fashion, to predict the future of retinal outputs? More precisely, if we observe that a population of retinal ganglion cells generates the word w t at time t, what can we say about the word that will be generated at time t + Δ t in the future? The answer to this question is contained in the conditional distribution of one word on the other, P ð w t +Δ t j w t Þ } \url{http://tinyurl.com/y9zmhlln}	
+			
+			@ \rewrite{
+				larger groups of cells carry predictive information for hundreds of milliseconds, }
 		
-		% ============================================================================ %
-		%                             sederberg2018learning                            %
-		% ============================================================================ %
-		
-		% Internal self-predictive mechanism	
-		* Recent biological evidence suggests that low-level neurons encodes predictive information about external  and 
-		
-		\todo{need to say this is exactly the non-trivial information closure, and refer to equation XXX}
-		\cite{sederberg2018learning}
-		\rewrite{in recordings of populations of RGCs of salamander retina driven by a simple stimulus with partially predictable dynamics, joint activity patterns transmit information that is predictive of future stimuli }
-		
-		\rewrite{We examined whether the temporal correlations within populations of RGCs can be used to guide the search for readouts of predictive information.}
-		
-		\rewrite{ We showed that groups of cells with high external, stimulus-predictive information also had high internal predictive information on two classes of stimuli, }
-		
-		\rewrite{
-			Very simple learning rules could find near-optimal readouts of predictive information without any external instructive signal. This suggests that bottom-up prediction may play an important role in sensory processing}
-		
-		\rewrite{Internal predictive information can guide stimulus prediction without explicit reference to stimulus parameters.}
-		
-		\rewrite{ Word–word internal predictive information is correlated with word–stimulus predictive information across sets of four cells.}
-		
-		* They also showed generalization of internal predictability across stimulus. This suggests .... what?
-		
-		\rewrite{ The generalization of internal predictability across stimulus classes partially reflects the ability of the retina to adapt to the statistics of stimuli}
-		
-		
-		\cite{Palmer2015}
-		\rewrite{ Groups of cells in the retina carry information about the future state of their own activity, and we show that this information can be compressed further and encoded by downstream predictor neurons that exhibit feature selectivity that would support predictive computations.}
-		
-		\todo{\url{http://tinyurl.com/y9zmhlln}	}
-		
-		\rewrite{It seems natural to phrase the problem of prediction in relation to the visual stimulus, as in Fig. 3, but the brain has no direct access to visual stimuli except that provided by the retina. Could the brain learn, in an unsupervised fashion, to predict the future of retinal outputs? More precisely, if we observe that a population of retinal ganglion cells generates the word w t at time t, what can we say about the word that will be generated at time t + Δ t in the future? The answer to this question is contained in the conditional distribution of one word on the other, P ð w t +Δ t j w t Þ }
-		
-		\rewrite{ larger groups of cells carry predictive information for hundreds of milliseconds, }
-		
+		\end{ants}
 
 	\section{Relation to empirical findings in neuroscience and consciousness studies}
 		\subsection{reflexive behavioural is unconscious}
@@ -442,10 +599,9 @@
 			\begin{ants}
 				@\cite{lau2011empirical}
 					@@ \rewrite{
-						The ﬁrst-order view maintains that conscious awareness is determined by early sensory activity alone, independently of higher-order representations. Thus the crucial difference between the ﬁrst-order and higher-order views is that the latter but not the former predict that conscious awareness is determined at least in part by prefrontal and parietal activity.\\
+						ddThe ﬁrst-order view maintains that conscious awareness is determined by early sensory activity alone, independently of higher-order representations. Thus the crucial difference between the ﬁrst-order and higher-order views is that the latter but not the former predict that conscious awareness is determined at least in part by prefrontal and parietal activity.\\
 						Therefore, in the group of ﬁrst-order theorists we include here not only those commonly labeled as such in the philosophical literature [11] but also theorists, such as Ned Block [12,13], who hold that the phenomenal qualities of awareness depend on the biological substrate rather than merely the content of the ﬁrst-order representations, as well as scientists who hold that visual awareness depends on activity in content-speciﬁc regions of the extrastriate cortex [24,25] or on feedback from these regions to the primary visual cortex [26].\\
-						Most ﬁrst-order theories explain the difference between awareness and unawareness by positing that the latter is associated with weak information [29] or with representations in alternative (e.g. subcortical) sensory pathways. Thus this view suggests that conscious and unconscious processing will have different functional consequences. Whereas some ﬁrst-order theorists hold that some higher cognitive functions can be performed without conscious awareness [30–32], most ﬁrst-order theorists take a difference in perceptual task performance (e.g. ‘hits’ vs ‘misses’ in a detection task) as evidence for a difference in conscious awareness [12,13,25,26,33]. In other words, they typically associate task performance with awareness.
-					}
+						Most ﬁrst-order theories explain the difference between awareness and unawareness by positing that the latter is associated with weak information [29] or with representations in alternative (e.g. subcortical) sensory pathways. Thus this view suggests that conscious and unconscious processing will have different functional consequences. Whereas some ﬁrst-order theorists hold that some higher cognitive functions can be performed without conscious awareness [30–32], most ﬁrst-order theorists take a difference in perceptual task performance (e.g. ‘hits’ vs ‘misses’ in a detection task) as evidence for a difference in conscious awareness [12,13,25,26,33]. In other words, they typically associate task performance with awareness.}
 				
 			\end{ants}
 		
@@ -498,7 +654,8 @@
 				
 			
 		\subsection{Higher Order Thought theory of consciousness}	
-			\idea{People think a high order representation receives information from the first order representation. This may be a misunderstanding. This may be the result of neural coarse-graining. Because contents in information closure look like watching fine-grained information, people may have an wrong impression about it}
+			\idea{
+				People think a high order representation receives information from the first order representation. This may be a misunderstanding. This may be the result of neural coarse-graining. Because contents in information closure look like watching fine-grained information, people may have an wrong impression about it}
 		
 			============================================================================			
 			\begin{ants}
@@ -554,21 +711,76 @@
 			* Similarly, the neural system also has many circuits that show predictive power but do not have \ac{ic}.
 			
 			
+			\subsubsection{statistical learning/prediction is not conscious}
+				\begin{ants}
+					@ considers the brain as a predictive machine
+					@ According to predictive processing account, conscious contents are the inference results (posterior from Bayesian inference framework) of predictive mechanism. 
+					
+					@ However, we can see that not all predictive mechanisms in the neural system can be consciously aware of. 
+					
+					@ So what's the critical difference between them in terms of consciousness?
+					
+					@ We argue that when predictive mechanisms utilise the information in the information closure, the predictive result is conscious. 
+					
+					@ Because the forward model build on the information closure representation can be seen as part of the closure. \todo[color=red]{IS THIS TRUE? NEED DISCUSSION}
+					
+					
+					@ we can consider two scenarios
+						
+						@@ Predictive information is encoded in neuron populations but there is high entropy of conditional probability which means it's not closure. Therefore, the conscious level could be very low even though the it still has some degree of predictability. 
+						
+						@@ Another scenario is a forward model but its state fully depends on external sensory input. This system is not information closured and therefore is not conscious. 
+						
+						@@ Based on this point of view, predictive power for a system does not guarantee consciousness. 
+						
+						@@ For example, in active inference \needref{active inference}, action is guided by prediction error so the state of the system is non-closured. 
+					
+				\end{ants}
+				
+			
 		\subsection{IIT}
+			\callforhelp{Help from Jun?}
+			
+			
+			\subsubsection{Information Integration}
+				\begin{ants}
+					@ \toWrite{Information integration without awareness}\cite{Mudrik_Faivre_Koch}
+					@ \rewrite{consciousness is necessary for high-level but not low-level semantic integration}\cite{Mudrik_Faivre_Koch} I would argue an inverse relationship:"High-level information processing is necessary for consciousness." This is because higher-level information processing is more likely to create an information closure representation. 
+					
+					@ Similarly, it is not \rewrite{consciousness is necessary for multisensory integration}. It should be multisensory integration is more likely to create an information closure representation. Because in most situations, multisensory signals are generated from hidden causes which may have deterministic dynamic and relation with each other. Therefore, to infer the hidden causes and represent the deterministic relations can form information closure representation which is conscious.  
+					
+				\end{ants}
+			
+			
+			\subsubsection{IIT}
+			
 			\subsubsection{Hoel's theory}
-				\martin{Do you want to write this session?}
+				\callforhelp{Help from Marting?}
 				
 		\subsection{Internal simulation and self-modeling}
 		
 		
 		
-		
 	\section{Counter-intuitive prediction}	
+	
+		\subsection{information closure}
+			\begin{ants}
+				@ We predict that through coarse-graining, conscious agents create 
+			\end{ants}
+			
+			
+		
 		\subsection{Prediction on split-brain (vs IIT)}
 			* IIT suggests that cutting, two subparts may both still have MIP, therefore, have two conscious mind. 
 			
 			* However, our theory suggests that if the cut largely destroy the \ac{ic}, then both part may not be conscious. 
-		
+	
+	
+	
+	\section{title}
+	
+	
+	
 	\section{Future work}
 		\begin{ants}
 			
@@ -576,15 +788,29 @@
 			
 		\end{ants}
 	
-	
-	
 		\subsection{Brain area}
+		\subsection{How to coarse-grain in the neural system}
+			\begin{ants}
+				@ \rewrite{
+					not all causal relationships (or relationships of nomological dependency) among micro-events aggregate up to causal relationships among coarse-grained macro-events that are constituted by those micro-events. Instead, whether one gets causation at the macroscopic level will depend (among other things) on the particular coarse-graining that is chosen.} \cite{price2007causation}
+				
+				@ \rewrite{
+					It may seem surprising, even counterintuitive, that causal and statistical dependence relationships involving fine grained microscopic variables do not automatically show up in causal and dependence relationships among the macroscopic variables that are realized by the fine grained variables.} \cite{price2007causation}
+				
+				@ \cite{jonas2017could} well demonstrated that it is difficult to understand higher-level information processing by the current neuroscience methods. 
+				
+			\end{ants}
 	
 	\section{Evolution of conscious mind (not sure but if I have time)}
 		\cite{dennett2008kinds}
+		
 
 	\section{Conclusion}
-		* NCC: To find NCC, it's not about where and when, it's about scale and level of description
+		\begin{ants}
+			@ Why is this theory better than other theories of consciousness
+			@ NCC: To find NCC, it's not about where and when, it's about scale and level of description			 
+		\end{ants}
+
 	
 	
 	% ============================================================================ %
