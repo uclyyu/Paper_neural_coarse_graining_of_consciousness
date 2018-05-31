@@ -25,8 +25,8 @@
 \contentsline {subsection}{\numberline {4.4}Information and system theory}{7}{subsection.4.4}
 \contentsline {subsection}{\numberline {4.5}Emperical approaches of measuring neural information closure}{8}{subsection.4.5}
 \contentsline {section}{\numberline {5}Biological Evidence of information closure in neural system}{8}{section.5}
-\contentsline {section}{\numberline {6}Relation to empirical findings in neuroscience and consciousness studies}{9}{section.6}
-\contentsline {subsection}{\numberline {6.1}reflexive behavioural is unconscious}{9}{subsection.6.1}
+\contentsline {section}{\numberline {6}Relation to empirical findings in neuroscience and consciousness studies}{10}{section.6}
+\contentsline {subsection}{\numberline {6.1}reflexive behavioural is unconscious}{10}{subsection.6.1}
 \contentsline {subsection}{\numberline {6.2}Explain normal and abnormal conscious/non-conscious experience}{10}{subsection.6.2}
 \contentsline {subsection}{\numberline {6.3}Deterministic vs probabilistic}{10}{subsection.6.3}
 \contentsline {section}{\numberline {7}Comparison with other theories}{10}{section.7}
@@ -40,11 +40,11 @@
 \contentsline {subsubsection}{\numberline {7.3.4}broadcasting}{12}{subsubsection.7.3.4}
 \contentsline {subsubsection}{\numberline {7.3.5}Ignition}{12}{subsubsection.7.3.5}
 \contentsline {subsection}{\numberline {7.4}Higher Order Thought theory of consciousness}{13}{subsection.7.4}
-\contentsline {subsubsection}{\numberline {7.4.1}Metacognition}{13}{subsubsection.7.4.1}
+\contentsline {subsubsection}{\numberline {7.4.1}Metacognition}{14}{subsubsection.7.4.1}
 \contentsline {subsection}{\numberline {7.5}Sensorimotor contingency}{14}{subsection.7.5}
 \contentsline {subsection}{\numberline {7.6}Predictive Brain}{14}{subsection.7.6}
 \contentsline {subsubsection}{\numberline {7.6.1}statistical learning/prediction is not conscious}{14}{subsubsection.7.6.1}
-\contentsline {subsection}{\numberline {7.7}IIT}{14}{subsection.7.7}
+\contentsline {subsection}{\numberline {7.7}IIT}{15}{subsection.7.7}
 \contentsline {subsubsection}{\numberline {7.7.1}Information Integration}{15}{subsubsection.7.7.1}
 \contentsline {subsubsection}{\numberline {7.7.2}IIT}{15}{subsubsection.7.7.2}
 \contentsline {subsubsection}{\numberline {7.7.3}Hoel's theory}{15}{subsubsection.7.7.3}
@@ -55,5 +55,5 @@
 \contentsline {section}{\numberline {9}Future work}{15}{section.9}
 \contentsline {subsection}{\numberline {9.1}Brain area}{15}{subsection.9.1}
 \contentsline {subsection}{\numberline {9.2}How to coarse-grain in the neural system}{15}{subsection.9.2}
-\contentsline {section}{\numberline {10}Evolution of conscious mind (not sure but if I have time)}{15}{section.10}
+\contentsline {section}{\numberline {10}Evolution of conscious mind (not sure but if I have time)}{16}{section.10}
 \contentsline {section}{\numberline {11}Conclusion}{16}{section.11}

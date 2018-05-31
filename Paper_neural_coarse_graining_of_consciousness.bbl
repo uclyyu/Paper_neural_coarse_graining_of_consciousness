@@ -43,6 +43,12 @@ Eurich, Christian~W, \& Wilke, Stefan~D. 2000.
 \newblock Multidimensional encoding strategy of spiking neurons.
 \newblock {\em Neural Computation}, {\bf 12}(7), 1519--1529.
 
+\bibitem[\protect\citename{Goldwyn \& Shea-Brown, }2011]{Goldwyn2011}
+Goldwyn, Joshua~H., \& Shea-Brown, Eric. 2011.
+\newblock {The what and where of adding channel noise to the Hodgkin-Huxley
+  equations}.
+\newblock {\em PLoS Computational Biology}, {\bf 7}(11).
+
 \bibitem[\protect\citename{Guttenberg {\em et~al.},
   }2016]{guttenberg2016neural}
 Guttenberg, Nicholas, Biehl, Martin, \& Kanai, Ryota. 2016.
@@ -135,5 +141,10 @@ Vul, Edward, Hanus, Deborah, \& Kanwisher, Nancy. 2009.
 \newblock Attention as inference: selection is probabilistic; responses are
   all-or-none samples.
 \newblock {\em Journal of Experimental Psychology: General}, {\bf 138}(4), 546.
+
+\bibitem[\protect\citename{White {\em et~al.}, }2000]{White2000}
+White, John~A., Rubinstein, Jay~T., \& Kay, Alan~R. 2000.
+\newblock {Channel noise in neurons}.
+\newblock {\em Trends in Neurosciences}, {\bf 23}(3), 131--137.
 
 \end{thebibliography}
