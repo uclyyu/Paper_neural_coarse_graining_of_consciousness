@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210) (preloaded format=xelatex 2018.4.18)  25 MAY 2018 15:37
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210) (preloaded format=xelatex 2018.4.18)  31 MAY 2018 11:47
 entering extended mode
 **./Paper_neural_coarse_graining_of_consciousness.tex
 (Paper_neural_coarse_graining_of_consciousness.tex
@@ -733,7 +733,11 @@ Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
 LaTeX Warning: Unused global option(s):
     [utf8].
 
-(Paper_neural_coarse_graining_of_consciousness.aux)
+(Paper_neural_coarse_graining_of_consciousness.aux
+
+LaTeX Warning: Label `fig:hierarchy' multiply defined.
+
+)
 \openout1 = `Paper_neural_coarse_graining_of_consciousness.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
@@ -835,41 +839,32 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 153.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 223--225
+Underfull \hbox (badness 10000) in paragraph at lines 234--236
 
  []
 
 [3]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\todo' on input line 242.
+(hyperref)                removing `\todo' on input line 253.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 242.
+(hyperref)                removing `\\' on input line 253.
 
+Missing character: There is no ﬁ in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 256--257
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 336--337
+Underfull \hbox (badness 10000) in paragraph at lines 365--366
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 339--341
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 351--353
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 376--378
+Underfull \hbox (badness 10000) in paragraph at lines 368--370
 
  []
 
@@ -879,90 +874,123 @@ Underfull \hbox (badness 10000) in paragraph at lines 380--382
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--387
+Underfull \hbox (badness 10000) in paragraph at lines 405--407
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 409--411
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 414--416
 
  []
 
 [5]
+File: CGandIC.png Graphic file (type QTm)
+ <use  "CGandIC.png" >
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\todo' on input line 455.
+(hyperref)                removing `\todo' on input line 490.
+
+File: hierarchy.pdf Graphic file (type QTm)
+<use  "hierarchy.pdf" >
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: File `WritingMaterials/HierachyDiscussion (1).jpg' not found on 
+input line 502.
+
+File: WritingMaterials/HierachyDiscussion (1).jpg Graphic file (type QTm)
+<use  "WritingMaterials/HierachyDiscussion (1).jpg" >
+Overfull \hbox (60.26306pt too wide) in paragraph at lines 502--504
+[]\T1/cmr/m/n/10 (1).jpg (1).bb [] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 479--480
+Underfull \hbox (badness 10000) in paragraph at lines 538--539
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 556--558
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 497--499
+Underfull \hbox (badness 10000) in paragraph at lines 559--561
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 500--502
+Underfull \hbox (badness 10000) in paragraph at lines 562--564
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 503--505
+Underfull \hbox (badness 10000) in paragraph at lines 565--567
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 506--508
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 509--511
+Underfull \hbox (badness 10000) in paragraph at lines 568--570
 
  []
 
 Missing character: There is no – in font ecti1000!
 Missing character: There is no – in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 512--514
+Underfull \hbox (badness 10000) in paragraph at lines 571--573
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 576--578
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 517--519
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 522--524
+Underfull \hbox (badness 10000) in paragraph at lines 581--583
 
  []
 
 Missing character: There is no Δ in font ecti1000!
 Missing character: There is no Δ in font ecti1000!
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 526.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 585.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-) [7]
-Underfull \hbox (badness 10000) in paragraph at lines 528--530
+)
+Underfull \hbox (badness 10000) in paragraph at lines 587--589
 
  []
 
 
-Overfull \hbox (0.38924pt too wide) in paragraph at lines 533--533
+Overfull \hbox (0.38924pt too wide) in paragraph at lines 592--592
 []\T1/cmr/bx/n/14.4 Relation to em-pir-i-cal find-ings in neu-ro-science and co
 n-scious-
  []
 
+[9]
 Missing character: There is no ’ in font ecti1000!
 Missing character: There is no ’ in font ecti1000!
-[8]
 Missing character: There is no ’ in font ecti1000!
+ [10]
 Missing character: There is no “ in font ecti1000!
 Missing character: There is no ” in font ecti1000!
 Missing character: There is no “ in font ecti1000!
 Missing character: There is no ” in font ecti1000!
 Missing character: There is no “ in font ecti1000!
 Missing character: There is no ” in font ecti1000!
- [9]
 Missing character: There is no ﬁ in font ecti1000!
 Missing character: There is no ﬁ in font ecti1000!
 Missing character: There is no ﬁ in font ecti1000!
@@ -977,72 +1005,77 @@ Missing character: There is no ’ in font ecti1000!
 Missing character: There is no ‘ in font ecti1000!
 Missing character: There is no ’ in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 598--602
+Underfull \hbox (badness 10000) in paragraph at lines 657--661
 
  []
 
+[11]
 Missing character: There is no “ in font ecti1000!
 Missing character: There is no ” in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 638--639
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--641
+Underfull \hbox (badness 10000) in paragraph at lines 699--700
 
  []
 
 Missing character: There is no ’ in font ecti1000!
 Missing character: There is no ’ in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 642--643
+Underfull \hbox (badness 10000) in paragraph at lines 701--702
 
  []
 
-[10]
-Overfull \hbox (172.34679pt too wide) in paragraph at lines 657--659
+[12]
+Overfull \hbox (172.34679pt too wide) in paragraph at lines 716--718
 []\T1/cmr/m/n/10 ==============================================================
 ==============
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 657--659
+Underfull \hbox (badness 10000) in paragraph at lines 716--718
 
  []
 
-[11]
 Missing character: There is no ﬁ in font ecti1000!
 Missing character: There is no ﬁ in font ecti1000!
 Missing character: There is no ﬁ in font ecti1000!
 Missing character: There is no ﬁ in font ecti1000!
+[13]
 Package acronym Info: Label `acro:ntic' newly defined as it shall be overridden
 
-although it is yet undefined on input line 691.
+although it is yet undefined on input line 750.
 Package acronym Info: Label `acro:cged' newly defined as it shall be overridden
 
-although it is yet undefined on input line 694.
+although it is yet undefined on input line 753.
 Missing character: There is no – in font ecrm1000!
 Missing character: There is no – in font ecrm1000!
 Package acronym Info: Label `acro:ic' newly defined as it shall be overridden
-although it is yet undefined on input line 706.
- [12] [13] (Paper_neural_coarse_graining_of_consciousness.bbl [14])
-[15]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 828.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 828.
+although it is yet undefined on input line 765.
+ [14] [15] (Paper_neural_coarse_graining_of_consciousness.bbl [16])
+[17]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 887.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 887.
  (Paper_neural_coarse_graining_of_consciousness.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 828.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 828.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 828.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 887.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 887.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 887.
  ) 
 Here is how much of TeX's memory you used:
- 23630 strings out of 428408
- 416539 string characters out of 3159511
- 561359 words of memory out of 3000000
- 26706 multiletter control sequences out of 15000+200000
+ 23646 strings out of 428408
+ 416768 string characters out of 3159511
+ 559755 words of memory out of 3000000
+ 26714 multiletter control sequences out of 15000+200000
  17684 words of font info for 43 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  62i,9n,86p,3138b,986s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Paper_neural_coarse_graining_of_consciousness.pdf (15 pages).
+Output written on Paper_neural_coarse_graining_of_consciousness.pdf (17 pages).
 

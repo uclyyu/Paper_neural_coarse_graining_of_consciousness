@@ -137,7 +137,7 @@
 	\end{abstract}
 	
 	
-	\section*{keywords:}
+	\section*{keywords:} 
 	Keywords: theory of Consciousness, information closure, neural coarse-graining, level of analysis
 	
 	% ============================================================================ %
@@ -150,18 +150,29 @@
 		\begin{ants}
 			
 			%% Story about a cell
-				@ Imagining you are a neuron in (a human) Bill's brain. Your "responsibility" is to collect neurotransmitters from dendrites, accumulate membrane potential, and finally send a signal to your colleagues through an action potential. 
+				@ Imagining you are a neuron in (a human) Bill's brain. Your "responsibility" is to collect neurotransmitters through dendrites from your other neurons, accumulate membrane potential, and send a signal to other neurons through an action potential. 
 				
-				@ You have no idea about whether you are involved in an information processing chain for Bill to see or catch  a ball. 
+				@ You have no idea that you are at a neural circuit in Bill's supplementary motor area and is now involved in a motor control processing while Bill reaches his hand to grab a cup. 
 				
-				@ All you have to do is receiving, computing, and outputting information. 
-			
-				@ Strikingly, not only you are ignorance of Bill's intention but also Bill has no conscious awareness of your behaviour. If your work contributes some part of Bill's conscious perception or intention to act. 
+				@  You are totally ignorant of the intension, the goal, and the motor plan that Bill is having now even thought you are part of the physiological substrate of those "high-level" information. 
+				
+				@ The same story also happens to Bill. In his conscious mind, he is not aware of what you do and even your existence if Bill never studies neuroscience.
+				
+				@ It seems that information you are processing and information shows in Bill's conscious percept are divorced from each other. 
+				
+				
+				
+				
+				
+%				@ All you have to do is receiving, computing, and outputting information. 
+%			
+%				@ Strikingly, not only you are ignorance of Bill's intention but also Bill has no conscious awareness of your behaviour. If your work contributes some part of Bill's conscious perception or intention to act. 
 			
 			
 			%% scale
-				@ \rewording{
-					It seems that we cannot consciously access information at all scale. We can only be aware of information processed at a certain level of coarse-graining in the neural system.}
+				
+				@ It seems true that we cannot consciously access information at all scale. We can only be aware of information processed at a certain level of coarse-graining in the neural system.
+				
 				
 				@ Information processing of individual neurons are highly noisy. Neurons fires all the time. However, those massive action potentials do not appear in our conscious contents. 
 				
@@ -242,7 +253,26 @@
 	\section{\martin{todo}Non-trivial Information Closure}
 		\begin{ants}
 			
+			%% Meaning of IC
+			@ \rewrite{
+				The notion of closure plays a prominent role in systems theory where it is used to identify or deﬁne the system in distinction from its environment} \cite{BERTSCHINGER.2006}
+			
+			
+			%% Definition of IC
+			@ Formally, then, a system is informationally closed if (almost) no information flows into it from the environment.
+			
+			@ \rewrite{
+				The notion of informational closure refers to a situation where the information flow between the environment and the system tends to zero.} \cite{BERTSCHINGER.2006}
+			
+			@ Mathematically, information closure can be define and measured by as the degree of information flowing from the environment to a system.
+				\begin{equation}
+					\left.\begin{array} { r l } { J _ { n } ( E \rightarrow S ) } & { = M I ( S _ { n + 1} ; E _ { n } | S _ { n } ) } \\ { } & { = H ( S _ { n + 1} | S _ { n } ) - H ( S _ { n + 1} | S _ { n } ,E _ { n } ) } \\ { } & { = H ( E _ { n } | S _ { n } ) - H ( E _ { n } | S _ { n } ,S _ { n + 1} ) } \\ { } & { = H ( E _ { n } | S _ { n } ) - H ( E _ { n } | S _ { n } ,S _ { n + 1} ) } \end{array} \right.
+				\end{equation}
+
 		\end{ants}
+		
+		% **************************************************************************** %
+		
 		
 		
 		% ============================== what is closure ============================= %
@@ -272,16 +302,12 @@
 		
 		
 		\subsection{Mathematical definition of information closure}
-		\rewrite{
-			The notion of informational closure refers to a situation where the information flow between the environment and the system tends to zero.
-		}\cite{BERTSCHINGER.2006}
+
 		
 		suggests that information closure can be defined as the degree of information flow between environment and the system. 
 		
 		
-		\begin{equation}
-		\left.\begin{array} { r l } { J _ { n } ( E \rightarrow S ) } & { = M I ( S _ { n + 1} ; E _ { n } | S _ { n } ) } \\ { } & { = H ( S _ { n + 1} | S _ { n } ) - H ( S _ { n + 1} | S _ { n } ,E _ { n } ) } \\ { } & { = H ( E _ { n } | S _ { n } ) - H ( E _ { n } | S _ { n } ,S _ { n + 1} ) } \\ { } & { = H ( E _ { n } | S _ { n } ) - H ( E _ { n } | S _ { n } ,S _ { n + 1} ) } \end{array} \right.
-		\end{equation}
+
 		
 		
 		
@@ -428,6 +454,12 @@
 
 	\section{A neural coarse graining theory of consciousness}
 		\toWrite{Need to describe my intuition more concretely }
+		
+		\begin{figure}[h]
+			\includegraphics[width=\textwidth]{CGandIC.png}
+			\caption{information closure through neural coarse-graining}
+			\label{fig:CGandIC}
+		\end{figure}
 	
 	
 		\begin{ants}
@@ -457,7 +489,31 @@
 		\subsection{Sensory hierarchy and neural coarse-graining
 			\todo[color=Red]{This is super important. I need to deal with this very carefully.}}
 		
+		
+
+			\begin{figure}[h]
+				\includegraphics[width=\textwidth]{hierarchy.pdf}
+				{Coarse-grain and sensory anatomical hierarchies}
+				\label{fig:hierarchy}
+			\end{figure}
+		
+		
+			\begin{figure}[h]
+				\includegraphics[width=\textwidth]{WritingMaterials/HierachyDiscussion (1).jpg}
+%				{Coarse-grain and sensory anatomical hierarchies}
+			\end{figure}		
+
+		
+		
+		
+		
+		
 			\begin{ants}
+				@ It's important to note that the dimension coarse-graining direction is not necessary to be align with anatomical sensory hierarchy in the neural system. 
+				
+				@ For example, pooling layers in CNN is an implementation of coarse-graining function. It' is very plausible visual processing hierarchy in the neural system realises pooling layers. 
+				
+				
 				@ Of course, from evolutional perspective, neural system should develop a better hardware to support neural coarse-graining
 				
 				
@@ -777,7 +833,7 @@
 	
 	
 	
-	\section{title}
+
 	
 	
 	
