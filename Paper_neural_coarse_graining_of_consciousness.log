@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210) (preloaded format=xelatex 2018.4.18)  31 MAY 2018 14:01
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210) (preloaded format=xelatex 2018.4.18)  8 JUN 2018 16:22
 entering extended mode
 **./Paper_neural_coarse_graining_of_consciousness.tex
 (Paper_neural_coarse_graining_of_consciousness.tex
@@ -82,6 +82,57 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks15
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\xelatex\xetexconfig\geometry.cfg"))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\stringstrings\stringstrings.sty"
+Package: stringstrings 2015/02/02 v1.23 Extensive array of string manipulation 
+routines for cosmetic and programming application
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\c@@letterindex=\count91
+\c@@@letterindex=\count92
+\c@@@@letterindex=\count93
+\c@@wordindex=\count94
+\c@@iargc=\count95
+\c@@gobblesize=\count96
+\c@@maxrotation=\count97
+\c@@stringsize=\count98
+\c@@@stringsize=\count99
+\c@@@@stringsize=\count100
+\c@@revisedstringsize=\count101
+\c@@gobbleindex=\count102
+\c@@charsfound=\count103
+\c@@alph=\count104
+\c@@alphaindex=\count105
+\c@@capstrigger=\count106
+\c@@fromindex=\count107
+\c@@toindex=\count108
+\c@@previousindex=\count109
+\c@@flag=\count110
+\c@@matchloc=\count111
+\c@@matchend=\count112
+\c@@matchsize=\count113
+\c@@matchmax=\count114
+\c@@skipped=\count115
+\c@@lcwords=\count116
+\c@@@matchloc=\count117
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\titlesec\titlesec.sty"
+Package: titlesec 2016/03/21 v2.10.2 Sectioning titles
+\ttl@box=\box26
+\beforetitleunit=\skip43
+\aftertitleunit=\skip44
+\ttl@plus=\dimen112
+\ttl@minus=\dimen113
+\ttl@toksa=\toks16
+\titlewidth=\dimen114
+\titlewidthlast=\dimen115
+\titlewidthfirst=\dimen116
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\sectsty\sectsty.sty"
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
@@ -99,16 +150,16 @@ Package: colortbl 2018/05/02 v1.0c Color table columns (DPC)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
-\col@sep=\dimen112
-\extrarowheight=\dimen113
-\NC@list=\toks16
-\extratabsurround=\skip43
-\backup@length=\skip44
+\col@sep=\dimen117
+\extrarowheight=\dimen118
+\NC@list=\toks17
+\extratabsurround=\skip45
+\backup@length=\skip46
 )
-\everycr=\toks17
-\minrowclearance=\skip45
+\everycr=\toks18
+\minrowclearance=\skip47
 )
-\rownum=\count91
+\rownum=\count118
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
@@ -123,14 +174,14 @@ File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip46
-\bibsep=\skip47
+\bibhang=\skip48
+\bibsep=\skip49
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count92
+\c@NAT@ctr=\count119
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2016/06/28 v2.15d AMS math features
-\@mathmargin=\skip48
+\@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
@@ -138,51 +189,51 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks18
-\ex@=\dimen114
+\@emptytoks=\toks19
+\ex@=\dimen119
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen115
+\pmbraise@=\dimen120
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count93
+\inf@bad=\count120
 LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count94
-\leftroot@=\count95
+\uproot@=\count121
+\leftroot@=\count122
 LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count96
-\DOTSCASE@=\count97
+\classnum@=\count123
+\DOTSCASE@=\count124
 LaTeX Info: Redefining \ldots on input line 394.
 LaTeX Info: Redefining \dots on input line 397.
 LaTeX Info: Redefining \cdots on input line 518.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen116
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen121
 LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
-\macc@depth=\count98
-\c@MaxMatrixCols=\count99
+\macc@depth=\count125
+\c@MaxMatrixCols=\count126
 \dotsspace@=\muskip10
-\c@parentequation=\count100
-\dspbrk@lvl=\count101
-\tag@help=\toks19
-\row@=\count102
-\column@=\count103
-\maxfields@=\count104
-\andhelp@=\toks20
-\eqnshift@=\dimen117
-\alignsep@=\dimen118
-\tagshift@=\dimen119
-\tagwidth@=\dimen120
-\totwidth@=\dimen121
-\lineht@=\dimen122
-\@envbody=\toks21
-\multlinegap=\skip49
-\multlinetaggap=\skip50
-\mathdisplay@stack=\toks22
+\c@parentequation=\count127
+\dspbrk@lvl=\count128
+\tag@help=\toks20
+\row@=\count129
+\column@=\count130
+\maxfields@=\count131
+\andhelp@=\toks21
+\eqnshift@=\dimen122
+\alignsep@=\dimen123
+\tagshift@=\dimen124
+\tagwidth@=\dimen125
+\totwidth@=\dimen126
+\lineht@=\dimen127
+\@envbody=\toks22
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2739.
 LaTeX Info: Redefining \] on input line 2740.
 )
@@ -200,8 +251,8 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 99.
 )
-\Gin@req@height=\dimen123
-\Gin@req@width=\dimen124
+\Gin@req@height=\dimen128
+\Gin@req@width=\dimen129
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2016/06/24 v6.83q Hypertext links for LaTeX
@@ -256,14 +307,14 @@ Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen125
-\Hy@linkcounter=\count105
-\Hy@pagecounter=\count106
+\@linkdim=\dimen130
+\Hy@linkcounter=\count132
+\Hy@pagecounter=\count133
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2016/06/24 v6.83q Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count107
+\Hy@SavedSpaceFactor=\count134
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -276,17 +327,17 @@ Package hyperref Info: Plain pages OFF on input line 4501.
 Package hyperref Info: Backreferencing OFF on input line 4506.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4735.
-\c@Hy@tempcnt=\count108
+\c@Hy@tempcnt=\count135
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5088.
-\XeTeXLinkMargin=\dimen126
-\Fld@menulength=\count109
-\Field@Width=\dimen127
-\Fld@charsize=\dimen128
+\XeTeXLinkMargin=\dimen131
+\Fld@menulength=\count136
+\Field@Width=\dimen132
+\Fld@charsize=\dimen133
 Package hyperref Info: Hyper figures OFF on input line 6342.
 Package hyperref Info: Link nesting OFF on input line 6347.
 Package hyperref Info: Hyper index ON on input line 6350.
@@ -296,9 +347,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6367.
 Package hyperref Info: PDF/A mode OFF on input line 6372.
 LaTeX Info: Redefining \ref on input line 6412.
 LaTeX Info: Redefining \pageref on input line 6416.
-\Hy@abspage=\count110
-\c@Item=\count111
-\c@Hfootnote=\count112
+\Hy@abspage=\count137
+\c@Item=\count138
+\c@Hfootnote=\count139
 )
 
 Package hyperref Message: Driver (autodetected): hxetex.
@@ -313,11 +364,11 @@ File: puenc.def 2016/06/24 v6.83q Hyperref: PDF Unicode definition (HO)
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box28
-\c@Hy@AnnotLevel=\count113
-\HyField@AnnotCount=\count114
-\Fld@listcount=\count115
-\c@bookmark@seq@number=\count116
+\pdfm@box=\box29
+\c@Hy@AnnotLevel=\count140
+\HyField@AnnotCount=\count141
+\Fld@listcount=\count142
+\c@bookmark@seq@number=\count143
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
@@ -328,64 +379,38 @@ Package rerunfilecheck Info: Feature \pdfmdfivesum is not available
 tly
 (rerunfilecheck)             and the loading of the package is aborted.
 )
-\Hy@SectionHShift=\skip51
+\Hy@SectionHShift=\skip53
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\preprint\authblk.sty"
 Package: authblk 2001/02/27 1.3 (PWD)
-\affilsep=\skip52
-\@affilsep=\skip53
-\c@Maxaffil=\count117
-\c@authors=\count118
-\c@affil=\count119
+\affilsep=\skip54
+\@affilsep=\skip55
+\c@Maxaffil=\count144
+\c@authors=\count145
+\c@affil=\count146
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
-Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
-Package: suffix 2006/07/15 1.5a Variant command support
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count147
+\float@exts=\toks24
+\float@box=\box30
+\@float@everytoks=\toks25
+\@floatcapt=\box31
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
-\@xs@message=\write3
-\integerpart=\count120
-\decimalpart=\count121
-)
-Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
-)
-\AC@clearlist=\toks23
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\todonotes\todonotes.sty"
-Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
-Package: todonotes 2012/07/25
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
-Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
-\XKV@toks=\toks24
-\XKV@tempa@toks=\toks25
-)
-\XKV@depth=\count122
-File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\frontendlayer\tikz.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\basiclayer\pgf.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\utilities\pgfrcs.sty"
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common.te
 x"
 \pgfutil@everybye=\toks26
-\pgfutil@tempdima=\dimen129
-\pgfutil@tempdimb=\dimen130
+\pgfutil@tempdima=\dimen134
+\pgfutil@tempdimb=\dimen135
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-common-li
 sts.tex"))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\utilities\pgfutil-latex.def
 "
-\pgfutil@abb=\box29
+\pgfutil@abb=\box32
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 ))
@@ -407,20 +432,20 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 ode.tex"
 \pgfkeys@tmptoks=\toks29
 ))
-\pgf@x=\dimen131
-\pgf@y=\dimen132
-\pgf@xa=\dimen133
-\pgf@ya=\dimen134
-\pgf@xb=\dimen135
-\pgf@yb=\dimen136
-\pgf@xc=\dimen137
-\pgf@yc=\dimen138
-\w@pgf@writea=\write4
+\pgf@x=\dimen136
+\pgf@y=\dimen137
+\pgf@xa=\dimen138
+\pgf@ya=\dimen139
+\pgf@xb=\dimen140
+\pgf@yb=\dimen141
+\pgf@xc=\dimen142
+\pgf@yc=\dimen143
+\w@pgf@writea=\write3
 \r@pgf@reada=\read1
-\c@pgf@counta=\count123
-\c@pgf@countb=\count124
-\c@pgf@countc=\count125
-\c@pgf@countd=\count126
+\c@pgf@counta=\count148
+\c@pgf@countb=\count149
+\c@pgf@countc=\count150
+\c@pgf@countd=\count151
 \t@pgf@toka=\toks30
 \t@pgf@tokb=\toks31
 \t@pgf@tokc=\toks32
@@ -442,13 +467,13 @@ File: pgfsys-dvipdfmx.def 2014/07/09  (rcs-revision 1.14)
 df.def"
 File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 )
-\pgfsys@objnum=\count127
+\pgfsys@objnum=\count152
 )))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsyssoftpath.
 code.tex"
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count128
-\pgfsyssoftpath@bigbuffer@items=\count129
+\pgfsyssoftpath@smallbuffer@items=\count153
+\pgfsyssoftpath@bigbuffer@items=\count154
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\systemlayer\pgfsysprotocol.
 code.tex"
@@ -462,9 +487,9 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathutil.code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathparser.code.tex
 "
-\pgfmath@dimen=\dimen139
-\pgfmath@count=\count130
-\pgfmath@box=\box30
+\pgfmath@dimen=\dimen144
+\pgfmath@count=\count155
+\pgfmath@box=\box33
 \pgfmath@toks=\toks33
 \pgfmath@stack@operand=\toks34
 \pgfmath@stack@operation=\toks35
@@ -488,57 +513,57 @@ code.tex")
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfunctions.integ
 erarithmetics.code.tex")))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmathfloat.code.tex"
-\c@pgfmathroundto@lastzeros=\count131
+\c@pgfmathroundto@lastzeros=\count156
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepoints.co
 de.tex"
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen140
-\pgf@picmaxx=\dimen141
-\pgf@picminy=\dimen142
-\pgf@picmaxy=\dimen143
-\pgf@pathminx=\dimen144
-\pgf@pathmaxx=\dimen145
-\pgf@pathminy=\dimen146
-\pgf@pathmaxy=\dimen147
-\pgf@xx=\dimen148
-\pgf@xy=\dimen149
-\pgf@yx=\dimen150
-\pgf@yy=\dimen151
-\pgf@zx=\dimen152
-\pgf@zy=\dimen153
+\pgf@picminx=\dimen145
+\pgf@picmaxx=\dimen146
+\pgf@picminy=\dimen147
+\pgf@picmaxy=\dimen148
+\pgf@pathminx=\dimen149
+\pgf@pathmaxx=\dimen150
+\pgf@pathminy=\dimen151
+\pgf@pathmaxy=\dimen152
+\pgf@xx=\dimen153
+\pgf@xy=\dimen154
+\pgf@yx=\dimen155
+\pgf@yy=\dimen156
+\pgf@zx=\dimen157
+\pgf@zy=\dimen158
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathconst
 ruct.code.tex"
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen154
-\pgf@path@lasty=\dimen155
+\pgf@path@lastx=\dimen159
+\pgf@path@lasty=\dimen160
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorepathusage
 .code.tex"
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen156
-\pgf@shorten@start@additional=\dimen157
+\pgf@shorten@end@additional=\dimen161
+\pgf@shorten@start@additional=\dimen162
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorescopes.co
 de.tex"
 File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
-\pgfpic=\box31
-\pgf@hbox=\box32
-\pgf@layerbox@main=\box33
-\pgf@picture@serial@count=\count132
+\pgfpic=\box34
+\pgf@hbox=\box35
+\pgf@layerbox@main=\box36
+\pgf@picture@serial@count=\count157
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoregraphicst
 ate.code.tex"
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen158
+\pgflinewidth=\dimen163
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoretransform
 ations.code.tex"
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen159
-\pgf@pt@y=\dimen160
-\pgf@pt@temp=\dimen161
+\pgf@pt@x=\dimen164
+\pgf@pt@y=\dimen165
+\pgf@pt@temp=\dimen166
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorequick.cod
 e.tex"
@@ -555,13 +580,13 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorearrows.co
 de.tex"
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen162
+\pgfarrowsep=\dimen167
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreshade.cod
 e.tex"
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen163
-\pgf@sys@shading@range@num=\count133
+\pgf@max=\dimen168
+\pgf@sys@shading@range@num=\count158
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreimage.cod
 e.tex"
@@ -570,7 +595,7 @@ File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcoreexternal.
 code.tex"
 File: pgfcoreexternal.code.tex 2014/07/09  (rcs-revision 1.21)
-\pgfexternal@startupbox=\box34
+\pgfexternal@startupbox=\box37
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\basiclayer\pgfcorelayers.co
 de.tex"
@@ -587,7 +612,7 @@ File: pgfcorepatterns.code.tex 2013/11/07  (rcs-revision 1.5)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleshapes.cod
 e.tex"
 File: pgfmoduleshapes.code.tex 2014/03/21  (rcs-revision 1.35)
-\pgfnodeparttextbox=\box35
+\pgfnodeparttextbox=\box38
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmoduleplot.code.
 tex"
@@ -596,8 +621,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
 -0-65.sty"
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen164
-\pgf@nodesepend=\dimen165
+\pgf@nodesepstart=\dimen169
+\pgf@nodesepend=\dimen170
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pgf\compatibility\pgfcomp-version
 -1-18.sty"
@@ -612,8 +637,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\math\pgfmath.code.tex")
-\pgffor@iter=\dimen166
-\pgffor@skip=\dimen167
+\pgffor@iter=\dimen171
+\pgffor@skip=\dimen172
 \pgffor@stack=\toks36
 \pgffor@toks=\toks37
 ))
@@ -624,85 +649,116 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\libraries\pgflibraryplothan
 dlers.code.tex"
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count134
-\pgfplotmarksize=\dimen168
+\pgf@plot@mark@count=\count159
+\pgfplotmarksize=\dimen173
 )
-\tikz@lastx=\dimen169
-\tikz@lasty=\dimen170
-\tikz@lastxsaved=\dimen171
-\tikz@lastysaved=\dimen172
-\tikzleveldistance=\dimen173
-\tikzsiblingdistance=\dimen174
-\tikz@figbox=\box36
-\tikz@figbox@bg=\box37
-\tikz@tempbox=\box38
-\tikz@tempbox@bg=\box39
-\tikztreelevel=\count135
-\tikznumberofchildren=\count136
-\tikznumberofcurrentchild=\count137
-\tikz@fig@count=\count138
+\tikz@lastx=\dimen174
+\tikz@lasty=\dimen175
+\tikz@lastxsaved=\dimen176
+\tikz@lastysaved=\dimen177
+\tikzleveldistance=\dimen178
+\tikzsiblingdistance=\dimen179
+\tikz@figbox=\box39
+\tikz@figbox@bg=\box40
+\tikz@tempbox=\box41
+\tikz@tempbox@bg=\box42
+\tikztreelevel=\count160
+\tikznumberofchildren=\count161
+\tikznumberofcurrentchild=\count162
+\tikz@fig@count=\count163
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\modules\pgfmodulematrix.cod
 e.tex"
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count139
-\pgfmatrixcurrentcolumn=\count140
-\pgf@matrix@numberofcolumns=\count141
+\pgfmatrixcurrentrow=\count164
+\pgfmatrixcurrentcolumn=\count165
+\pgf@matrix@numberofcolumns=\count166
 )
-\tikz@expandcount=\count142
+\tikz@expandcount=\count167
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarytopaths.code.tex"
 File: tikzlibrarytopaths.code.tex 2008/06/17 v3.0.1a (rcs-revision 1.2)
 )))
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\acronym\acronym.sty"
+Package: acronym 2015/03/21 v1.41 Support for acronyms (Tobias Oetiker)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\bigfoot\suffix.sty"
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xstring\xstring.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xstring\xstring.tex"
+\@xs@message=\write4
+\integerpart=\count168
+\decimalpart=\count169
+)
+Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
+)
+\AC@clearlist=\toks38
+)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\todonotes\todonotes.sty"
+Package: todonotes 2015/07/09 .dtx Todonotes source and documentation.
+Package: todonotes 2012/07/25
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xkeyval\xkeyval.sty"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkeyval.tex"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\xkeyval\xkvutils.tex"
+\XKV@toks=\toks39
+\XKV@tempa@toks=\toks40
+)
+\XKV@depth=\count170
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\pgf\frontendlayer\tikz\librarie
 s\tikzlibrarypositioning.code.tex"
 File: tikzlibrarypositioning.code.tex 2008/10/06 v3.0.1a (rcs-revision 1.7)
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count143
-\calc@Bcount=\count144
-\calc@Adimen=\dimen175
-\calc@Bdimen=\dimen176
-\calc@Askip=\skip54
-\calc@Bskip=\skip55
+\calc@Acount=\count171
+\calc@Bcount=\count172
+\calc@Adimen=\dimen180
+\calc@Bdimen=\dimen181
+\calc@Askip=\skip56
+\calc@Bskip=\skip57
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count145
-\calc@Cskip=\skip56
+\calc@Ccount=\count173
+\calc@Cskip=\skip58
 )
-\c@@todonotes@numberoftodonotes=\count146
+\c@@todonotes@numberoftodonotes=\count174
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\easylist\easylist.sty"
 Package: easylist 2014/01/11 v.1.4 Numbered items with a single command.
-\el@CounterTotal=\count147
-\el@Scratch=\count148
-\el@ControlCounter=\count149
-\el@CounterLevel=\count150
-\c@List1=\count151
-\c@List2=\count152
-\c@List3=\count153
-\c@List4=\count154
-\c@List5=\count155
-\c@List6=\count156
-\c@List7=\count157
-\c@List8=\count158
-\c@List9=\count159
-\c@List10=\count160
-\el@ProgressiveDimension=\dimen177
-\el@CounterBox=\box40
-\el@ControlBox=\box41
-\el@TotalMargin=\dimen178
-\el@LeftMove=\dimen179
+\el@CounterTotal=\count175
+\el@Scratch=\count176
+\el@ControlCounter=\count177
+\el@CounterLevel=\count178
+\c@List1=\count179
+\c@List2=\count180
+\c@List3=\count181
+\c@List4=\count182
+\c@List5=\count183
+\c@List6=\count184
+\c@List7=\count185
+\c@List8=\count186
+\c@List9=\count187
+\c@List10=\count188
+\el@ProgressiveDimension=\dimen182
+\el@CounterBox=\box43
+\el@ControlBox=\box44
+\el@TotalMargin=\dimen183
+\el@LeftMove=\dimen184
 )
 (C:\Users\acercyc\AppData\Roaming\MiKTeX\2.9\tex\latex\tcolorbox\tcolorbox.sty
 Package: tcolorbox 2018/03/22 version 4.13 text color boxes
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks38
-\verbatim@line=\toks39
+\every@verbatim=\toks41
+\verbatim@line=\toks42
 \verbatim@in@stream=\read2
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\environ\environ.sty"
@@ -713,19 +769,19 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\etoolbox\etoolbox.sty"
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count161
+\etb@tempcnta=\count189
 )
-\tcb@titlebox=\box42
-\tcb@upperbox=\box43
-\tcb@lowerbox=\box44
-\tcb@phantombox=\box45
-\c@tcbbreakpart=\count162
-\c@tcblayer=\count163
-\tcolorbox@number=\count164
-\tcb@temp=\box46
-\tcb@temp=\box47
-\tcb@temp=\box48
+\tcb@titlebox=\box45
+\tcb@upperbox=\box46
+\tcb@lowerbox=\box47
+\tcb@phantombox=\box48
+\c@tcbbreakpart=\count190
+\c@tcblayer=\count191
+\tcolorbox@number=\count192
 \tcb@temp=\box49
+\tcb@temp=\box50
+\tcb@temp=\box51
+\tcb@temp=\box52
 \tcb@out=\write5
 \tcb@record@out=\write6
 )
@@ -736,22 +792,22 @@ LaTeX Warning: Unused global option(s):
 (Paper_neural_coarse_graining_of_consciousness.aux)
 \openout1 = `Paper_neural_coarse_graining_of_consciousness.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 131.
-LaTeX Font Info:    ... okay on input line 131.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -786,19 +842,19 @@ LaTeX Font Info:    ... okay on input line 131.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\AtBeginShipoutBox=\box50
-Package hyperref Info: Link coloring ON on input line 131.
+\AtBeginShipoutBox=\box53
+Package hyperref Info: Link coloring ON on input line 165.
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count165
+\c@section@level=\count193
 )
-LaTeX Info: Redefining \ref on input line 131.
-LaTeX Info: Redefining \pageref on input line 131.
-LaTeX Info: Redefining \nameref on input line 131.
+LaTeX Info: Redefining \ref on input line 165.
+LaTeX Info: Redefining \pageref on input line 165.
+LaTeX Info: Redefining \nameref on input line 165.
 
 (Paper_neural_coarse_graining_of_consciousness.out)
 (Paper_neural_coarse_graining_of_consciousness.out)
@@ -807,16 +863,16 @@ LaTeX Info: Redefining \nameref on input line 131.
 
 
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 132.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 166.
 
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 166.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 132.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 166.
 
 (Paper_neural_coarse_graining_of_consciousness.toc
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
@@ -828,245 +884,298 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 )
 [1
 
-])
+]
+
+LaTeX Warning: Marginpar on page 2 moved.
+
+)
 \tf@toc=\write8
 \openout8 = `Paper_neural_coarse_graining_of_consciousness.toc'.
 
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 153.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 188.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 237--239
 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\todo' on input line 289.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 289.
 
 [3]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\todo' on input line 256.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\\' on input line 256.
-
-Missing character: There is no ﬁ in font ecti1000!
-
-Underfull \hbox (badness 10000) in paragraph at lines 292--293
-
+File: WritingMaterials/PDFXCview_2018-06-07_17-45-59.png Graphic file (type QTm
+)
+ <use  "WritingMaterials/PDFXCview_2018-06-07_17-45-59.png" >
+Overfull \hbox (34.14322pt too wide) in paragraph at lines 315--315
+[][] 
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Missing character: There is no “ in font ecti1000!
+Missing character: There is no ” in font ecti1000!
+
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--373
+Underfull \hbox (badness 10000) in paragraph at lines 392--393
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--385
+Underfull \hbox (badness 10000) in paragraph at lines 402--404
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--410
-
- []
+LaTeX Warning: Marginpar on page 5 moved.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--414
+Underfull \hbox (badness 10000) in paragraph at lines 461--463
 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 417--419
+Underfull \hbox (badness 10000) in paragraph at lines 514--516
 
  []
 
-File: CGandIC.png Graphic file (type QTm)
-<use  "CGandIC.png" >
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 518--520
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 523--525
+
+ []
+
+
+LaTeX Warning: Marginpar on page 6 moved.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\todo' on input line 493.
+(hyperref)                removing `\todo' on input line 547.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\\' on input line 547.
+
+File: WritingMaterials/PDFXCview_2018-06-08_14-24-03.png Graphic file (type QTm
+)
+<use  "WritingMaterials/PDFXCview_2018-06-08_14-24-03.png" > [6] [7]
+Missing character: There is no ﬀ in font ecti1000!
+File: CGandIC.png Graphic file (type QTm)
+
+<use  "CGandIC.png" >
+Overfull \hbox (34.14322pt too wide) in paragraph at lines 621--621
+[][] 
+ []
+
+[8] [9]
+File: WritingMaterials/PDFXCview_2018-06-01_17-44-30.png Graphic file (type QTm
+)
+ <use  "WritingMaterials/PDFXCview_2018-06-01_17-44-30.png" >
+Overfull \hbox (263.53624pt too wide) in paragraph at lines 657--658
+[] []\T1/cmr/m/n/10 use [] 
+ []
+
+File: WritingMaterials/PDFXCview_2018-06-04_19-18-12.png Graphic file (type QTm
+)
+<use  "WritingMaterials/PDFXCview_2018-06-04_19-18-12.png" >
+Overfull \hbox (4.67307pt too wide) in paragraph at lines 659--660
+[] []\T1/cmr/m/n/10 or use [] 
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\todo' on input line 697.
 
 File: hierarchy.pdf Graphic file (type QTm)
-<use  "hierarchy.pdf" >
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+<use  "hierarchy.pdf" > [10]
 
 LaTeX Warning: File `WritingMaterials/HierachyDiscussion (1).jpg' not found on 
-input line 505.
+input line 709.
 
 File: WritingMaterials/HierachyDiscussion (1).jpg Graphic file (type QTm)
 <use  "WritingMaterials/HierachyDiscussion (1).jpg" >
-Overfull \hbox (60.26306pt too wide) in paragraph at lines 505--507
+Overfull \hbox (60.26306pt too wide) in paragraph at lines 709--711
 []\T1/cmr/m/n/10 (1).jpg (1).bb [] 
  []
 
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 541--542
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 559--561
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 562--564
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 565--567
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 568--570
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 571--573
-
- []
-
-Missing character: There is no – in font ecti1000!
-Missing character: There is no – in font ecti1000!
-
-Underfull \hbox (badness 10000) in paragraph at lines 574--576
-
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 579--581
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 584--586
-
- []
-
-Missing character: There is no Δ in font ecti1000!
-Missing character: There is no Δ in font ecti1000!
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 588.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
-File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-Underfull \hbox (badness 10000) in paragraph at lines 590--592
-
- []
-
-
-Overfull \hbox (0.38924pt too wide) in paragraph at lines 595--595
-[]\T1/cmr/bx/n/14.4 Relation to em-pir-i-cal find-ings in neu-ro-science and co
-n-scious-
- []
-
-[9]
-Missing character: There is no ’ in font ecti1000!
-Missing character: There is no ’ in font ecti1000!
-Missing character: There is no ’ in font ecti1000!
- [10]
-Missing character: There is no “ in font ecti1000!
-Missing character: There is no ” in font ecti1000!
-Missing character: There is no “ in font ecti1000!
-Missing character: There is no ” in font ecti1000!
-Missing character: There is no “ in font ecti1000!
-Missing character: There is no ” in font ecti1000!
-Missing character: There is no ﬁ in font ecti1000!
-Missing character: There is no ﬁ in font ecti1000!
-Missing character: There is no ﬁ in font ecti1000!
-Missing character: There is no ﬁ in font ecti1000!
-Missing character: There is no ﬁ in font ecti1000!
-Missing character: There is no ﬁ in font ecti1000!
-Missing character: There is no ﬁ in font ecti1000!
-Missing character: There is no – in font ecti1000!
-Missing character: There is no ﬁ in font ecti1000!
-Missing character: There is no ‘ in font ecti1000!
-Missing character: There is no ’ in font ecti1000!
-Missing character: There is no ‘ in font ecti1000!
-Missing character: There is no ’ in font ecti1000!
-
-Underfull \hbox (badness 10000) in paragraph at lines 660--664
-
- []
-
 [11]
-Missing character: There is no “ in font ecti1000!
-Missing character: There is no ” in font ecti1000!
-
-Underfull \hbox (badness 10000) in paragraph at lines 700--701
+Underfull \hbox (badness 10000) in paragraph at lines 747--748
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 702--703
+Underfull \hbox (badness 10000) in paragraph at lines 773--775
 
  []
 
-Missing character: There is no ’ in font ecti1000!
-Missing character: There is no ’ in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 704--705
+Underfull \hbox (badness 10000) in paragraph at lines 776--778
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 779--781
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 782--784
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 785--787
+
+ []
+
+Missing character: There is no – in font ecti1000!
+Missing character: There is no – in font ecti1000!
+
+Underfull \hbox (badness 10000) in paragraph at lines 788--790
 
  []
 
 [12]
-Overfull \hbox (172.34679pt too wide) in paragraph at lines 719--721
+Underfull \hbox (badness 10000) in paragraph at lines 793--795
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 798--800
+
+ []
+
+Missing character: There is no Δ in font ecti1000!
+Missing character: There is no Δ in font ecti1000!
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 802.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
+File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 10000) in paragraph at lines 804--806
+
+ []
+
+
+Overfull \hbox (0.38924pt too wide) in paragraph at lines 812--812
+[]\T1/cmr/bx/n/14.4 Relation to em-pir-i-cal find-ings in neu-ro-science and co
+n-scious-
+ []
+
+[13]
+Missing character: There is no ’ in font ecti1000!
+Missing character: There is no ’ in font ecti1000!
+Missing character: There is no ’ in font ecti1000!
+ [14]
+Missing character: There is no “ in font ecti1000!
+Missing character: There is no ” in font ecti1000!
+Missing character: There is no “ in font ecti1000!
+Missing character: There is no ” in font ecti1000!
+Missing character: There is no “ in font ecti1000!
+Missing character: There is no ” in font ecti1000!
+Missing character: There is no ﬁ in font ecti1000!
+Missing character: There is no ﬁ in font ecti1000!
+Missing character: There is no ﬁ in font ecti1000!
+Missing character: There is no ﬁ in font ecti1000!
+Missing character: There is no ﬁ in font ecti1000!
+Missing character: There is no ﬁ in font ecti1000!
+Missing character: There is no ﬁ in font ecti1000!
+Missing character: There is no – in font ecti1000!
+Missing character: There is no ﬁ in font ecti1000!
+Missing character: There is no ‘ in font ecti1000!
+Missing character: There is no ’ in font ecti1000!
+Missing character: There is no ‘ in font ecti1000!
+Missing character: There is no ’ in font ecti1000!
+
+Underfull \hbox (badness 10000) in paragraph at lines 908--912
+
+ []
+
+[15]
+Missing character: There is no “ in font ecti1000!
+Missing character: There is no ” in font ecti1000!
+
+Underfull \hbox (badness 10000) in paragraph at lines 948--949
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 950--951
+
+ []
+
+Missing character: There is no ’ in font ecti1000!
+Missing character: There is no ’ in font ecti1000!
+
+Underfull \hbox (badness 10000) in paragraph at lines 952--953
+
+ []
+
+[16]
+Overfull \hbox (172.34679pt too wide) in paragraph at lines 967--969
 []\T1/cmr/m/n/10 ==============================================================
 ==============
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 719--721
+Underfull \hbox (badness 10000) in paragraph at lines 967--969
 
  []
 
 Missing character: There is no ﬁ in font ecti1000!
 Missing character: There is no ﬁ in font ecti1000!
 Missing character: There is no ﬁ in font ecti1000!
-[13]
+[17]
+
+LaTeX Warning: Marginpar on page 18 moved.
+
 Missing character: There is no ﬁ in font ecti1000!
 Package acronym Info: Label `acro:ntic' newly defined as it shall be overridden
 
-although it is yet undefined on input line 753.
+although it is yet undefined on input line 1001.
 Package acronym Info: Label `acro:cged' newly defined as it shall be overridden
 
-although it is yet undefined on input line 756.
+although it is yet undefined on input line 1004.
 Missing character: There is no – in font ecrm1000!
 Missing character: There is no – in font ecrm1000!
 Package acronym Info: Label `acro:ic' newly defined as it shall be overridden
-although it is yet undefined on input line 768.
- [14] [15] (Paper_neural_coarse_graining_of_consciousness.bbl [16])
-[17]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 890.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 890.
- (Paper_neural_coarse_graining_of_consciousness.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 890.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 890.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 890.
+although it is yet undefined on input line 1016.
+[18]
+
+LaTeX Warning: Marginpar on page 19 moved.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\todo' on input line 1048.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\todo' on input line 1058.
+
+[19] (Paper_neural_coarse_graining_of_consciousness.bbl [20]) [21]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1152.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1152.
+
+(Paper_neural_coarse_graining_of_consciousness.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1152.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1152.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1152.
  ) 
 Here is how much of TeX's memory you used:
- 23652 strings out of 428408
- 416876 string characters out of 3159511
- 561823 words of memory out of 3000000
- 26720 multiletter control sequences out of 15000+200000
+ 24809 strings out of 428408
+ 433393 string characters out of 3159511
+ 628966 words of memory out of 3000000
+ 27861 multiletter control sequences out of 15000+200000
  17684 words of font info for 43 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 62i,9n,86p,3138b,986s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,9n,86p,3138b,986s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Paper_neural_coarse_graining_of_consciousness.pdf (17 pages).
+Output written on Paper_neural_coarse_graining_of_consciousness.pdf (21 pages).
 

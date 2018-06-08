@@ -1,59 +1,58 @@
 \select@language {english}
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}
-\contentsline {section}{\numberline {2}\todo [color=SpringGreen]{@Martin:\\todo}Non-trivial Information Closure}{4}{section*.8}
-\contentsline {subsection}{\numberline {2.1}Mathematical definition of information closure}{4}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Non-trivial information closure}{4}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}how to achieve non-trivial information closure}{5}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}information closure and Level Identification}{5}{subsection.2.4}
-\contentsline {subsection}{\numberline {2.5}Biological Creature may try to achieve closure even the environment is not }{5}{subsection.2.5}
-\contentsline {section}{\numberline {3}neural coarse-graining}{5}{section.3}
-\contentsline {subsection}{\numberline {3.1}coarse-graining in neural system}{5}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Single neurons are noisy}{5}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}firing rate coding}{5}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}Population coding}{5}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}sensory hierarchy}{6}{subsection.3.5}
-\contentsline {subsection}{\numberline {3.6}The advantage of NCG}{6}{subsection.3.6}
-\contentsline {subsubsection}{\numberline {3.6.1}Resist to noise}{6}{subsubsection.3.6.1}
-\contentsline {subsubsection}{\numberline {3.6.2}Operate on deterministic and abstract level}{6}{subsubsection.3.6.2}
-\contentsline {subsubsection}{\numberline {3.6.3}Predictive power}{6}{subsubsection.3.6.3}
-\contentsline {subsubsection}{\numberline {3.6.4}Reduce energy cost}{6}{subsubsection.3.6.4}
-\contentsline {subsection}{\numberline {3.7}neural coarse-graining in deep learning}{6}{subsection.3.7}
-\contentsline {section}{\numberline {4}A neural coarse graining theory of consciousness}{6}{section.4}
-\contentsline {subsection}{\numberline {4.1}Measure of conscious level}{6}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Conscious contents}{6}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Sensory hierarchy and neural coarse-graining \todo [color=Red]{This is super important. I need to deal with this very carefully.}}{6}{section*.11}
-\contentsline {subsection}{\numberline {4.4}Information and system theory}{7}{subsection.4.4}
-\contentsline {subsection}{\numberline {4.5}Emperical approaches of measuring neural information closure}{8}{subsection.4.5}
-\contentsline {section}{\numberline {5}Biological Evidence of information closure in neural system}{8}{section.5}
-\contentsline {section}{\numberline {6}Relation to empirical findings in neuroscience and consciousness studies}{10}{section.6}
-\contentsline {subsection}{\numberline {6.1}reflexive behavioural is unconscious}{10}{subsection.6.1}
-\contentsline {subsection}{\numberline {6.2}Explain normal and abnormal conscious/non-conscious experience}{10}{subsection.6.2}
-\contentsline {subsection}{\numberline {6.3}Deterministic vs probabilistic}{10}{subsection.6.3}
-\contentsline {section}{\numberline {7}Comparison with other theories}{10}{section.7}
-\contentsline {subsection}{\numberline {7.1}Intermediate Level Theory}{10}{subsection.7.1}
-\contentsline {subsubsection}{\numberline {7.1.1}The difference between ILT and our theory}{11}{subsubsection.7.1.1}
-\contentsline {subsection}{\numberline {7.2}first-order theories}{11}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Global Workspace Theory (GWT)}{12}{subsection.7.3}
-\contentsline {subsubsection}{\numberline {7.3.1}Global availability and Broadcasting}{12}{subsubsection.7.3.1}
-\contentsline {subsubsection}{\numberline {7.3.2}Code translation}{12}{subsubsection.7.3.2}
-\contentsline {subsubsection}{\numberline {7.3.3}Stability}{12}{subsubsection.7.3.3}
-\contentsline {subsubsection}{\numberline {7.3.4}broadcasting}{12}{subsubsection.7.3.4}
-\contentsline {subsubsection}{\numberline {7.3.5}Ignition}{12}{subsubsection.7.3.5}
-\contentsline {subsection}{\numberline {7.4}Higher Order Thought theory of consciousness}{13}{subsection.7.4}
-\contentsline {subsubsection}{\numberline {7.4.1}Metacognition}{14}{subsubsection.7.4.1}
-\contentsline {subsection}{\numberline {7.5}Sensorimotor contingency}{14}{subsection.7.5}
-\contentsline {subsection}{\numberline {7.6}Predictive Brain}{14}{subsection.7.6}
-\contentsline {subsubsection}{\numberline {7.6.1}statistical learning/prediction is not conscious}{14}{subsubsection.7.6.1}
-\contentsline {subsection}{\numberline {7.7}IIT}{15}{subsection.7.7}
-\contentsline {subsubsection}{\numberline {7.7.1}Information Integration}{15}{subsubsection.7.7.1}
-\contentsline {subsubsection}{\numberline {7.7.2}IIT}{15}{subsubsection.7.7.2}
-\contentsline {subsubsection}{\numberline {7.7.3}Hoel's theory}{15}{subsubsection.7.7.3}
-\contentsline {subsection}{\numberline {7.8}Internal simulation and self-modeling}{15}{subsection.7.8}
-\contentsline {section}{\numberline {8}Counter-intuitive prediction}{15}{section.8}
-\contentsline {subsection}{\numberline {8.1}information closure}{15}{subsection.8.1}
-\contentsline {subsection}{\numberline {8.2}Prediction on split-brain (vs IIT)}{15}{subsection.8.2}
-\contentsline {section}{\numberline {9}Future work}{15}{section.9}
-\contentsline {subsection}{\numberline {9.1}Brain area}{15}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}How to coarse-grain in the neural system}{15}{subsection.9.2}
-\contentsline {section}{\numberline {10}Evolution of conscious mind (not sure but if I have time)}{16}{section.10}
-\contentsline {section}{\numberline {11}Conclusion}{16}{section.11}
+\contentsline {section}{\numberline {2}Non-trivial informational closure\todo [color=SpringGreen]{@Martin:\\todo}}{3}{section*.11}
+\contentsline {section}{\numberline {3}Neural coarse-graining}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Coarse-graining in neural system}{6}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}\todo [color=SpringGreen]{@Martin:\\todo}Neural coarse-graining}{6}{section*.25}
+\contentsline {subsection}{\numberline {3.3}The advantage of NCG}{8}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Resistant to noise}{8}{subsubsection.3.3.1}
+\contentsline {subsubsection}{\numberline {3.3.2}Predictive power}{8}{subsubsection.3.3.2}
+\contentsline {subsubsection}{\numberline {3.3.3}Agent can process information and act at abstract levels}{8}{subsubsection.3.3.3}
+\contentsline {section}{\numberline {4}A neural coarse graining theory of consciousness}{8}{section.4}
+\contentsline {subsection}{\numberline {4.1}Measure of conscious level}{10}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Conscious contents}{10}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Sensory hierarchy and neural coarse-graining \todo [color=Red]{This is super important. I need to deal with this very carefully. Need to completely rewording}}{11}{section*.31}
+\contentsline {subsection}{\numberline {4.4}Information and system theory}{12}{subsection.4.4}
+\contentsline {subsection}{\numberline {4.5}Empirical approaches of measuring neural informational closure}{12}{subsection.4.5}
+\contentsline {section}{\numberline {5}Biological evidence of informational closure in neural system}{12}{section.5}
+\contentsline {section}{\numberline {6}Relation to empirical findings in neuroscience and consciousness studies}{13}{section.6}
+\contentsline {subsection}{\numberline {6.1}Unconscious Processing}{13}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}reflexive behavioural is unconscious / or environment-state dependent}{13}{subsection.6.2}
+\contentsline {subsubsection}{\numberline {6.2.1}Reflection}{13}{subsubsection.6.2.1}
+\contentsline {subsubsection}{\numberline {6.2.2}Blindsight}{13}{subsubsection.6.2.2}
+\contentsline {subsubsection}{\numberline {6.2.3}procedure memory}{13}{subsubsection.6.2.3}
+\contentsline {subsubsection}{\numberline {6.2.4}cerebellum}{13}{subsubsection.6.2.4}
+\contentsline {subsection}{\numberline {6.3}Due to level of abstraction}{14}{subsection.6.3}
+\contentsline {subsubsection}{\numberline {6.3.1}statistical inference}{14}{subsubsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.2}subliminal perception}{14}{subsubsection.6.3.2}
+\contentsline {subsubsection}{\numberline {6.3.3}Libet Experiments}{14}{subsubsection.6.3.3}
+\contentsline {subsection}{\numberline {6.4}Deterministic vs probabilistic}{14}{subsection.6.4}
+\contentsline {section}{\numberline {7}Phenomenology (conscious processing)}{14}{section.7}
+\contentsline {subsection}{\numberline {7.1}Perceptual overflow}{14}{subsection.7.1}
+\contentsline {section}{\numberline {8}Comparison with other theories}{14}{section.8}
+\contentsline {subsection}{\numberline {8.1}Intermediate Level Theory}{14}{subsection.8.1}
+\contentsline {subsubsection}{\numberline {8.1.1}The difference between ILT and our theory}{15}{subsubsection.8.1.1}
+\contentsline {subsection}{\numberline {8.2}first-order theories}{15}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Global Workspace Theory (GWT)}{16}{subsection.8.3}
+\contentsline {subsubsection}{\numberline {8.3.1}Global availability and Broadcasting}{16}{subsubsection.8.3.1}
+\contentsline {subsubsection}{\numberline {8.3.2}Code translation}{16}{subsubsection.8.3.2}
+\contentsline {subsubsection}{\numberline {8.3.3}Stability}{16}{subsubsection.8.3.3}
+\contentsline {subsubsection}{\numberline {8.3.4}broadcasting}{16}{subsubsection.8.3.4}
+\contentsline {subsubsection}{\numberline {8.3.5}Ignition}{16}{subsubsection.8.3.5}
+\contentsline {subsection}{\numberline {8.4}Higher Order Thought theory of consciousness}{17}{subsection.8.4}
+\contentsline {subsubsection}{\numberline {8.4.1}Metacognition}{18}{subsubsection.8.4.1}
+\contentsline {subsection}{\numberline {8.5}Sensorimotor contingency}{18}{subsection.8.5}
+\contentsline {subsection}{\numberline {8.6}Predictive Brain}{18}{subsection.8.6}
+\contentsline {subsubsection}{\numberline {8.6.1}statistical learning/prediction is not conscious}{18}{subsubsection.8.6.1}
+\contentsline {subsection}{\numberline {8.7}Integrated information theory\todo [color=SpringGreen]{Help from Jun?}}{19}{section*.42}
+\contentsline {subsubsection}{\numberline {8.7.1}Hoel's theory\todo [color=SpringGreen]{Help from Marting?}}{19}{section*.43}
+\contentsline {subsection}{\numberline {8.8}Internal simulation and self-modelling}{19}{subsection.8.8}
+\contentsline {section}{\numberline {9}Counter-intuitive prediction}{19}{section.9}
+\contentsline {subsection}{\numberline {9.1}informational closure}{19}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Prediction on split-brain (vs IIT)}{19}{subsection.9.2}
+\contentsline {section}{\numberline {10}Future works}{19}{section.10}
+\contentsline {subsection}{\numberline {10.1}Brain area}{19}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}attention}{19}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}How to coarse-grain in the neural system}{19}{subsection.10.3}
+\contentsline {section}{\numberline {11}Evolution of conscious mind (not sure but if I have time)}{20}{section.11}
+\contentsline {section}{\numberline {12}Conclusion}{20}{section.12}

@@ -56,6 +56,18 @@ Guttenberg, Nicholas, Biehl, Martin, \& Kanai, Ryota. 2016.
   freedom with neural networks.
 \newblock {\em arXiv preprint arXiv:1609.00116}.
 
+\bibitem[\protect\citename{Hoel {\em et~al.}, }2013]{hoel2013quantifying}
+Hoel, Erik~P, Albantakis, Larissa, \& Tononi, Giulio. 2013.
+\newblock Quantifying causal emergence shows that macro can beat micro.
+\newblock {\em Proceedings of the National Academy of Sciences}, {\bf 110}(49),
+  19790--19795.
+
+\bibitem[\protect\citename{Hoel {\em et~al.}, }2016]{hoel2016can}
+Hoel, Erik~P, Albantakis, Larissa, Marshall, William, \& Tononi, Giulio. 2016.
+\newblock Can the macro beat the micro? Integrated information across
+  spatiotemporal scales.
+\newblock {\em Neuroscience of Consciousness}, {\bf 2016}(1), niw012.
+
 \bibitem[\protect\citename{Jackendoff, }1987]{jackendoff1987consciousness}
 Jackendoff, Ray. 1987.
 \newblock {\em Consciousness and the computational mind.}
@@ -71,6 +83,23 @@ Lau, Hakwan, \& Rosenthal, David. 2011.
 \newblock Empirical support for higher-order theories of conscious awareness.
 \newblock {\em Trends in cognitive sciences}, {\bf 15}(8), 365--373.
 
+\bibitem[\protect\citename{Laureys, }2005]{laureys2005neural}
+Laureys, Steven. 2005.
+\newblock The neural correlate of (un) awareness: lessons from the vegetative
+  state.
+\newblock {\em Trends in cognitive sciences}, {\bf 9}(12), 556--559.
+
+\bibitem[\protect\citename{Lemon \& Edgley, }2010]{lemon2010life}
+Lemon, RN, \& Edgley, SA. 2010.
+\newblock Life without a cerebellum.
+\newblock {\em Brain}, {\bf 133}(3), 652--654.
+
+\bibitem[\protect\citename{Mathis \& Mozer, }1995]{mathis1995computational}
+Mathis, Donald~W, \& Mozer, Michael~C. 1995.
+\newblock On the computational utility of consciousness.
+\newblock {\em Pages  11--18 of:} {\em Advances in neural information
+  processing systems}.
+
 \bibitem[\protect\citename{Moreno-Bote {\em et~al.}, }2011]{moreno2011bayesian}
 Moreno-Bote, Rub{\'e}n, Knill, David~C, \& Pouget, Alexandre. 2011.
 \newblock Bayesian sampling in visual perception.
@@ -81,6 +110,11 @@ Moreno-Bote, Rub{\'e}n, Knill, David~C, \& Pouget, Alexandre. 2011.
 Mudrik, Liad, Faivre, Nathan, \& Koch, Christof.
 \newblock Information integration without awareness.
 \newblock {\em Trends in Cognitive Sciences}.
+
+\bibitem[\protect\citename{Overgaard \& Overgaard, }2010]{overgaard2010neural}
+Overgaard, Morten, \& Overgaard, Rikke. 2010.
+\newblock Neural correlates of contents and levels of consciousness.
+\newblock {\em Frontiers in psychology}, {\bf 1}, 164.
 
 \bibitem[\protect\citename{Palmer {\em et~al.}, }2015]{Palmer2015}
 Palmer, Stephanie~E., Marre, Olivier, Berry, Michael~J., \& Bialek, William.
@@ -106,6 +140,12 @@ Prinz, Jesse. 2007.
 \newblock The intermediate level theory of consciousness.
 \newblock {\em The Blackwell companion to consciousness},  257--271.
 
+\bibitem[\protect\citename{{Quian Quiroga} \& Panzeri, }2009]{QuianQuiroga2009}
+{Quian Quiroga}, Rodrigo, \& Panzeri, Stefano. 2009.
+\newblock {Extracting information from neuronal populations: Information theory
+  and decoding approaches}.
+\newblock {\em Nature Reviews Neuroscience}, {\bf 10}(3), 173--185.
+
 \bibitem[\protect\citename{Rosenthal, }2005]{rosenthal2005consciousness}
 Rosenthal, David~M. 2005.
 \newblock {\em Consciousness and mind}.
@@ -124,11 +164,10 @@ Shamir, Maoz. 2014.
   code}.
 \newblock {\em Current Opinion in Neurobiology}, {\bf 25}, 140--148.
 
-\bibitem[\protect\citename{Stahl \& Feigenson, }2015]{Stahl2015}
-Stahl, Aimee~E., \& Feigenson, Lisa. 2015.
-\newblock {Observing the unexpected enhances infants' learning and
-  exploration}.
-\newblock {\em Science}, {\bf 348}(6230), 91--94.
+\bibitem[\protect\citename{Stanley, }2013]{Stanley2013}
+Stanley, Garrett~B. 2013.
+\newblock {Reading and writing the neural code}.
+\newblock {\em Nature Neuroscience}, {\bf 16}(3), 259--263.
 
 \bibitem[\protect\citename{Vul {\em et~al.}, }2008]{vul2008temporal}
 Vul, Edward, Nieuwenstein, Mark, \& Kanwisher, Nancy. 2008.
