@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {2}Non-trivial informational closure\todo [color=SpringGreen]{@Martin:\\todo}}{3}{section*.11}
 \contentsline {section}{\numberline {3}Neural coarse-graining}{5}{section.3}
 \contentsline {subsection}{\numberline {3.1}Coarse-graining in neural system}{6}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}\todo [color=SpringGreen]{@Martin:\\todo}Neural coarse-graining}{6}{section*.25}
+\contentsline {subsection}{\numberline {3.2}\todo [color=SpringGreen]{@Martin:\\todo}Neural coarse-graining}{6}{section*.24}
 \contentsline {subsection}{\numberline {3.3}The advantage of NCG}{8}{subsection.3.3}
 \contentsline {subsubsection}{\numberline {3.3.1}Resistant to noise}{8}{subsubsection.3.3.1}
 \contentsline {subsubsection}{\numberline {3.3.2}Predictive power}{8}{subsubsection.3.3.2}
@@ -11,7 +11,7 @@
 \contentsline {section}{\numberline {4}A neural coarse graining theory of consciousness}{8}{section.4}
 \contentsline {subsection}{\numberline {4.1}Measure of conscious level}{10}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Conscious contents}{10}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Sensory hierarchy and neural coarse-graining \todo [color=Red]{This is super important. I need to deal with this very carefully. Need to completely rewording}}{11}{section*.31}
+\contentsline {subsection}{\numberline {4.3}Sensory hierarchy and neural coarse-graining \todo [color=Red]{This is super important. I need to deal with this very carefully. Need to completely rewording}}{11}{section*.30}
 \contentsline {subsection}{\numberline {4.4}Information and system theory}{12}{subsection.4.4}
 \contentsline {subsection}{\numberline {4.5}Empirical approaches of measuring neural informational closure}{12}{subsection.4.5}
 \contentsline {section}{\numberline {5}Biological evidence of informational closure in neural system}{12}{section.5}
@@ -44,8 +44,8 @@
 \contentsline {subsection}{\numberline {8.5}Sensorimotor contingency}{18}{subsection.8.5}
 \contentsline {subsection}{\numberline {8.6}Predictive Brain}{18}{subsection.8.6}
 \contentsline {subsubsection}{\numberline {8.6.1}statistical learning/prediction is not conscious}{18}{subsubsection.8.6.1}
-\contentsline {subsection}{\numberline {8.7}Integrated information theory\todo [color=SpringGreen]{Help from Jun?}}{19}{section*.42}
-\contentsline {subsubsection}{\numberline {8.7.1}Hoel's theory\todo [color=SpringGreen]{Help from Marting?}}{19}{section*.43}
+\contentsline {subsection}{\numberline {8.7}Integrated information theory\todo [color=SpringGreen]{Help from Jun?}}{19}{section*.41}
+\contentsline {subsubsection}{\numberline {8.7.1}Hoel's theory\todo [color=SpringGreen]{Help from Martin?}}{19}{section*.42}
 \contentsline {subsection}{\numberline {8.8}Internal simulation and self-modelling}{19}{subsection.8.8}
 \contentsline {section}{\numberline {9}Counter-intuitive prediction}{19}{section.9}
 \contentsline {subsection}{\numberline {9.1}informational closure}{19}{subsection.9.1}

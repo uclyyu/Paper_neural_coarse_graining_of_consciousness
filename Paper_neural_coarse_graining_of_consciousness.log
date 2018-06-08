@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210) (preloaded format=xelatex 2018.4.18)  8 JUN 2018 16:22
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210) (preloaded format=xelatex 2018.4.18)  8 JUN 2018 16:50
 entering extended mode
 **./Paper_neural_coarse_graining_of_consciousness.tex
 (Paper_neural_coarse_graining_of_consciousness.tex
@@ -930,9 +930,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 402--404
  []
 
 
-LaTeX Warning: Marginpar on page 5 moved.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 461--463
 
  []
@@ -1169,10 +1166,10 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1152.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1152.
  ) 
 Here is how much of TeX's memory you used:
- 24809 strings out of 428408
- 433393 string characters out of 3159511
- 628966 words of memory out of 3000000
- 27861 multiletter control sequences out of 15000+200000
+ 24798 strings out of 428408
+ 433170 string characters out of 3159511
+ 628416 words of memory out of 3000000
+ 27850 multiletter control sequences out of 15000+200000
  17684 words of font info for 43 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  55i,9n,86p,3138b,986s stack positions out of 5000i,500n,10000p,200000b,50000s
