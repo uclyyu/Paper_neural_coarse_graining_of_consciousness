@@ -17,22 +17,10 @@
 \usepackage{stringstrings}
 \usepackage[explicit]{titlesec}
 \usepackage{sectsty}
-%\usepackage{titlesec}
-
-%\sectionfont{\capitalize}
 
 
 
-%\newcommand\SentenceCase[1]{%
-%	\caselower[e]{#1}%
-%	\capitalize[q]{\thestring}%
-%}
-%\titleformat{\section}{\normalfont\Large\bfseries}{\thesection}{1em}{\SentenceCase{#1}\thestring}
-
-
-
-
-%% Useful packages
+%% ============================== Useful packages ============================= %
 \usepackage[dvipsnames,table,xcdraw]{xcolor}
 \usepackage[round]{natbib}
 \usepackage{amsmath}
@@ -45,7 +33,7 @@
 
 
 
-%% acronym
+%% ================================== acronym ================================= %
 \usepackage{acronym}
 \newacro{ntic}{non-trivial informational closure}
 \newacro{ic}{informational closure}
@@ -60,6 +48,7 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[at]{easylist}
 \usepackage{tcolorbox}
+\usepackage{comment}
 
 
 % Meaning of colours --------------------------------------------------------- %
@@ -77,18 +66,36 @@
 	% Outline items that can be integrated into main text
 		\newenvironment{ants}
 			{
-			 \begin{easylist}[itemize]
-			}
+			 \begin{easylist}[itemize]		
+		 	}
 			{
 			\end{easylist}
 			}
+	
+	% Writing Materials
+		\newenvironment{writingMaterials}
+			{	
+				\begin{tcolorbox}[size=small, colframe=black!20!white, toprule=1mm]
+					Writing Materials
+				\end{tcolorbox}
+
+				\begin{easylist}[itemize]		
+			}
+			{
+				\end{easylist}
+				\begin{tcolorbox}[size=small, bottomrule=1mm, halign=flush right, colframe=black!20!white]
+					Writing Materials
+				\end{tcolorbox}			
+			}	
+		
+		
+		
 % Funcitonal content
 	% Quotes
 		\newcommand{\rewrite}[1]{\textcolor{ForestGreen}{\textit{"#1"}}\newline}
 		
 	% todo
 		% figure
-
 		\newcommand{\includegraphicsTodo}[2][]{%
 			\tcbox[%
 				adjusted title=\LARGE To Be Modified,
@@ -102,7 +109,7 @@
 		
 	
 	% Highlight
-		\newcommand{\highlight}[2][Yellow]{\colorbox{#2}}
+		\newcommand{\highlight}[2][Yellow]{\colorbox{#1}{#2}}
 	
 		% Highlight and comment
 		\newcommand{\highlightAndComment}[3][Yellow]{\todo[color=#1]{#3}\colorbox{#1}{#2}}
@@ -120,8 +127,8 @@
 
 	% idea
 		% text idea
-			\newcommand{\idea}[1]{\noindent
-				\textcolor{Plum}{[[ #1 ]]}}	
+			\newcommand{\idea}[2][Plum]{\noindent
+				\textcolor{#1}{[[ #2 ]]}}	
 		
 		% box idea
 			\newcommand{\ideaBox}[1]{
@@ -162,6 +169,10 @@
 \affil[1]{ARAYA, Inc., Tokyo, Japan}
 
 
+
+% ============================================================================ %
+%                                     Body                                     %
+% ============================================================================ %
 \begin{document}
 	\maketitle
 	\tableofcontents
@@ -181,6 +192,7 @@
 	
 	
 	\section{Introduction}
+	
 	
 		\begin{ants}
 			
@@ -240,6 +252,13 @@
 				@ We finally provide predictions and testable approaches for this theory.
 			
 				
+				@ \todo{Do I need a figure?}
+					\begin{figure}
+						\includegraphicsTodo[width=\textwidth]{WritingMaterials/PDFXCview_2018-06-11_13-37-34.png}
+						\cite{pennartz2017consciousness}
+						\caption{xxxx}
+	   			   	\end{figure}
+				
 		\end{ants}
 
 	
@@ -288,7 +307,7 @@
 
 	\section{Non-trivial informational closure\martin{todo}}
 	
-		\subsection*{Meaning of informational closure}
+		\subsection{Meaning of informational closure}
 			\begin{ants}
 				@ \rewrite{
 					The notion of closure plays a prominent role in systems theory where it is used to identify or define the system in distinction from its environment} \cite{BERTSCHINGER.2006}
@@ -309,7 +328,7 @@
 			\end{ants}
 	
 	
-		\subsection*{Definition of informational closure}
+		\subsection{Definition of informational closure}
 		
 			\begin{figure}
 				\includegraphicsTodo[width=\textwidth]{WritingMaterials/PDFXCview_2018-06-07_17-45-59.png} 
@@ -346,7 +365,7 @@
 		
 		
 		
-		\subsection*{trivial case}
+		\subsection{Trivial case}
 			\begin{ants}
 				@ However, informational closure could be trivial.
 				
@@ -364,7 +383,7 @@
 		
 		
 		
-		\subsection*{Non-trivial informational closure}
+		\subsection{Non-trivial informational closure}
 			\begin{ants}
 				
 				@ \citep{BERTSCHINGER.2006}
@@ -395,7 +414,7 @@
 		
 
 		
-		\subsection*{Achieve non-trivial informational closure}
+		\subsection{Achieve non-trivial informational closure}
 			\begin{ants}
 
 				@ Accurately model deterministic environment 
@@ -410,10 +429,10 @@
 
 
 		
-		\subsection*{informational closure and level identification \ideaCallout{maybe not necessary}}
+		\subsection{Informational closure and level identification \ideaCallout{maybe not necessary}}
 		
 		
-		\subsection*{Biological Creature may try to achieve closure even the environment is not \ideaCallout{Maybe not necessary}}
+		\subsection{Biological Creature may try to achieve closure even the environment is not \ideaCallout{Maybe not necessary}}
 
 
 
@@ -575,11 +594,11 @@
 		
 			
 		\subsection{The advantage of NCG}
-			\begin{ants}
+			\begin{comment}
 				@ Resistant to noise
 				@ Predictive power
 				@ Agents can process information and act at abstract levels
-			\end{ants}
+			\end{comment}
 
 
 			
@@ -612,6 +631,14 @@
 				
 				@ The contents of consciousness correspond to the states of the non-trivial informational closure. 
 				
+				@ \idea[red]{I need to somehow acknowledge \cite{pennartz2017consciousness}}
+					@@ \rewrite{ In conclusion, for a well-behaved representational system, it does not matter whether a neural activation pattern represents an external world feature truthfully or not, as long as the system represents the feature consistently over time and in sensory space.}
+					
+					@@ pennartz levels are defined by functional elements call "functional ensembles". \cite{pennartz2017consciousness} \rewrite{This delineation is different from a scale-based distinction of levels, because different levels are distinguished here based on function , i.e., what each level can accomplish in terms of computation and representation, culminating in perception at the highest level.}
+					
+					
+				
+				
 			%% Following
 				@ In the following part, we....\todo{todo}
 											
@@ -631,6 +658,20 @@
 		% Backup
 		% ==================================== %		
 		\begin{ants}
+			
+			@ \rewrite{ 
+				Multilevel views on consciousness and cognition have been expressed before by many other theorists, such as Oppenheim and Putnam (1958), Attneave (1961), Hofstadter (1979, 1985), Churchland and Sejnowski (1992), Wimsatt (1994), and Lycan (1996).} \cite{pennartz2017consciousness}
+			
+				@@ Oppenheim , P. , \& Putnam , H. ( 1958 ). Unity of science as a working hypothesis . In H. Feigl , G. Maxwell , \& M. Scriven (Eds.), Concepts, theories, and the mind – body problem (pp. 3 – 36 ). Minneapolis : University of Minnesota Press .
+				@@ Attneave , F. ( 1961 ). In defense of homunculi . In W. A. Rosenblith (Ed.), Sensory communication (pp. 777 – 782 ). Cambridge, MA : MIT Press .
+				@@ Hofstadter , D. R. ( 1979 ). Godel, Escher, Bach, an eternal golden braid . New York : Basic Books .
+				@@ Churchland , P. S. , \& Sejnowski , T. J. ( 1992 ). The computational brain . Cambridge, MA : MIT Press .
+				@@ Wimsatt , W. C. ( 1994 ). The ontology of complex systems: levels of organization, perspectives, and causal thickets. Canadian Journal of Philosophy , 20 , 207 – 274 .
+				@@ Lycan ,  W. G.  ( 1996 ).  Consciousness and experience .  Cambridge, MA :  MIT Press .			
+			
+			
+			
+			
 			@ It's important that not the neural states but the coarse-grained state determine contents of consciousness. 
 			
 			@ Consciousness is information 
@@ -697,7 +738,7 @@
 		
 		
 		\subsection{Sensory hierarchy and neural coarse-graining
-			\todo[color=Red]{This is super important. I need to deal with this very carefully. Need to completely rewording}}
+			\todo[color=Red]{This is super important. I need to deal with this very carefully. Need to completely rewording}}\label{sec:SensoryHierarchy}
 		
 			
 
@@ -812,7 +853,7 @@
 
 
 
-	\section{Relation to empirical findings in neuroscience and consciousness studies}
+	\section{Relation to empirical findings in neuroscience and studies of consciousness}
 	
 		\subsection{Unconscious Processing}
 			\begin{ants}
@@ -825,7 +866,7 @@
 		
 		
 	
-		\subsection{reflexive behavioural is unconscious / or environment-state dependent}	
+		\subsection{reflexive behaviours is unconscious (or environment-state dependent processes)}\label{sec:reflexive}
 			\subsubsection{Reflection}
 				\begin{ants}
 					@ Reflexive systems is not informational closured. 
@@ -850,14 +891,18 @@
 					@ cerebellum feed-forward connections, maybe just a policy network.\needref{cerebellum} 
 				\end{ants}
 				
-		\subsection{Due to level of abstraction}
+		\subsection{Under the level of informational closure}
 			\subsubsection{statistical inference}
 				\begin{ants}
 					@ The computation of Bayesian brain is unconscious.			 
 				\end{ants}
 			
 			\subsubsection{subliminal perception}
-			
+				\begin{ants}
+					@ Above chance performance can be performed through non-closure pathway (reflexive behaviours) 
+					
+					@ Due to coarse-graining, mapping between changes of microstate
+				\end{ants}
 			\subsubsection{Libet Experiments}		
 		
 			
@@ -866,38 +911,61 @@
 			\cite{vul2008temporal, moreno2011bayesian, asplund2014attentional, vul2009attention}
 			
 			
-	\section{Phenomenology (conscious processing)}
-	
-			
-		Binocular rivalry
-		Hallucinations
-		Dream / non-dream sleep
-		planning 
-		imagination 
-	
+	\section{About Phenomenology (conscious processing)}
 		\subsection{Perceptual overflow}
+		\subsection{Planning}
+		\subsection{Imagination}
+		\subsection{Dream vs non-dream sleep}
+		\subsection{Binocular rivalry}
+		\subsection{Hallucinations}
+		\subsection{Synaesthesia}
+		
+		
+		
 		
 	\section{Comparison with other theories}
-		\subsection{Intermediate Level Theory}
-		
+	
+		\subsection{Theories about level of abstraction and coarse-graining}
 			\begin{ants}
-				@ \rewrite{
-					The intermediate level theory originally proposed by Ray Jackendoff and further defended and specified by Jesse Prinz proposes that within the hierarchy of representations that are used to describe the cognitive system, conscious experience occurs only for specific levels of representation. The theory is rooted in Jackendoff ’s analysis of different cognitive systems such as vision, language, and music and the subsequent observation that consciousness does not arise anywhere within these systems. According to Jackendoff, consciousness is not associated with low-level, nor with high-level representations, but rather with those implying intermediate levels of processing. For instance, in the domain of object recognition, it is assumed that the visual system comprises a low level with local computations of visual features, an intermediate level reflecting binding and object recognition, and a higher level computing viewpoint invariance and representing abstract categories. According to Jackendoff and Prinz, conscious experience is not comprised of a disunified picture of visual features, nor is it represented by viewinvariant categories. Rather it is composed of bound and specific instances of objects that are assumed to be computed at the intermediate level of representation. In an analogous manner, speech perception can be decomposed into three levels: an acoustic representation of speech sounds at the lower level, a high level involving abstract lexical and syntactic categories, and in between a word recognition level relying on phonological representations. This theory explains why the conscious experience associated with speech perception mostly involves phonological representations, rather than other levels of representations. In Jackendoff and Prinz’ theory,the privileged role of the intermediate level of processing is based on the need for real-time computational efficiency. Indeed, this level of representation is assumed to be the most relevant one regarding ecological and functional needs. Another important aspect of this theory concerns the central role of attention during conscious experience. Here, attention is defined as a selection process that acts as a gate to working memory mechanisms. It performs the function of selecting the relevant information that is amplified afterward and then becomes conscious. Indeed, Prinz acknowledges that activation of an intermediatelevel representation on its own cannot be a sufficient condition for consciousness, given that those representations can be activated during subliminal perception. However, this theory makes the crucial postulate that the amplification of intermediatelevel representations by attention is a necessary and sufficient condition for consciousness. In sum, for each domain of processing, the content of consciousness at a particular moment is supported by a representational structure of intermediate level for that domain, which is selected to enter short-term memory, and enriched by attentional processing.} \cite{banks2009encyclopedia}
+				@ Before the current theory, several theories and perspectives of consciousness have proposed the notion that links level of abstraction or coarse-graining in the neural system to consciousness. 
 				
-				@ \rewrite{
-					In 1987, Ray Jackendoff published Consciousness and the Computational Mind. In it, he posed an important Where question: Where, in the fl ow of information, does consciousness arise? Most cognitive scientists agree that the mind is, in some sense, a computer. It is a device that processes information by transforming representations in accordance with rules. Computational devices decompose into various interconnected subsystems, each of which performs some aspect of a complex task. Given such a decompositional analysis, we can ask: in which subsystems does consciousness arise? If we depict the mind as a vast fl ow chart, and highlight the boxes whose rules and representations are conscious, which boxes should we mark? Jackendoff ’s answer is simple and elegant. He noticed that many of our mental capacities, including our senses and our language systems, are organized hierarchically. In each of these hierarchies, it makes sense to talk about low- , intermediate- , and high- level processing systems. We break down tasks into stages. Appealing to prevailing models of these stages, Jackendoff observed that the intermediate level seems to be privileged with respect to consciousness. Consciousness seems to arise in intermediate- level processing systems and not elsewhere.} \cite{prinz2007intermediate}
-				
-				@ \cite{jackendoff1987consciousness}
-				@ \cite{prinz2007intermediate}
-				@ 2.5D
-			
-			
-				@ about why it is this level
-				@@ \rewrite{
-					Under the computational interpretation, the “why” question means: In what sense are intermediate level representations computationally important or distinctive? Th is is a tractable question, and it may lead to insights into the function of consciousness. Representations at the intermediate level are ideally suited for real- time deliberative behavioral responses. Low- level representations fail to bind features into coherent wholes. If we are going to interact with our environment, the low level is not a good guide. Th e high level is a good deal better for action, but also suboptimal. Th e high level tells us the category of the stimuli we perceive, but from an allocentric point of view. It abstracts away from stimulus features that are crucial for action. If we encounter a predator, the high- level visual representation does not tell us if it is facing toward us or away from us. Without that knowledge, we cannot decide what course of action to take. So, I propose that the intermediate level plays a distinctive role in information processing. It delivers representations that are coherent but viewpoint specifi c. Th ese representations are useful for determining what to do here and now.arg1} \cite{prinz2007intermediate}
-				@@ \rewrite{
-					I conclude that the intermediate level plays a distinctive and important computational role. Some researchers fi nd this puzzling. In wondering why the intermediate level is privileged, they note the arbitrariness of the fact that perceptual hierarchies have three levels. Could they not have two? Or a hundred? Do the 50 or so areas that contribute to visual processing really divide neatly into three levels? I think these puzzles depend on a particular understanding of what the word “intermediate” amounts to. One might get caught up in the fact that the intermediate level is the second stage in a sequence. Call this the “serial understanding of the intermediate level.” Alternatively, one might think of the intermediate level semantically. On this reading, the intermediate level is one that is not abstract and categorical, but not piecemeal or disunifi ed. Th ese notions are all in need of some refi nement, but, as a fi rst approximation, the idea is that intermediate- level representations are neither too specifi c nor too general.}\cite{prinz2007intermediate}
+				@ We shortly describe two theories which is \todo{XXX and XXX} related to our current proposal. 
 			\end{ants}
+			
+			
+			\subsubsection{Intermediate Level Theory}
+				\begin{ants}
+					@ Intermediate Level Theory (ILT) proposes that conscious experience only correlates specific levels of representations in the sensory processing the hierarchy. \citep{prinz2007intermediate, jackendoff1987consciousness}. This theory claims that consciousness only associates with the representation at  intermediate levels rather than the ones at lower-level or higher-level. 
+					
+					
+					@ A critical difference between ILT and our theory is that our theory doesn't assume the direction of coarse-graining should align with the direction of  anatomical processing levels along cortical hierarchies.
+				\end{ants}
+			
+			
+				\begin{comment}
+					%% Back up materials
+					@ \rewrite{
+						The intermediate level theory originally proposed by Ray Jackendoff and further defended and specified by Jesse Prinz proposes that within the hierarchy of representations that are used to describe the cognitive system, conscious experience occurs only for specific levels of representation. The theory is rooted in Jackendoff ’s analysis of different cognitive systems such as vision, language, and music and the subsequent observation that consciousness does not arise anywhere within these systems. According to Jackendoff, consciousness is not associated with low-level, nor with high-level representations, but rather with those implying intermediate levels of processing. For instance, in the domain of object recognition, it is assumed that the visual system comprises a low level with local computations of visual features, an intermediate level reflecting binding and object recognition, and a higher level computing viewpoint invariance and representing abstract categories. According to Jackendoff and Prinz, conscious experience is not comprised of a disunified picture of visual features, nor is it represented by viewinvariant categories. Rather it is composed of bound and specific instances of objects that are assumed to be computed at the intermediate level of representation. In an analogous manner, speech perception can be decomposed into three levels: an acoustic representation of speech sounds at the lower level, a high level involving abstract lexical and syntactic categories, and in between a word recognition level relying on phonological representations. This theory explains why the conscious experience associated with speech perception mostly involves phonological representations, rather than other levels of representations. In Jackendoff and Prinz’ theory,the privileged role of the intermediate level of processing is based on the need for real-time computational efficiency. Indeed, this level of representation is assumed to be the most relevant one regarding ecological and functional needs. Another important aspect of this theory concerns the central role of attention during conscious experience. Here, attention is defined as a selection process that acts as a gate to working memory mechanisms. It performs the function of selecting the relevant information that is amplified afterward and then becomes conscious. Indeed, Prinz acknowledges that activation of an intermediatelevel representation on its own cannot be a sufficient condition for consciousness, given that those representations can be activated during subliminal perception. However, this theory makes the crucial postulate that the amplification of intermediatelevel representations by attention is a necessary and sufficient condition for consciousness. In sum, for each domain of processing, the content of consciousness at a particular moment is supported by a representational structure of intermediate level for that domain, which is selected to enter short-term memory, and enriched by attentional processing.} \cite{banks2009encyclopedia}
+					
+					@ \rewrite{
+						In 1987, Ray Jackendoff published Consciousness and the Computational Mind. In it, he posed an important Where question: Where, in the fl ow of information, does consciousness arise? Most cognitive scientists agree that the mind is, in some sense, a computer. It is a device that processes information by transforming representations in accordance with rules. Computational devices decompose into various interconnected subsystems, each of which performs some aspect of a complex task. Given such a decompositional analysis, we can ask: in which subsystems does consciousness arise? If we depict the mind as a vast fl ow chart, and highlight the boxes whose rules and representations are conscious, which boxes should we mark? Jackendoff ’s answer is simple and elegant. He noticed that many of our mental capacities, including our senses and our language systems, are organized hierarchically. In each of these hierarchies, it makes sense to talk about low- , intermediate- , and high- level processing systems. We break down tasks into stages. Appealing to prevailing models of these stages, Jackendoff observed that the intermediate level seems to be privileged with respect to consciousness. Consciousness seems to arise in intermediate- level processing systems and not elsewhere.} \cite{prinz2007intermediate}
+					
+					@ \cite{jackendoff1987consciousness}
+					@ \cite{prinz2007intermediate}
+					@ 2.5D
+				
+				
+					@ about why it is this level
+					@@ \rewrite{
+						Under the computational interpretation, the “why” question means: In what sense are intermediate level representations computationally important or distinctive? Th is is a tractable question, and it may lead to insights into the function of consciousness. Representations at the intermediate level are ideally suited for real- time deliberative behavioral responses. Low- level representations fail to bind features into coherent wholes. If we are going to interact with our environment, the low level is not a good guide. Th e high level is a good deal better for action, but also suboptimal. Th e high level tells us the category of the stimuli we perceive, but from an allocentric point of view. It abstracts away from stimulus features that are crucial for action. If we encounter a predator, the high- level visual representation does not tell us if it is facing toward us or away from us. Without that knowledge, we cannot decide what course of action to take. So, I propose that the intermediate level plays a distinctive role in information processing. It delivers representations that are coherent but viewpoint specifi c. Th ese representations are useful for determining what to do here and now.arg1} \cite{prinz2007intermediate}
+					@@ \rewrite{
+						I conclude that the intermediate level plays a distinctive and important computational role. Some researchers fi nd this puzzling. In wondering why the intermediate level is privileged, they note the arbitrariness of the fact that perceptual hierarchies have three levels. Could they not have two? Or a hundred? Do the 50 or so areas that contribute to visual processing really divide neatly into three levels? I think these puzzles depend on a particular understanding of what the word “intermediate” amounts to. One might get caught up in the fact that the intermediate level is the second stage in a sequence. Call this the “serial understanding of the intermediate level.” Alternatively, one might think of the intermediate level semantically. On this reading, the intermediate level is one that is not abstract and categorical, but not piecemeal or disunifi ed. Th ese notions are all in need of some refi nement, but, as a fi rst approximation, the idea is that intermediate- level representations are neither too specifi c nor too general.}\cite{prinz2007intermediate}
+					
+					
+					
+					%% Our theory
+					@ However, as we mentioned in Section \ref{sec:SensoryHierarchy}, \rewrite{The notion of ‘ levels ’ deployed here is functional and very different from that of successive anatomical processing stages along cortical hierarchies [75] or from anatomic scales in the brain. The multi-level concept in [2] is more akin to Marr ’ s original distinction between the levels of (neural) implementation, algorithms, and computational theory [122], but focuses on how conscious representations correspond to computational operations at levels with lower complexity and representational capacity.}
+				\end{comment}
 		
 		
 			\subsubsection{The difference between ILT and our theory}
@@ -905,18 +973,44 @@
 				
 				* Our prediction is, if information that is carried by v1 neurons are necessary to complete informational closure, the states of V1 neurons should also co-vary with conscious contents. 	
 				
-		\subsection{first-order theories}
+		\subsection{First-order theories}
+			\begin{writingMaterials}
+				@\rewrite{
+					The ﬁrst-order view maintains that conscious awareness is determined by early sensory activity alone, independently of higher-order representations. Thus the crucial difference between the ﬁrst-order and higher-order views is that the latter but not the former predict that conscious awareness is determined at least in part by prefrontal and parietal activity. Therefore, in the group of ﬁrst-order theorists we include here not only those commonly labeled as such in the philosophical literature [11] but also theorists, such as Ned Block [12,13], who hold that the phenomenal qualities of awareness depend on the biological substrate rather than merely the content of the ﬁrst-order representations, as well as scientists who hold that visual awareness depends on activity in content-speciﬁc regions of the extrastriate cortex [24,25] or on feedback from these regions to the primary visual cortex [26]. Most ﬁrst-order theories explain the difference between awareness and unawareness by positing that the latter is associated with weak information [29] or with representations in alternative (e.g. subcortical) sensory pathways. Thus this view suggests that conscious and unconscious processing will have different functional consequences. Whereas some ﬁrst-order theorists hold that some higher cognitive functions can be performed without conscious awareness [30–32], most ﬁrst-order theorists take a difference in perceptual task performance (e.g. ‘hits’ vs ‘misses’ in a detection task) as evidence for a difference in conscious awareness [12,13,25,26,33]. In other words, they typically associate task performance with awareness..} \cite{lau2011empirical}
+				
+				@ Among those are first-order theories, on which a mental state is conscious if being in that state results in one’s being conscious of something;
+				
+				
+				@  According to first-order views, phenomenal consciousness consists in analog or fine-grained contents that are available to the first-order processes that guide thought and action. So a phenomenally-conscious percept of red, for example, consists in a state with the analog content red which is tokened in such a way as to feed into thoughts about red, or into actions that are in one way or another guided by redness. 
+				
+			\end{writingMaterials}
+		
+		
+		
+		
+		\subsection{Global workspace theory}
+		
 			\begin{ants}
-				@\cite{lau2011empirical}
-					@@ \rewrite{
-						ddThe ﬁrst-order view maintains that conscious awareness is determined by early sensory activity alone, independently of higher-order representations. Thus the crucial difference between the ﬁrst-order and higher-order views is that the latter but not the former predict that conscious awareness is determined at least in part by prefrontal and parietal activity.\\
-						Therefore, in the group of ﬁrst-order theorists we include here not only those commonly labeled as such in the philosophical literature [11] but also theorists, such as Ned Block [12,13], who hold that the phenomenal qualities of awareness depend on the biological substrate rather than merely the content of the ﬁrst-order representations, as well as scientists who hold that visual awareness depends on activity in content-speciﬁc regions of the extrastriate cortex [24,25] or on feedback from these regions to the primary visual cortex [26].\\
-						Most ﬁrst-order theories explain the difference between awareness and unawareness by positing that the latter is associated with weak information [29] or with representations in alternative (e.g. subcortical) sensory pathways. Thus this view suggests that conscious and unconscious processing will have different functional consequences. Whereas some ﬁrst-order theorists hold that some higher cognitive functions can be performed without conscious awareness [30–32], most ﬁrst-order theorists take a difference in perceptual task performance (e.g. ‘hits’ vs ‘misses’ in a detection task) as evidence for a difference in conscious awareness [12,13,25,26,33]. In other words, they typically associate task performance with awareness.}
+				
+				%% Introduction
+				@ Global workspace theory (GWT)\cite{baars1988cognitive, baars1997theatre, baars2002conscious} or Global Neuronal Workspace theory (GNWT)\cite{dehaene1998neuronal, dehaene2001towards, dehaene2011experimental} states that the neural system consists of many separate specialised modules and a central global workspace (GW) which integrates and passes information amount the modules. Only the information that is accessed by the global workspace can be conscious aware of. The modules competes with each other to gain the access to the global workspace and the information from the winner can trigger an all-or-none "ignition" in the global workspace and be globally broadcasted to other modules. Conscious contents then associates information which gains access to the internal global workspace \cite{Dehaene2017}.
+				
+				%% Our theory
+				
+				@ GW in previous data is the place that form NTIC. 
+				
+				@ non-linearity and emergence
+				
+				@ what's the different prediction?
+				
+				@ We predict that when the new 
+				
+				
 				
 			\end{ants}
 		
+	
 		
-		\subsection{Global Workspace Theory (GWT)}
 			\subsubsection{Global availability and Broadcasting}
 			
 			\subsubsection{Code translation}
@@ -930,13 +1024,22 @@
 				\begin{ants}
 					@ the presence of contexts as stable coalitions shaping access to the workspace.
 					
+					@ e ‘all-or-none’ behavior, whereby the incoming evidence either quickly dies out (corresponding to subliminal processing) or is accumulated and ampliﬁed non-linearly into a full-blown state of high-level activity. This global ‘ignition’ has been proposed as a marker of conscious perception [70]. Indeed, empirically, when stimulus strength is varied, the early stages of non-conscious processing typically show a linear variation in activation, whereas conscious access is often characterized by a late non-linear ampliﬁcation of activation which invades a distributed set of parietal, prefrontal and cingulate areas
 				\end{ants}
 			
 			
-			\subsubsection{broadcasting}
+			\subsubsection{Broadcasting}
+			
+			
+			
 			
 			\subsubsection{Ignition}
-				\toWrite{Explain ignite}
+				\begin{writingMaterials}
+					@ Conscious access as an accumulation of evidence leading to an all-or-none ignition What, if anything, remains unique to conscious processing? Although many cognitive operations can be partially launched non-consciously, these operations rarely if ever run to completion in the absence of consciousness. A subliminal stimulus may induce above-chance performance, behavioural priming, and a small amount of brain activity in narrowly deﬁned brain networks, but these measures often increase dramatically as soon as the subject reports seeing the stimulus, especially in high-level areas [46 60,61  ]. Accumulation of evidence has been demonstrated with non-conscious stimuli [59], but only conscious stimuli cross the threshold beyond which an overt strategy can be ﬂexibly deployed
+				\end{writingMaterials}
+				
+				
+				
 
 		
 			\begin{ants}
@@ -997,8 +1100,99 @@
 				\rewrite{
 					Metacognition: cognition that is about another cognitive process as opposed to about objects in the world. In this article we use it mainly to refer to sensory metacognition: a cognitive process that concerns the quality or efﬁcacy of a perceptual process. The capacity of sensory metacognition is sometimes empirically assessed by the correspondence between subjective report and task performance: how closely are they associated with each other on a trial-by-trial basis}\cite{lau2011empirical}
 
+
 		
 		\subsection{Sensorimotor contingency}
+			\begin{ants}
+				%% SMC
+				
+				@ Sensorimotor contingency (SMC) theory of consciousness is proposed to account of conscious perception. It suggests that different types of SMCs give rise to different characteristics of conscious perception \cite{o2001sensorimotor}. 
+				
+				@ The theory radically rejects the view that conscious contents is associated with information encoded in internal representations in the neural system. 
+
+				@ Rather, the quality of conscious perception depends on agents' mastery of SMCs. 
+				
+				@ It emphasizes the importance of the interactions between a system (the neural system) and its. 
+				
+				@ Counter-intuitively, because consciousness inhabits in interactions between agents and environments, this theory suggests that consciousness is not driven by brain activities. Instead, consciousness should be shaped by the way of interaction, i.e. SMCs, between agents and environments. 
+														
+
+				
+				%% Our theory
+				
+				@ Similar to the SMC theory, our theory predicts that the interaction between the neural system and the environment shapes the quality of conscious perception. 
+				
+				@ This is because to achieve NTIC the neural system should maximise the conditional mutual information between the future state of the NTIC process and the environment given the agent's current action (see equation XXX \todo[color=red]{I NEED A EQUATION!}).
+				
+				@ This suggests the to maximise NTIC the NTIC process needs to involve the information about the environmental transition and dynamic after agent preforms an action. 
+				
+				
+				@ Therefore, as a consequence of maximising NTIC, the representation forming NTIC implicitly encodes information about SMCs. 
+				
+				@ In the long-term, once NTIC neural dynamic interoperates the environmental state transition given actions via maximising NTIC, the state space of XXX then is shaped by the new learned SMC
+				
+				@ Accordingly, the way how the agent interacts with the environment influences the structure of the NTIC representation. 
+				
+				
+				
+				@ \todo{Need to involve some sentence from  }
+				
+				@ \idea{Do I need a figure here?}				
+				
+				@ However, in contrast to the SMC theory, our theory suggests the state of NTIC process correlate conscious contents. Therefore, if the NTIC process is formed inside the neural system, we should have correspondent conscious contents in our conscious experience without interacting with the environment. 
+				
+				@ \idea{Not sure here} This can easily explain that the conscious experience of dream is just induced by self-evolved state changes of the NTIC process. 
+				
+				
+				@ Further more the SMC and our theories make complete different prediction about the relationship between SMC and consciousness.
+				
+				@ Contrary to the SMC theory which suggests that consciousness resides on SMCs, our theory predicts that pure S-R contingency between the neural system and the environment can not achieve informational closure within the neural system and therefore is not conscious (please see section \ref{sec:reflexive})
+
+				
+			\end{ants}
+
+		
+			\begin{comment}
+				
+				%% Intro about this theory
+				@ O’Regan and Noë
+				
+				@ In their seminal article O’Regan and Noe¨ (2001) introduce sensorimotor contingencies (SMCs) as the basis of a sensorimotor account of conscious perception.
+				
+				@ In short, different types of SMCs give rise to different qualities of sensory experience
+				
+				@  Second, vision, audition, touch, etc., correspond to domains of knowledge of the respective SMCs that are exercised by an agent as part of its habitual behavior.This ‘‘mastery of SMCs’’ is what lets an agent perceive its environment and adapt its behavior accordingly
+				
+				@ And third, sensory awareness arises when SMCs are integrated with planning, reasoning, and generation of behavior
+				
+				@ The theory is a radical departure from the classical view that the brain constructs an internal representation of the outside world on which higher cognitive processes such as memorizing, reasoning, and planning operat
+				
+				@ perception depends on a practical mastery of sensorimotor dependencies or “sensorimotor contingencies” (SMCs)
+				
+				@ s the importance of brain-body-world interactions in cognitive processes. On sensorimotor theory, the perception of a tomato as a (perceptually present, real, subjectively veridical) tomato is given by practical mastery of the SMCs governing how the sensory responses elicited by the tomato will behave in a variety of situations. 
+				
+				@ ways of acting or as something we do, rather than an internal phenomenal experience or an internal representation of the world (O’Regan \& Noë, 2001)
+				
+				@ \rewrite{I advance this truly astonishing hypothesis: To understand consciousness in humans and animals, we must look not inward, into the recesses of our insides; rather, we need to look to the ways in which each of us, as a whole animal, carries on the processes of living in and with and in response to the world around us . . . You are not your brain . . . Meaningful thought arises only for the whole animal dynamically engaged with its environment . . . And indeed the same is true for the quality of our conscious episodes . . . The taste of licorice is not something that happens in our brains.} (Noë, 2009, pp. 7–8)
+				
+				@ Because consciousness resides in our behavioural interactions with the world rather than in our brain, the theory postulates that consciousness does not derive from brain activity at all. Consequently, there is no need to explain how brain activity causes or constitutes consciousness, because it does not. 
+				
+				@ O ’ Regan, J.K. and Noë, A. (2001) A sensorimotor account of vision and visual consciousness. Behav. Brain Sci. 24, 939 – 973
+				
+				@ SMC theory argues that consciousness arises from the execution of SMCs, resulting in brain – environmental interactions. 
+				
+				@ The second variant of SMC theory postulates that ‘ it is not movement as such, but the consequences of potential movement that play a role ’ (in perceptual experience) ([5], p. 1015; see also [9,10,19,20]). This ‘ non-acute ’ or dispositional variant marks a signi ﬁ cant shift in position because it de-emphasizes actual movement. \cite{pennartz2017consciousness}
+				
+				@ It stipulates that for us to be conscious of something in the environment (or of our way of interacting with the environment)						
+								
+			\end{comment}
+		
+		
+		
+		
+		
+		
+		
 		\subsection{Predictive Brain}
 			
 			* Because of this XXXX, the representation has the maximal \ac{ntic} also has the maximal predictive power of the external environment. \todo[inline]{I need math here!!}
@@ -1076,11 +1270,11 @@
 				\end{ants}
 				
 				
-		\subsection{Internal simulation and self-modelling}
+		\subsection{Internal simulation and self-modelling theory}
 		
 		
 		
-	\section{Counter-intuitive prediction}	
+	\section{Theory predictions (Counter-intuitive prediction)}	
 	
 		\subsection{informational closure}
 			\begin{ants}
@@ -1105,13 +1299,13 @@
 			
 			@ Lack of direct evidence because no one focus on informational closure
 			
-			@
 			
 		\end{ants}
 	
-		\subsection{Brain area}
-		\subsection{attention}
-		\subsection{How to coarse-grain in the neural system}
+		\subsection{About location of NTIC}
+		\subsection{Attention}
+%		\subsection{We didn't specify what dynamic in the NTIC process associates with conscious contents.}
+		\subsection{Finding coarse-grain function}
 			\begin{ants}
 				@ It's not clear what the coarse-graining function is.\todo[color=red]{this should be explained by environmental deterministic}
 				
@@ -1125,8 +1319,8 @@
 				
 			\end{ants}
 	
-	\section{Evolution of conscious mind (not sure but if I have time)}
-		\cite{dennett2008kinds}
+%	\section{Evolution of conscious mind (not sure but if I have time)}
+%		\cite{dennett2008kinds}
 		
 
 	\section{Conclusion}

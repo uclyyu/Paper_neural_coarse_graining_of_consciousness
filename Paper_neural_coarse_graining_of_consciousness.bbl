@@ -7,11 +7,21 @@ Asplund, Christopher~L, Fougnie, Daryl, Zughni, Samir, Martin, Justin~W, \&
   conscious perception.
 \newblock {\em Psychological science}, {\bf 25}(3), 824--831.
 
-\bibitem[\protect\citename{Banks, }2009]{banks2009encyclopedia}
-Banks, William~P. 2009.
-\newblock {\em Encyclopedia of consciousness}.
-\newblock  Vol. 1.
-\newblock Academic Press.
+\bibitem[\protect\citename{Baars, }1988]{baars1988cognitive}
+Baars, Bernard~J. 1988.
+\newblock {\em A cognitive theory of consciousness}.
+\newblock Cambridge University Press.
+
+\bibitem[\protect\citename{Baars, }1997]{baars1997theatre}
+Baars, Bernard~J. 1997.
+\newblock In the theatre of consciousness. Global workspace theory, a rigorous
+  scientific theory of consciousness.
+\newblock {\em Journal of Consciousness Studies}, {\bf 4}(4), 292--309.
+
+\bibitem[\protect\citename{Baars, }2002]{baars2002conscious}
+Baars, Bernard~J. 2002.
+\newblock The conscious access hypothesis: origins and recent evidence.
+\newblock {\em Trends in cognitive sciences}, {\bf 6}(1), 47--52.
 
 \bibitem[\protect\citename{Bertschinger {\em et~al.}, }2006]{BERTSCHINGER.2006}
 Bertschinger, Nils, Olbrich, Eckehard, Ay, Nihat, \& Jost, J{\"u}rgen. 2006.
@@ -23,6 +33,23 @@ Bertschinger, Nils, Olbrich, Eckehard, Ay, Nihat, \& Jost, J{\"u}rgen. 2006.
 Binder, Marc~D, Hirokawa, Nobutaka, \& Windhorst, Uwe. 2009.
 \newblock Encyclopedia of neuroscience.
 
+\bibitem[\protect\citename{Dehaene \& Changeux, }2011]{dehaene2011experimental}
+Dehaene, Stanislas, \& Changeux, Jean-Pierre. 2011.
+\newblock Experimental and theoretical approaches to conscious processing.
+\newblock {\em Neuron}, {\bf 70}(2), 200--227.
+
+\bibitem[\protect\citename{Dehaene \& Naccache, }2001]{dehaene2001towards}
+Dehaene, Stanislas, \& Naccache, Lionel. 2001.
+\newblock Towards a cognitive neuroscience of consciousness: basic evidence and
+  a workspace framework.
+\newblock {\em Cognition}, {\bf 79}(1-2), 1--37.
+
+\bibitem[\protect\citename{Dehaene {\em et~al.}, }1998]{dehaene1998neuronal}
+Dehaene, Stanislas, Kerszberg, Michel, \& Changeux, Jean-Pierre. 1998.
+\newblock A neuronal model of a global workspace in effortful cognitive tasks.
+\newblock {\em Proceedings of the national Academy of Sciences}, {\bf 95}(24),
+  14529--14534.
+
 \bibitem[\protect\citename{Dehaene {\em et~al.},
   }2017a]{dehaene2017consciousness}
 Dehaene, Stanislas, Lau, Hakwan, \& Kouider, Sid. 2017a.
@@ -32,11 +59,6 @@ Dehaene, Stanislas, Lau, Hakwan, \& Kouider, Sid. 2017a.
 \bibitem[\protect\citename{Dehaene {\em et~al.}, }2017b]{Dehaene2017}
 Dehaene, Stanislas, Lau, Hakwan, \& Kouider, Sid. 2017b.
 \newblock {What is consciousness, and could machines have it?}
-
-\bibitem[\protect\citename{Dennett, }2008]{dennett2008kinds}
-Dennett, Danile~C. 2008.
-\newblock {\em Kinds of minds: Toward an understanding of consciousness}.
-\newblock Basic Books.
 
 \bibitem[\protect\citename{Eurich \& Wilke, }2000]{eurich2000multidimensional}
 Eurich, Christian~W, \& Wilke, Stefan~D. 2000.
@@ -111,6 +133,11 @@ Mudrik, Liad, Faivre, Nathan, \& Koch, Christof.
 \newblock Information integration without awareness.
 \newblock {\em Trends in Cognitive Sciences}.
 
+\bibitem[\protect\citename{O'Regan \& No{\"e}, }2001]{o2001sensorimotor}
+O'Regan, J~Kevin, \& No{\"e}, Alva. 2001.
+\newblock A sensorimotor account of vision and visual consciousness.
+\newblock {\em Behavioral and brain sciences}, {\bf 24}(5), 939--973.
+
 \bibitem[\protect\citename{Overgaard \& Overgaard, }2010]{overgaard2010neural}
 Overgaard, Morten, \& Overgaard, Rikke. 2010.
 \newblock Neural correlates of contents and levels of consciousness.
@@ -122,6 +149,12 @@ Palmer, Stephanie~E., Marre, Olivier, Berry, Michael~J., \& Bialek, William.
 \newblock {Predictive information in a sensory population}.
 \newblock {\em Proceedings of the National Academy of Sciences}, {\bf 112}(22),
   6908--6913.
+
+\bibitem[\protect\citename{Pennartz, }2017]{pennartz2017consciousness}
+Pennartz, Cyriel~MA. 2017.
+\newblock Consciousness, Representation, Action: The Importance of Being
+  Goal-Directed.
+\newblock {\em Trends in cognitive sciences}.
 
 \bibitem[\protect\citename{PFANTE {\em et~al.}, }2014]{PFANTE.2014}
 PFANTE, OLIVER, BERTSCHINGER, NILS, OLBRICH, ECKEHARD, AY, NIHAT, \& JOST,
