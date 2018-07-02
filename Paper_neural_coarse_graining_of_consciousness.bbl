@@ -33,6 +33,12 @@ Bertschinger, Nils, Olbrich, Eckehard, Ay, Nihat, \& Jost, J{\"u}rgen. 2006.
 Binder, Marc~D, Hirokawa, Nobutaka, \& Windhorst, Uwe. 2009.
 \newblock Encyclopedia of neuroscience.
 
+\bibitem[\protect\citename{Clark, }2013]{clark_2013}
+Clark, Andy. 2013.
+\newblock Whatever next? Predictive brains, situated agents, and the future of
+  cognitive science.
+\newblock {\em Behavioral and Brain Sciences}, {\bf 36}(3), 181–204.
+
 \bibitem[\protect\citename{Dehaene \& Changeux, }2011]{dehaene2011experimental}
 Dehaene, Stanislas, \& Changeux, Jean-Pierre. 2011.
 \newblock Experimental and theoretical approaches to conscious processing.
@@ -78,6 +84,16 @@ Guttenberg, Nicholas, Biehl, Martin, \& Kanai, Ryota. 2016.
   freedom with neural networks.
 \newblock {\em arXiv preprint arXiv:1609.00116}.
 
+\bibitem[\protect\citename{Helmholtz, }1866]{helmholtz1866concerning}
+Helmholtz, H~von. 1866.
+\newblock Concerning the perceptions in general.
+\newblock {\em Treatise on physiological optics,}.
+
+\bibitem[\protect\citename{Hobson \& Friston, }2016]{hobson2016response}
+Hobson, J~Allan, \& Friston, Karl~J. 2016.
+\newblock A response to our theatre critics.
+\newblock {\em Journal of Consciousness Studies}, {\bf 23}(3-4), 245--254.
+
 \bibitem[\protect\citename{Hoel {\em et~al.}, }2013]{hoel2013quantifying}
 Hoel, Erik~P, Albantakis, Larissa, \& Tononi, Giulio. 2013.
 \newblock Quantifying causal emergence shows that macro can beat micro.
@@ -90,6 +106,12 @@ Hoel, Erik~P, Albantakis, Larissa, Marshall, William, \& Tononi, Giulio. 2016.
   spatiotemporal scales.
 \newblock {\em Neuroscience of Consciousness}, {\bf 2016}(1), niw012.
 
+\bibitem[\protect\citename{Hohwy, }2013]{Hohwy2013}
+Hohwy, Jakob. 2013.
+\newblock {\em The Predictive Mind}.
+\newblock Oxford University Press.
+\newblock 187 cites:.
+
 \bibitem[\protect\citename{Jackendoff, }1987]{jackendoff1987consciousness}
 Jackendoff, Ray. 1987.
 \newblock {\em Consciousness and the computational mind.}
@@ -99,6 +121,12 @@ Jackendoff, Ray. 1987.
 Jonas, Eric, \& Kording, Konrad~Paul. 2017.
 \newblock Could a neuroscientist understand a microprocessor?
 \newblock {\em PLoS computational biology}, {\bf 13}(1), e1005268.
+
+\bibitem[\protect\citename{Lamme, }2015]{lamme2015predictive}
+Lamme, Victor. 2015.
+\newblock {\em Predictive coding is unconscious, so that consciousness happens
+  now}.
+\newblock Open MIND. Frankfurt am Main: MIND Group.
 
 \bibitem[\protect\citename{Lau \& Rosenthal, }2011]{lau2011empirical}
 Lau, Hakwan, \& Rosenthal, David. 2011.
@@ -121,6 +149,11 @@ Mathis, Donald~W, \& Mozer, Michael~C. 1995.
 \newblock On the computational utility of consciousness.
 \newblock {\em Pages  11--18 of:} {\em Advances in neural information
   processing systems}.
+
+\bibitem[\protect\citename{Melloni, }2015]{Melloni2015}
+Melloni, Lucia. 2015.
+\newblock {Consciousness as Inference in Time}.
+\newblock {\em Open MIND}, {\bf 22}.
 
 \bibitem[\protect\citename{Moreno-Bote {\em et~al.}, }2011]{moreno2011bayesian}
 Moreno-Bote, Rub{\'e}n, Knill, David~C, \& Pouget, Alexandre. 2011.
@@ -190,6 +223,13 @@ Sederberg, Audrey~J, MacLean, Jason~N, \& Palmer, Stephanie~E. 2018.
 \newblock Learning to make external sensory stimulus predictions using internal
   correlations in populations of neurons.
 \newblock {\em Proceedings of the National Academy of Sciences},  201710779.
+
+\bibitem[\protect\citename{Seth, }2014]{SethPP2014}
+Seth, Anil~K. 2014.
+\newblock A predictive processing theory of sensorimotor contingencies:
+  Explaining the puzzle of perceptual presence and its absence in synesthesia.
+\newblock {\em Cognitive Neuroscience}, {\bf 5}(2), 97--118.
+\newblock 51 cites:.
 
 \bibitem[\protect\citename{Shamir, }2014]{Shamir2014}
 Shamir, Maoz. 2014.

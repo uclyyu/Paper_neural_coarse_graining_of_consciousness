@@ -1,9 +1,9 @@
 \select@language {english}
 \contentsline {section}{\numberline {1}Introduction}{3}{section.1}
-\contentsline {section}{\numberline {2}Non-trivial informational closure\todo [color=SpringGreen]{@Martin:\\todo}}{5}{section*.14}
-\contentsline {subsection}{\numberline {2.1}Meaning of informational closure}{5}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Definition of informational closure}{5}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Trivial case}{6}{subsection.2.3}
+\contentsline {section}{\numberline {2}Non-trivial informational closure\todo [color=SpringGreen]{@Martin:\\todo}}{4}{section*.14}
+\contentsline {subsection}{\numberline {2.1}Meaning of informational closure}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Definition of informational closure}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Trivial case}{4}{subsection.2.3}
 \contentsline {subsection}{\numberline {2.4}Non-trivial informational closure}{6}{subsection.2.4}
 \contentsline {subsection}{\numberline {2.5}Achieve non-trivial informational closure}{6}{subsection.2.5}
 \contentsline {subsection}{\numberline {2.6}Informational closure and level identification \todo [color=Thistle, size=\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip ]{maybe not necessary}}{7}{section*.16}
@@ -31,14 +31,15 @@
 \contentsline {subsubsection}{\numberline {6.3.2}subliminal perception}{15}{subsubsection.6.3.2}
 \contentsline {subsubsection}{\numberline {6.3.3}Libet Experiments}{15}{subsubsection.6.3.3}
 \contentsline {subsection}{\numberline {6.4}Deterministic vs probabilistic}{15}{subsection.6.4}
-\contentsline {section}{\numberline {7}About Phenomenology (conscious processing)}{16}{section.7}
-\contentsline {subsection}{\numberline {7.1}Perceptual overflow}{16}{subsection.7.1}
-\contentsline {subsection}{\numberline {7.2}Planning}{16}{subsection.7.2}
-\contentsline {subsection}{\numberline {7.3}Imagination}{16}{subsection.7.3}
-\contentsline {subsection}{\numberline {7.4}Dream vs non-dream sleep}{16}{subsection.7.4}
-\contentsline {subsection}{\numberline {7.5}Binocular rivalry}{16}{subsection.7.5}
-\contentsline {subsection}{\numberline {7.6}Hallucinations}{16}{subsection.7.6}
-\contentsline {subsection}{\numberline {7.7}Synaesthesia}{16}{subsection.7.7}
+\contentsline {section}{\numberline {7}About Phenomenology (conscious processing)}{15}{section.7}
+\contentsline {subsection}{\numberline {7.1}Perceptual overflow}{15}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Volition and freewill}{15}{subsection.7.2}
+\contentsline {subsection}{\numberline {7.3}Planning}{16}{subsection.7.3}
+\contentsline {subsection}{\numberline {7.4}Imagination}{16}{subsection.7.4}
+\contentsline {subsection}{\numberline {7.5}Dream vs non-dream sleep}{16}{subsection.7.5}
+\contentsline {subsection}{\numberline {7.6}Binocular rivalry}{16}{subsection.7.6}
+\contentsline {subsection}{\numberline {7.7}Hallucinations}{16}{subsection.7.7}
+\contentsline {subsection}{\numberline {7.8}Synaesthesia}{16}{subsection.7.8}
 \contentsline {section}{\numberline {8}Comparison with other theories}{16}{section.8}
 \contentsline {subsection}{\numberline {8.1}Theories about level of abstraction and coarse-graining}{16}{subsection.8.1}
 \contentsline {subsubsection}{\numberline {8.1.1}Intermediate Level Theory}{16}{subsubsection.8.1.1}
@@ -53,16 +54,16 @@
 \contentsline {subsection}{\numberline {8.4}Higher Order Thought theory of consciousness}{18}{subsection.8.4}
 \contentsline {subsubsection}{\numberline {8.4.1}Metacognition}{19}{subsubsection.8.4.1}
 \contentsline {subsection}{\numberline {8.5}Sensorimotor contingency}{19}{subsection.8.5}
-\contentsline {subsection}{\numberline {8.6}Predictive Brain}{20}{subsection.8.6}
-\contentsline {subsubsection}{\numberline {8.6.1}statistical learning/prediction is not conscious}{20}{subsubsection.8.6.1}
-\contentsline {subsection}{\numberline {8.7}Integrated information theory\todo [color=SpringGreen]{Help from Jun?}}{21}{section*.40}
-\contentsline {subsubsection}{\numberline {8.7.1}Hoel's theory\todo [color=SpringGreen]{Help from Martin?}}{21}{section*.41}
-\contentsline {subsection}{\numberline {8.8}Internal simulation and self-modelling theory}{21}{subsection.8.8}
-\contentsline {section}{\numberline {9}Theory predictions (Counter-intuitive prediction)}{21}{section.9}
-\contentsline {subsection}{\numberline {9.1}informational closure}{21}{subsection.9.1}
-\contentsline {subsection}{\numberline {9.2}Prediction on split-brain (vs IIT)}{21}{subsection.9.2}
-\contentsline {section}{\numberline {10}Future works}{22}{section.10}
-\contentsline {subsection}{\numberline {10.1}About location of NTIC}{22}{subsection.10.1}
-\contentsline {subsection}{\numberline {10.2}Attention}{22}{subsection.10.2}
-\contentsline {subsection}{\numberline {10.3}Finding coarse-grain function}{22}{subsection.10.3}
-\contentsline {section}{\numberline {11}Conclusion}{22}{section.11}
+\contentsline {subsection}{\numberline {8.6}Predictive Processing}{20}{subsection.8.6}
+\contentsline {subsubsection}{\numberline {8.6.1}statistical learning/prediction is not conscious}{23}{subsubsection.8.6.1}
+\contentsline {subsection}{\numberline {8.7}Integrated information theory\todo [color=SpringGreen]{Help from Jun?}}{23}{section*.40}
+\contentsline {subsubsection}{\numberline {8.7.1}Hoel's theory\todo [color=SpringGreen]{Help from Martin?}}{23}{section*.41}
+\contentsline {subsection}{\numberline {8.8}Internal simulation and self-modelling theory}{24}{subsection.8.8}
+\contentsline {section}{\numberline {9}Theory predictions (Counter-intuitive prediction)}{24}{section.9}
+\contentsline {subsection}{\numberline {9.1}informational closure}{24}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Prediction on split-brain (vs IIT)}{24}{subsection.9.2}
+\contentsline {section}{\numberline {10}Future works}{24}{section.10}
+\contentsline {subsection}{\numberline {10.1}About location of NTIC}{24}{subsection.10.1}
+\contentsline {subsection}{\numberline {10.2}Attention}{24}{subsection.10.2}
+\contentsline {subsection}{\numberline {10.3}Finding coarse-grain function}{24}{subsection.10.3}
+\contentsline {section}{\numberline {11}Conclusion}{24}{section.11}
