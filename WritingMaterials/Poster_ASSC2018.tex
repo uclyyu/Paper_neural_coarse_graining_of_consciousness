@@ -1,0 +1,161 @@
+\documentclass[utf8]{article}
+
+
+
+
+%% Language and font encodings
+\usepackage[english]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+%% ============================== Useful packages ============================= %
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage[round]{natbib}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{authblk}
+\usepackage{float}
+\usepackage{tikz}
+
+%% Sets page size and margins
+%\usepackage[a4paper, top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=4cm]{geometry}
+\usepackage[papersize={10in, 12in}, top=3cm,bottom=2cm,left=2in,right=2in,marginparwidth=1.8in]{geometry}
+
+
+\begin{document}
+
+
+
+%% ----------------------------- information flow -----------------------------
+informational closure
+
+
+Information flow $J_{t}$ from environment to a system at time $t$ can be defined as
+\begin{equation}\label{eq:InformationFlow}
+\left.\begin{array}
+{rl}{J_{t}(E \rightarrow Y )} & {:= I(Y_{t+1};E_{t}|Y_{t})} \\
+{ } & { \ = H(Y_{t+1}|Y_{t})-H(Y_{t+1}|Y_{t},E_{t})} \\
+{ } & { \ = H(E_{t}|Y_{t})-H(Y_{t}|Y_{t},Y_{t+1})} \\
+{ } & { \ = H(E_{t}|Y_{t})-H(E_{t}|Y_{t},Y_{t+1})}\\
+{ } & { \ = I(Y_{t+1};E_{t}) - (I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t}))}
+\end{array}\right.
+\end{equation}
+
+
+
+Rewrite 
+\begin{equation}
+I(Y_{t+1};E_{t}|Y_{t}) = 
+I(Y_{t+1};E_{t}) - (I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t}))
+\end{equation}
+
+
+
+% ---------------------------------- Trivial --------------------------------- %
+Trivial case
+\begin{equation}
+\left.\begin{array}
+{l}{I(Y_{t+1};E_{t})=0}\\
+{I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t})=0}
+\end{array}\right.
+\end{equation}
+
+
+\begin{equation}
+\begin{aligned}
+{l}{I(Y_{t+1};E_{t})=0}&&{\Rightarrow}&&{J_{t}(E \rightarrow Y )=0}
+\end{aligned}
+\end{equation}
+
+
+
+
+% -------------------------------- Define NTIC ------------------------------- %
+\noindent [[ NTIC ]]
+%\begin{equation}
+%\left.\begin{array}
+%{rl}{NTIC} & {:=I(Y_{t+1};E_{t},\dots,E_{t-m})-I(Y_{t+1};E_{t},\dots,E_{t-m}|Y_{t})}\\
+%{ } & {=I(Y_{t+1};E_{t},\dots,E_{t-m})-I(Y_{t+1};E_{t}|Y_{t})}
+%\end{array} \right.
+%\end{equation}
+
+\noindent In non-trivial cases, 
+\begin{equation}
+I(Y_{t+1};E_{t})\neq0, 
+\end{equation}
+This suggests that the process encodes information about the future state of the environment.\\
+Therefore, informational closure can be achieved by
+
+\begin{equation}
+I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t}) >0
+\end{equation}
+
+\noindent And non-trivial information closure (NTIC) can be defined as
+
+\begin{equation}
+\left.\begin{array}
+{rl}{NTIC} & {:=I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t})}\\
+{ } & {\ =I(Y_{t+1};E_{t})-I(Y_{t+1};E_{t}|Y_{t})}
+\end{array} \right.
+\end{equation}
+
+
+% --------------------------------- Maximise --------------------------------- %
+
+
+%\begin{equation}
+%max(NTIC) = max(I(Y_{t+1};Y_{t}))\ \&\ min(I(Y_{t+1};Y_{t}|E_{t}))
+%\end{equation}
+%
+%
+%\begin{equation}
+%\begin{aligned}
+%& maximise & NTIC & \\
+%& s.t. & maximise & I(Y_{t+1};Y_{t})\\
+%& & minimise & I(Y_{t+1};Y_{t}|E_{t})
+%\end{aligned}
+%\end{equation}
+
+
+
+
+% --------------------------------- Maximise --------------------------------- %
+%\begin{equation}
+%\text{To maximize } NTIC \text{ is equivalent to}
+%\end{equation}
+
+\noindent To maximize $NTIC$ is equivalent to
+
+\begin{equation}
+\begin{aligned}
+& \text{maximise} & { } & I(Y_{t+1};Y_{t}) & { } & and \\
+& \text{minimise} & { } & I(Y_{t+1};Y_{t}|E_{t}) & { }
+\end{aligned}
+\end{equation}
+
+%\begin{equation}
+%\left.\begin{array}
+%%{rl}{maximize} & {NTIC}\\
+%%{maximize} & {I(Y_{t+1};Y_{t})}\\
+%%{minimize} & {I(Y_{t+1};Y_{t}|E_{t})}
+%
+%
+%
+%\end{array} \right.
+%\end{equation}
+
+
+\cite{guttenberg2016neural}
+\cite{BERTSCHINGER.2006}
+\cite{jackendoff1987consciousness}
+\cite{hoel2013quantifying}
+\cite{hoel2016can}
+
+
+\bibliographystyle{authordate1}
+\bibliography{ref}
+
+
+
+\end{document}

@@ -75,20 +75,18 @@
 	% Writing Materials
 		\newenvironment{writingMaterials}
 			{	
-				\begin{tcolorbox}[size=small, colframe=black!20!white, toprule=1mm]
-					Writing Materials
-				\end{tcolorbox}
-
-				\begin{easylist}[itemize]		
+			\begin{tcolorbox}[size=small, colframe=black!20!white, toprule=1mm]
+				Writing Materials
+			\end{tcolorbox}
+			
+			\begin{easylist}[itemize]		
 			}
 			{
-				\end{easylist}
-				\begin{tcolorbox}[size=small, bottomrule=1mm, halign=flush right, colframe=black!20!white]
-					Writing Materials
-				\end{tcolorbox}			
+			\end{easylist}
+			\begin{tcolorbox}[size=small, bottomrule=1mm, halign=flush right, colframe=black!20!white]
+				Writing Materials
+			\end{tcolorbox}			
 			}	
-		
-		
 		
 % Funcitonal content
 	% Quotes
@@ -330,39 +328,61 @@
 	
 		\subsection{Definition of informational closure}
 		
-			\begin{figure}
-				\includegraphicsTodo[width=\textwidth]{WritingMaterials/PDFXCview_2018-06-07_17-45-59.png} 
-				\cite{BERTSCHINGER.2006} I need something like this 
-				\caption{xxxx}
-				\label{fig:AgentAndEnv}			
-			\end{figure}
-
-			
-			\begin{ants}				
-				@ Formally, then, a system is informationally closed if (almost) no information flows into it from the environment.
-				
-				@ \rewrite{
-					The notion of informational closure refers to a situation where the information flow between the environment and the system tends to zero.} \cite{BERTSCHINGER.2006}
-				
-				@ Mathematically, informational closure can be define and measured by as the degree of information flowing from the environment to a system.
+			\noindent Information flow $J_{t}$ from environment $E$ to a system $Y$ at time $t$ can be defined as			
 				\begin{equation}\label{eq:InformationFlow}
 				\left.\begin{array}
-				{rl}{J_{n}(E \rightarrow S )} & { = MI(S_{n+1};E_{n}|S_{n})} \\
-				{ } & { = H(S_{n+1}|S_{n})-H(S_{n+1}|S_{n},E_{n})} \\
-				{ } & { = H(E_{n}|S_{n})-H(E_{n}|S_{n},S_{n+1})} \\
-				{ } & { = H(E_{n}|S_{n})-H(E_{n}|S_{n},S_{n+1})}
+				{rl}{J_{t}(E \rightarrow Y )} & {:= I(Y_{t+1};E_{t}|Y_{t})} \\
+				%{ } & { \ = H(Y_{t+1}|Y_{t})-H(Y_{t+1}|Y_{t},E_{t})} \\
+				%{ } & { \ = H(E_{t}|Y_{t})-H(Y_{t}|Y_{t},Y_{t+1})} \\
+				%{ } & { \ = H(E_{t}|Y_{t})-H(E_{t}|Y_{t},Y_{t+1})}\\
+				{ } & { \ = I(Y_{t+1};E_{t}) - (I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t}))}
 				\end{array}\right.
 				\end{equation}
-				
-				
-				@ \ref{eq:InformationFlow} can be rewritten as 
+		
+				\begin{figure}
+					\includegraphics[width=\textwidth]{WritingMaterials/SystemAndEnv.pdf} 
+					\caption{Figure adapted from \cite{BERTSCHINGER.2006}}
+					\label{fig:SystemAndEnv}	
+				\end{figure}
+			
+			
+			\noindent
+			Based on the definition from \cite{BERTSCHINGER.2006}, a system is informational closured when information flow between the environment and the system is close to zero.
+
+
+			\noindent However, achieving information closure (minimising $J_t$) could be trivial, which means the environment and the system are entirely independent of each other.
 				\begin{equation}
-				MI(S_{n+1};E_{n}|S_{n}) = 
-				MI(S_{n+1};E_{n}) - (MI(S_{n+1};S_{n})-MI(S_{n+1};S_{n}|E_{n}))
+				\begin{aligned}
+				{I(Y_{t+1};E_{t})=0}&&{\Rightarrow}&&{J_{t}(E \rightarrow Y )=0}
+				\end{aligned}
+				\end{equation}
+
+			\noindent In the non-trivial case, the system trying to encode environmental dynamic can also achieve informational closure. This means
+				\begin{equation}
+				I(Y_{t+1};E_{t})\neq0, 
+				\end{equation}
+			
+			
+			
+			\noindent And, non-trivial informational closure can be defined as 		
+				\begin{equation}
+				\left.\begin{array}
+				{rl}{NTIC} & {:=I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t})}\\
+				{ } & {\ =I(Y_{t+1};E_{t})-I(Y_{t+1};E_{t}|Y_{t})}
+				\end{array} \right.
 				\end{equation}
 				
-			\end{ants}
-		
+				
+			\noindent Therefore, Maximising NTIC is equivalent to
+				\begin{equation}
+				\begin{aligned}
+				& \text{maximise} & { } & I(Y_{t+1};Y_{t}) & { } & \text{and} \\
+				& \text{minimise} & { } & I(Y_{t+1};Y_{t}|E_{t}) & { }
+				\end{aligned}
+				\end{equation}
+			
+				
+
 		
 		
 		\subsection{Trivial case}
@@ -604,10 +624,32 @@
 			
 
 	\section{A neural coarse graining theory of consciousness}
-		\toWrite{Need to describe my intuition more concretely }
+		\ideaBox{Need to describe my intuition more concretely}
+		
 		
 		\begin{ants}
+			\toWrite{Do I need to start with my philosophical intuition?}
 			
+			@ Through coarse-graining, we can define a new set of variables.
+			
+			@ If the new set of variables are informational closured, then this creates a new "reality" for all the variables inside. 
+			
+			@ Reality means the all the information (include variables and the relationships) within the boundary of causal or informational influence between variables.
+			
+			@ This is the same as "if a tree falls in a forest" thought experiment. 
+			
+			@ 
+			
+			
+		\end{ants}
+		
+		
+		
+		
+		% ----------------------------------------------------------------------------
+		
+		\begin{ants}
+				
 			%% reasoning
 				@ Information processing in the neural system exists at different level of abstraction.
 				
@@ -625,7 +667,6 @@
 			
 			
 			%% our claim 
-				@ 
 				
 				@ We claim that the state of a coarse-grained scale which realises non-trivial informational closured correlates the state of consciousness. 
 				
@@ -752,7 +793,7 @@
 		
 			
 			\begin{figure}[H]
-				\includegraphics[width=\textwidth]{WritingMaterials/HierachyDiscussion (1).jpg}
+				\includegraphics[width=\textwidth]{WritingMaterials/SeperationOfCGandCortHierachy.pdf}
 %				{Coarse-grain and sensory anatomical hierarchies}
 			\end{figure}		
 
@@ -797,144 +838,15 @@
 		\subsection{Empirical approaches of measuring neural informational closure}
 		
 		
-	\section{Biological evidence of informational closure in neural system}
-		
-		\begin{ants}		
-			% ============================================================================ %
-			%                             sederberg2018learning                            %
-			% ============================================================================ %
-			
-			
-			@ So far, not so much research on non-trivial informational closure in biological neural systems. 
-			
-			@ However, \rewording{XXX}
-			
-			% Internal self-predictive mechanism	
-			@ Recent biological evidence suggests that low-level neurons encodes predictive information about external  and 
-			
-			@ \toWrite{
-				need to say this is exactly the non-trivial informational closure, and refer to equation XXX}
-			
-			@ \cite{sederberg2018learning}
-			@ \rewrite{
-				in recordings of populations of RGCs of salamander retina driven by a simple stimulus with partially predictable dynamics, joint activity patterns transmit information that is predictive of future stimuli }
-			
-			@ \rewrite{
-				We examined whether the temporal correlations within populations of RGCs can be used to guide the search for readouts of predictive information.}
-			
-			@ \rewrite{
-				We showed that groups of cells with high external, stimulus-predictive information also had high internal predictive information on two classes of stimuli, }
-			
-			@ \rewrite{
-				Very simple learning rules could find near-optimal readouts of predictive information without any external instructive signal. This suggests that bottom-up prediction may play an important role in sensory processing}
-			
-			@ \rewrite{
-				Internal predictive information can guide stimulus prediction without explicit reference to stimulus parameters.}
-			
-			@ \rewrite{
-				Word–word internal predictive information is correlated with word–stimulus predictive information across sets of four cells.}
-			
-			@ They also showed generalization of internal predictability across stimulus. This suggests .... what?
-			
-			@ \rewrite{
-				The generalization of internal predictability across stimulus classes partially reflects the ability of the retina to adapt to the statistics of stimuli}
-			
-			
-			@ \cite{Palmer2015}
-			@ \rewrite{
-				Groups of cells in the retina carry information about the future state of their own activity, and we show that this information can be compressed further and encoded by downstream predictor neurons that exhibit feature selectivity that would support predictive computations.}
-			
-			@ \rewrite{
-				It seems natural to phrase the problem of prediction in relation to the visual stimulus, as in Fig. 3, but the brain has no direct access to visual stimuli except that provided by the retina. Could the brain learn, in an unsupervised fashion, to predict the future of retinal outputs? More precisely, if we observe that a population of retinal ganglion cells generates the word w t at time t, what can we say about the word that will be generated at time t + Δ t in the future? The answer to this question is contained in the conditional distribution of one word on the other, P ð w t +Δ t j w t Þ } \url{http://tinyurl.com/y9zmhlln}	
-			
-			@ \rewrite{
-				larger groups of cells carry predictive information for hundreds of milliseconds, }
-		
-		\end{ants}
 
-
-
-
-	\section{Relation to empirical findings in neuroscience and studies of consciousness}
+	\section{Conscious vs unconscious processing}
+		\ideaBox{Now we can combine "Relation to empirical findings in neuroscience and studies of consciousness" and "About Phenomenology (conscious processing)" in to this}
 	
-		\subsection{Unconscious Processing}
-			\begin{ants}
-				@ According the theory, there are two factor that renders neural processes unconscious. 
-				
-				@ First, processes are reflexive. This causes non-closured
-				
-				@ Second, the abstraction level of the information is below the non-trivial informational closure scale. 
-			\end{ants}
-		
-		
 	
-		\subsection{reflexive behaviours is unconscious (or environment-state dependent processes)}\label{sec:reflexive}
-			\subsubsection{Reflection}
-				\begin{ants}
-					@ Reflexive systems is not informational closured. 
-					@ Base	d on our theory, 
-					@ x -> s -> a
-						@@ the system state is determined by environmental state, then it is not conscious. 
-					@ Therefore, in general, a simple policy network is not conscious. 
-				\end{ants}
-		
-			\subsubsection{Blindsight}
-				\begin{ants}
-					@ This also blindsight. 
-					@ Blindsight patients and still make above chance judgement without conscious awareness of visual targets.
-					@ The stimulus-reaction policy network still intact, but it cannot form informational closure and therefore, patients has no conscious awareness of visual  targets
-					@ Patient B.F. reactions are stimulus driven. 
-				\end{ants}
-		
-			\subsubsection{procedure memory}
-			
-			\subsubsection{cerebellum}
-				\begin{ants}
-					@ cerebellum feed-forward connections, maybe just a policy network.\needref{cerebellum} 
-				\end{ants}
-				
-		\subsection{Under the level of informational closure}
-			\subsubsection{statistical inference}
-				\begin{ants}
-					@ The computation of Bayesian brain is unconscious.			 
-				\end{ants}
-			
-			\subsubsection{subliminal perception}
-				\begin{ants}
-					@ Above chance performance can be performed through non-closure pathway (reflexive behaviours) 
-					
-					@ Due to coarse-graining, mapping between changes of microstate
-				\end{ants}
-			\subsubsection{Libet Experiments}		
-		
-			
-		\subsection{Deterministic vs probabilistic}
-			\cite{dehaene2017consciousness}
-			\cite{vul2008temporal, moreno2011bayesian, asplund2014attentional, vul2009attention}
-			
-			
-	\section{About Phenomenology (conscious processing)}
-		\subsection{Perceptual overflow}
-		\subsection{Volition and freewill}
-			\begin{ants}
-				@ Volition is a result of coarse-graining
-				
-				@ Lebel's experiment can be well explained by the experiment.
-			\end{ants}
-		
-		
-		
-		\subsection{Planning}
-		\subsection{Imagination}
-		\subsection{Dream vs non-dream sleep}
-		\subsection{Binocular rivalry}
-		\subsection{Hallucinations}
-		\subsection{Synaesthesia}
-		
-		
-		
-		
+
 	\section{Comparison with other theories}
+		\ideaBox{Main points should be same/diff, our advantages, and predictions}
+		
 	
 		\subsection{Theories about level of abstraction and coarse-graining}
 			\begin{ants}
@@ -1402,26 +1314,7 @@
 		
 		
 		
-	\section{Theory predictions (Counter-intuitive prediction)}	
-	
-		\subsection{informational closure}
-			\begin{ants}
-				@ We predict that through coarse-graining, conscious agents create 
-			\end{ants}
-			
-			
-		
-		\subsection{Prediction on split-brain (vs IIT)}
-			* IIT suggests that cutting, two subparts may both still have MIP, therefore, have two conscious mind. 
-			
-			* However, our theory suggests that if the cut largely destroy the \ac{ic}, then both part may not be conscious. 
-	
-	
-	
 
-	
-	
-	
 	\section{Future works}
 		\begin{ants}
 			
@@ -1478,6 +1371,161 @@
 	\bibliographystyle{authordate1}
 	\bibliography{ref}
 	
+	\section*{=== backup ===}	
+	\section*{Biological evidence of informational closure in neural system}
+		\begin{ants}		
+			% ============================================================================ %
+			%                             sederberg2018learning                            %
+			% ============================================================================ %
+			
+			
+			@ So far, not so much research on non-trivial informational closure in biological neural systems. 
+			
+			@ However, \rewording{XXX}
+			
+			% Internal self-predictive mechanism	
+			@ Recent biological evidence suggests that low-level neurons encodes predictive information about external  and 
+			
+			@ \toWrite{
+				need to say this is exactly the non-trivial informational closure, and refer to equation XXX}
+			
+			@ \cite{sederberg2018learning}
+			@ \rewrite{
+				in recordings of populations of RGCs of salamander retina driven by a simple stimulus with partially predictable dynamics, joint activity patterns transmit information that is predictive of future stimuli }
+			
+			@ \rewrite{
+				We examined whether the temporal correlations within populations of RGCs can be used to guide the search for readouts of predictive information.}
+			
+			@ \rewrite{
+				We showed that groups of cells with high external, stimulus-predictive information also had high internal predictive information on two classes of stimuli, }
+			
+			@ \rewrite{
+				Very simple learning rules could find near-optimal readouts of predictive information without any external instructive signal. This suggests that bottom-up prediction may play an important role in sensory processing}
+			
+			@ \rewrite{
+				Internal predictive information can guide stimulus prediction without explicit reference to stimulus parameters.}
+			
+			@ \rewrite{
+				Word–word internal predictive information is correlated with word–stimulus predictive information across sets of four cells.}
+			
+			@ They also showed generalization of internal predictability across stimulus. This suggests .... what?
+			
+			@ \rewrite{
+				The generalization of internal predictability across stimulus classes partially reflects the ability of the retina to adapt to the statistics of stimuli}
+			
+			
+			@ \cite{Palmer2015}
+			@ \rewrite{
+				Groups of cells in the retina carry information about the future state of their own activity, and we show that this information can be compressed further and encoded by downstream predictor neurons that exhibit feature selectivity that would support predictive computations.}
+			
+			@ \rewrite{
+				It seems natural to phrase the problem of prediction in relation to the visual stimulus, as in Fig. 3, but the brain has no direct access to visual stimuli except that provided by the retina. Could the brain learn, in an unsupervised fashion, to predict the future of retinal outputs? More precisely, if we observe that a population of retinal ganglion cells generates the word w t at time t, what can we say about the word that will be generated at time t + Δ t in the future? The answer to this question is contained in the conditional distribution of one word on the other, P ð w t +Δ t j w t Þ } \url{http://tinyurl.com/y9zmhlln}	
+			
+			@ \rewrite{
+				larger groups of cells carry predictive information for hundreds of milliseconds, }
+			
+		\end{ants}
+
+
+
+
+	\section*{Relation to empirical findings in neuroscience and studies of consciousness}
+
+		\subsection{Unconscious Processing}
+		\begin{ants}
+			@ According the theory, there are two factor that renders neural processes unconscious. 
+			
+			@ First, processes are reflexive. This causes non-closured
+			
+			@ Second, the abstraction level of the information is below the non-trivial informational closure scale. 
+		\end{ants}
+		
+		
+		
+		\subsection{reflexive behaviours is unconscious (or environment-state dependent processes)}\label{sec:reflexive}
+		\subsubsection{Reflection}
+		\begin{ants}
+			@ Reflexive systems is not informational closured. 
+			@ Base	d on our theory, 
+			@ x -> s -> a
+			@@ the system state is determined by environmental state, then it is not conscious. 
+			@ Therefore, in general, a simple policy network is not conscious. 
+		\end{ants}
+		
+		\subsubsection{Blindsight}
+		\begin{ants}
+			@ This also blindsight. 
+			@ Blindsight patients and still make above chance judgement without conscious awareness of visual targets.
+			@ The stimulus-reaction policy network still intact, but it cannot form informational closure and therefore, patients has no conscious awareness of visual  targets
+			@ Patient B.F. reactions are stimulus driven. 
+		\end{ants}
+		
+		\subsubsection{procedure memory}
+		
+		\subsubsection{cerebellum}
+		\begin{ants}
+			@ cerebellum feed-forward connections, maybe just a policy network.\needref{cerebellum} 
+		\end{ants}
+		
+		\subsection{Under the level of informational closure}
+		\subsubsection{statistical inference}
+		\begin{ants}
+			@ The computation of Bayesian brain is unconscious.			 
+		\end{ants}
+		
+		\subsubsection{subliminal perception}
+		\begin{ants}
+			@ Above chance performance can be performed through non-closure pathway (reflexive behaviours) 
+			
+			@ Due to coarse-graining, mapping between changes of microstate
+		\end{ants}
+		\subsubsection{Libet Experiments}		
+		
+		
+		\subsection{Deterministic vs probabilistic}
+		\cite{dehaene2017consciousness}
+		\cite{vul2008temporal, moreno2011bayesian, asplund2014attentional, vul2009attention}
+
+
+	\section*{About Phenomenology (conscious processing)}
+\subsection{Perceptual overflow}
+\subsection{Volition and freewill}
+\begin{ants}
+	@ Volition is a result of coarse-graining
 	
-	
+	@ Lebel's experiment can be well explained by the experiment.
+\end{ants}
+
+
+
+\subsection{Planning}
+\subsection{Imagination}
+\subsection{Dream vs non-dream sleep}
+\subsection{Binocular rivalry}
+\subsection{Hallucinations}
+\subsection{Synaesthesia}
+
+
+
+
+	\section*{Theory predictions (Counter-intuitive prediction)}	
+
+\subsection{informational closure}
+\begin{ants}
+	@ We predict that through coarse-graining, conscious agents create 
+\end{ants}
+
+
+
+\subsection{Prediction on split-brain (vs IIT)}
+* IIT suggests that cutting, two subparts may both still have MIP, therefore, have two conscious mind. 
+
+* However, our theory suggests that if the cut largely destroy the \ac{ic}, then both part may not be conscious. 
+
+
+
+
+
+
+
 \end{document}
