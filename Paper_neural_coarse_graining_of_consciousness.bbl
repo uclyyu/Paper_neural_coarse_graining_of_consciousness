@@ -71,6 +71,11 @@ Eurich, Christian~W, \& Wilke, Stefan~D. 2000.
 \newblock Multidimensional encoding strategy of spiking neurons.
 \newblock {\em Neural Computation}, {\bf 12}(7), 1519--1529.
 
+\bibitem[\protect\citename{Faisal {\em et~al.}, }2008]{faisal2008noise}
+Faisal, A~Aldo, Selen, Luc~PJ, \& Wolpert, Daniel~M. 2008.
+\newblock Noise in the nervous system.
+\newblock {\em Nature reviews neuroscience}, {\bf 9}(4), 292.
+
 \bibitem[\protect\citename{Goldwyn \& Shea-Brown, }2011]{Goldwyn2011}
 Goldwyn, Joshua~H., \& Shea-Brown, Eric. 2011.
 \newblock {The what and where of adding channel noise to the Hodgkin-Huxley
@@ -144,11 +149,22 @@ Lemon, RN, \& Edgley, SA. 2010.
 \newblock Life without a cerebellum.
 \newblock {\em Brain}, {\bf 133}(3), 652--654.
 
+\bibitem[\protect\citename{Luhmann, }1995]{luhmann1995probleme}
+Luhmann, Niklas. 1995.
+\newblock Probleme mit operativer Schlie{\ss}ung.
+\newblock {\em Soziologische Aufkl{\"a}rung}, {\bf 6}, 12--24.
+
 \bibitem[\protect\citename{Mathis \& Mozer, }1995]{mathis1995computational}
 Mathis, Donald~W, \& Mozer, Michael~C. 1995.
 \newblock On the computational utility of consciousness.
 \newblock {\em Pages  11--18 of:} {\em Advances in neural information
   processing systems}.
+
+\bibitem[\protect\citename{Maturana \& Varela, }1991]{maturana1991autopoiesis}
+Maturana, Humberto~R, \& Varela, Francisco~J. 1991.
+\newblock {\em Autopoiesis and cognition: The realization of the living}.
+\newblock  Vol. 42.
+\newblock Springer Science \& Business Media.
 
 \bibitem[\protect\citename{Melloni, }2015]{Melloni2015}
 Melloni, Lucia. 2015.
@@ -183,6 +199,12 @@ Palmer, Stephanie~E., Marre, Olivier, Berry, Michael~J., \& Bialek, William.
 \newblock {\em Proceedings of the National Academy of Sciences}, {\bf 112}(22),
   6908--6913.
 
+\bibitem[\protect\citename{Pattee, }2012]{pattee2012evolving}
+Pattee, Howard~Hunt. 2012.
+\newblock Evolving self-reference: matter, symbols, and semantic closure.
+\newblock {\em Pages  211--226 of:} {\em Laws, language and life}.
+\newblock Springer.
+
 \bibitem[\protect\citename{Pennartz, }2017]{pennartz2017consciousness}
 Pennartz, Cyriel~MA. 2017.
 \newblock Consciousness, Representation, Action: The Importance of Being
@@ -211,6 +233,12 @@ Prinz, Jesse. 2007.
 \newblock {Extracting information from neuronal populations: Information theory
   and decoding approaches}.
 \newblock {\em Nature Reviews Neuroscience}, {\bf 10}(3), 173--185.
+
+\bibitem[\protect\citename{Rosen, }1991]{rosen1991life}
+Rosen, Robert. 1991.
+\newblock {\em Life itself: a comprehensive inquiry into the nature, origin,
+  and fabrication of life}.
+\newblock Columbia University Press.
 
 \bibitem[\protect\citename{Rosenthal, }2005]{rosenthal2005consciousness}
 Rosenthal, David~M. 2005.
@@ -241,6 +269,11 @@ Shamir, Maoz. 2014.
 Stanley, Garrett~B. 2013.
 \newblock {Reading and writing the neural code}.
 \newblock {\em Nature Neuroscience}, {\bf 16}(3), 259--263.
+
+\bibitem[\protect\citename{Stein {\em et~al.}, }2005]{stein2005neuronal}
+Stein, Richard~B, Gossen, E~Roderich, \& Jones, Kelvin~E. 2005.
+\newblock Neuronal variability: noise or part of the signal?
+\newblock {\em Nature Reviews Neuroscience}, {\bf 6}(5), 389.
 
 \bibitem[\protect\citename{Vul {\em et~al.}, }2008]{vul2008temporal}
 Vul, Edward, Nieuwenstein, Mark, \& Kanwisher, Nancy. 2008.
