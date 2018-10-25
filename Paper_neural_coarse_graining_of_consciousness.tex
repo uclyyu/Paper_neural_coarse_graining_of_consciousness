@@ -62,7 +62,7 @@
 %	Red: Important and Critical
 %	Orange: Todo
 %	Blue: Topic and Guideline
-%	Purple: Murmur, talking to myself
+%	Purple: Murmur
 %	Green: Question, Call for help, Open for opinions and comments
 %	Brown: Need Wording 
 % ---------------------------------------------------------------------------- %
@@ -96,11 +96,16 @@
 			}	
 		
 % Funcitonal content
-	% Quotes
+	% Quotes: green
 		\newcommand{\rewrite}[1]{\textcolor{ForestGreen}{\textit{"#1"}}\newline}
 		
-	% todo
-		% figure
+		
+	% todo: orange
+		% text todo
+		\newcommand{\toWrite}[1]{\noindent
+			\textcolor{Orange}{\textbf{[[ #1 ]]}}}
+	
+		% figure todo
 		\newcommand{\includegraphicsTodo}[2][]{%
 			\tcbox[%
 				adjusted title=\LARGE To Be Modified,
@@ -110,49 +115,77 @@
 				colframe=Red!60!White,
 				boxrule=1mm,
 				colback=white%
-				]{\includegraphics[#1]{#2}}}		
+				]{\includegraphics[#1]{#2}}}
+			
+		% rewording
+		\newcommand{\rewording}[1]{\textcolor{RawSienna}{[[ REWORDING | #1 ]]}}	
 		
-	
-	% Highlight
-		\newcommand{\highlight}[2][Yellow]{\colorbox{#1}{#2}}
-	
-		% Highlight and comment
-		\newcommand{\highlightAndComment}[3][Yellow]{\todo[color=#1]{#3}\colorbox{#1}{#2}}
-	
-	% rewording
-		\newcommand{\rewording}[1]{\textcolor{RawSienna}{[[ REWORDING | #1 ]]}}
-		
-	% Need reference 
+		% Need reference 
 		\newcommand{\needref}[1]{%
 			\ifthenelse{\equal{#1}{}}{%
-				\todo[color=White, linecolor=BlueViolet]{\textcolor{BlueViolet}{Ref}}}{%
-				\todo[color=White, linecolor=BlueViolet]{\textcolor{BlueViolet}{Ref: #1}}%
-				}%
+				\todo[color=White, linecolor=Orange, bordercolor=Orange]{\textcolor{Orange}{Ref}}}{%
+				\todo[color=White, linecolor=Orange, bordercolor=Orange]{\textcolor{Orange}{Ref: #1}}%
+			}%
+		}					
+		
+	
+	
+	% Highlight
+		% Highlight only
+		\newcommand{\highlight}[2][Thistle!50!white]{\colorbox{#1}{#2}}
+	
+		% Highlight and comment
+		\newcommand{\highlightAndComment}[3][Thistle!50!white]{\todo[color=#1]{#3}\colorbox{#1}{#2}}
+		
+		% Critical point
+		\newcommand{\critical}[1]{%
+			\todo[color=OrangeRed!70!white]{#1}
 		}
+		
+		
 
-	% idea
+
+	% idea: Purple 
 		% text idea
 			\newcommand{\idea}[2][Plum]{\noindent
 				\textcolor{#1}{[[ #2 ]]}}	
 		
 		% box idea
 			\newcommand{\ideaBox}[1]{
-				\begin{tcolorbox}[hyphenationfix, width=12cm, colback=Thistle!50!white, flush right]
+				\begin{tcolorbox}[%
+					width=12cm,
+					sharp corners=downhill, 
+					hyphenationfix, 
+					arc=8pt,
+					colback=Thistle!50!white, 
+					flush right,
+					halign=flush right,
+					]%
 					#1
 				\end{tcolorbox}
 			}
 		
 		% callout idea
-			\newcommand{\ideaCallout}[1]{\todo[color=Thistle, size=\small]{#1}}
+			\newcommand{\ideaCallout}[1]{\todo[color=Thistle!50!white, size=\small]{#1}}
 		
-	% guildline and direction
-		\newcommand{\toWrite}[1]{\noindent
-			\textcolor{Cyan}{\textbf{[[ #1 ]]}}}
 		
-	% call for help
-		\newcommand{\callforhelp}[1]{\todo[color=SpringGreen]{#1}}
-		\newcommand{\martin}[1]{\todo[color=SpringGreen]{@Martin:\\#1}}
+	% communication: green
+		% call for help
+			\newcommand{\callforhelp}[1]{\todo[color=SpringGreen]{[Call For Help]: #1}}
 		
+
+		% comment
+			% comment by authers
+			\newcommand{\addcomment}[3][\empty]{\todo[color=SkyBlue]{Comment [#2]:\newline#3}\colorbox{SkyBlue}{#1}}
+	
+			% usage: 
+			% \addcomment{auther}{comment text} 
+			% or
+			% \addcomment[highlighted text]{auther}{comment text}
+			%
+			% e.g.
+			% It's a \addcomment[beautiful]{Acer}{need a reference} day
+
 
 
 
@@ -256,7 +289,7 @@
 	
 	
 
-	\section{Non-trivial informational closure\martin{todo}}
+	\section{Non-trivial informational closure}
 		\ideaBox{I am still not sure we should go for NTIC without describe my intuition about consciousness and closure? Or we should start with my intuition. Or we should postpone to explain the intuition in Chapter 4?}
 		
 		The notion of non-trivial informational closure (NTIC) is introduced by \cite{BERTSCHINGER.2006}. The concept of closure is closely related to system identification in systems theory. One can define a system from its environment by computing the closureness of the system \citep{maturana1991autopoiesis, rosen1991life, pattee2012evolving, luhmann1995probleme}. The closureness can be further quantified by information theory. 
@@ -624,7 +657,7 @@
 		
 		
 			
-		\subsection{\martin{todo}Neural coarse-graining}
+		\subsection{Neural coarse-graining}
 			\begin{figure}
 				\includegraphicsTodo[width=0.8\textwidth]{WritingMaterials/PDFXCview_2018-06-08_14-24-03.png}
 				\caption{NCG \idea{I need to simplify this figure}\citep{guttenberg2016neural}}
@@ -640,7 +673,7 @@
 				
 				@ Achieving NTIC is the key objective to to extract out latent control parameters in the environment.
 				
-				@ Through two objectives during training, the model can achieve NTIC. \martin{todo}
+				@ Through two objectives during training, the model can achieve NTIC. 
 				
 				@ this can be achieved by maximising the self-predictive power of deep layers and its entropy through all training data. 
 				
@@ -743,7 +776,7 @@
 				
 				@ The contents of consciousness correspond to the states of the non-trivial informational closure. 
 				
-				@ \idea[red]{I need to somehow acknowledge \cite{pennartz2017consciousness}}
+				@ \critical{I need to somehow acknowledge \cite{pennartz2017consciousness}}
 					@@ \rewrite{ In conclusion, for a well-behaved representational system, it does not matter whether a neural activation pattern represents an external world feature truthfully or not, as long as the system represents the feature consistently over time and in sensory space.}
 					
 					@@ pennartz levels are defined by functional elements call "functional ensembles". \cite{pennartz2017consciousness} \rewrite{This delineation is different from a scale-based distinction of levels, because different levels are distinguished here based on function , i.e., what each level can accomplish in terms of computation and representation, culminating in perception at the highest level.}
@@ -850,7 +883,7 @@
 		
 		
 		\subsection{Sensory hierarchy and neural coarse-graining
-			\todo[color=Red]{This is super important. I need to deal with this very carefully. Need to completely rewording}}\label{sec:SensoryHierarchy}
+			\critical{This is super important. I need to deal with this very carefully. Need to completely rewording}}\label{sec:SensoryHierarchy}
 		
 			
 
@@ -1128,7 +1161,7 @@
 				
 				@ Similar to the SMC theory, our theory predicts that the interaction between the neural system and the environment shapes the quality of conscious perception. 
 				
-				@ This is because to achieve NTIC the neural system should maximise the conditional mutual information between the future state of the NTIC process and the environment given the agent's current action (see equation XXX \todo[color=red]{I NEED A EQUATION!}).
+				@ This is because to achieve NTIC the neural system should maximise the conditional mutual information between the future state of the NTIC process and the environment given the agent's current action (see equation XXX \critical{I NEED A EQUATION!}).
 				
 				@ This suggests the to maximise NTIC the NTIC process needs to involve the information about the environmental transition and dynamic after agent preforms an action. 
 				
@@ -1241,7 +1274,7 @@
 				% 2018/06/15 15:10
 				@ We first hypothesize that predictive processing stays unconscious is because it is not able to achieve NTIC. 
 				
-					@@ \toWrite{Example from PID controller}
+					@@ \idea{Example from PID controller?}
 					
 				@ Second, according to our theory, it is obvious that the computation of predictive processing is unconscious and only the result is conscious. Because the computational details is not at the coarse-grained level which achieves NTIC. 
 				
@@ -1348,7 +1381,7 @@
 					
 					@ We argue that when predictive mechanisms utilise the information in the informational closure, the predictive result is conscious. 
 					
-					@ Because the forward model build on the informational closure representation can be seen as part of the closure. \todo[color=red]{IS THIS TRUE? NEED DISCUSSION}
+					@ Because the forward model build on the informational closure representation can be seen as part of the closure. \critical{IS THIS TRUE? NEED DISCUSSION}
 					
 					
 					@ we can consider two scenarios
@@ -1416,7 +1449,7 @@
 
 		\subsection{Finding coarse-grain function}
 			\begin{ants}
-				@ It's not clear what the coarse-graining function is.\todo[color=red]{this should be explained by environmental deterministic}
+				@ It's not clear what the coarse-graining function is.\critical{this should be explained by environmental deterministic}
 				
 				@ \rewrite{
 					not all causal relationships (or relationships of nomological dependency) among micro-events aggregate up to causal relationships among coarse-grained macro-events that are constituted by those micro-events. Instead, whether one gets causation at the macroscopic level will depend (among other things) on the particular coarse-graining that is chosen.} \cite{price2007causation}

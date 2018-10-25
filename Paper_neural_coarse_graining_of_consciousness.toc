@@ -1,19 +1,19 @@
 \select@language {english}
 \contentsline {section}{\numberline {1}Introduction}{2}{section.1}
-\contentsline {section}{\numberline {2}Non-trivial informational closure\todo [color=SpringGreen]{@Martin:\\todo}}{3}{section*.12}
-\contentsline {subsection}{\numberline {2.1}Informational closure and level identification \todo [color=Thistle, size=\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip ]{maybe not necessary}}{6}{section*.13}
-\contentsline {subsection}{\numberline {2.2}Biological Creature may try to achieve closure even the environment is not \todo [color=Thistle, size=\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip ]{Maybe not necessary}}{6}{section*.14}
+\contentsline {section}{\numberline {2}Non-trivial informational closure}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Informational closure and level identification \todo [color=Thistle!50!white, size=\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip ]{maybe not necessary}}{6}{section*.10}
+\contentsline {subsection}{\numberline {2.2}Biological Creature may try to achieve closure even the environment is not \todo [color=Thistle!50!white, size=\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip ]{Maybe not necessary}}{6}{section*.11}
 \contentsline {section}{\numberline {3}Neural coarse-graining}{6}{section.3}
 \contentsline {subsection}{\numberline {3.1}intro}{6}{subsection.3.1}
 \contentsline {subsection}{\numberline {3.2}Coarse-graining in neural system}{7}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}\todo [color=SpringGreen]{@Martin:\\todo}Neural coarse-graining}{9}{section*.17}
+\contentsline {subsection}{\numberline {3.3}Neural coarse-graining}{9}{subsection.3.3}
 \contentsline {subsection}{\numberline {3.4}The advantage of NCG}{10}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}NTIC at specific levels of neural coarse-graining\todo [color=SpringGreen]{any reference?}}{10}{section*.19}
+\contentsline {subsection}{\numberline {3.5}NTIC at specific levels of neural coarse-graining\todo [color=SpringGreen]{[Call For Help]: any reference?}}{10}{section*.14}
 \contentsline {section}{\numberline {4}A neural coarse graining theory of consciousness}{10}{section.4}
 \contentsline {subsection}{\numberline {4.1}Measure of conscious level}{13}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Conscious contents}{14}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Sensory hierarchy and neural coarse-graining \todo [color=Red]{This is super important. I need to deal with this very carefully. Need to completely rewording}}{14}{section*.24}
-\contentsline {subparagraph}{more information theory and philosophy relevance}{15}{section*.26}
+\contentsline {subsection}{\numberline {4.3}Sensory hierarchy and neural coarse-graining \todo [color=OrangeRed!70!white]{This is super important. I need to deal with this very carefully. Need to completely rewording} }{14}{section*.20}
+\contentsline {subparagraph}{more information theory and philosophy relevance}{15}{section*.22}
 \contentsline {subsection}{\numberline {4.4}Information and system theory}{15}{subsection.4.4}
 \contentsline {subsection}{\numberline {4.5}Empirical approaches of measuring neural informational closure}{16}{subsection.4.5}
 \contentsline {section}{\numberline {5}Conscious vs unconscious processing}{16}{section.5}
@@ -33,8 +33,8 @@
 \contentsline {subsection}{\numberline {6.5}Sensorimotor contingency}{19}{subsection.6.5}
 \contentsline {subsection}{\numberline {6.6}Predictive Processing}{20}{subsection.6.6}
 \contentsline {subsubsection}{\numberline {6.6.1}statistical learning/prediction is not conscious}{23}{subsubsection.6.6.1}
-\contentsline {subsection}{\numberline {6.7}Integrated information theory\todo [color=SpringGreen]{Help from Jun?}}{23}{section*.38}
-\contentsline {subsubsection}{\numberline {6.7.1}Hoel's theory\todo [color=SpringGreen]{Help from Martin?}}{23}{section*.39}
+\contentsline {subsection}{\numberline {6.7}Integrated information theory\todo [color=SpringGreen]{[Call For Help]: Help from Jun?}}{23}{section*.34}
+\contentsline {subsubsection}{\numberline {6.7.1}Hoel's theory\todo [color=SpringGreen]{[Call For Help]: Help from Martin?}}{23}{section*.35}
 \contentsline {subsection}{\numberline {6.8}Internal simulation and self-modelling theory}{24}{subsection.6.8}
 \contentsline {section}{\numberline {7}Future works}{24}{section.7}
 \contentsline {subsection}{\numberline {7.1}About location of NTIC}{24}{subsection.7.1}
