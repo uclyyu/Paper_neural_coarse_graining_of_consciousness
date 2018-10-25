@@ -127,6 +127,14 @@ Jonas, Eric, \& Kording, Konrad~Paul. 2017.
 \newblock Could a neuroscientist understand a microprocessor?
 \newblock {\em PLoS computational biology}, {\bf 13}(1), e1005268.
 
+\bibitem[\protect\citename{Kandel {\em et~al.}, }2000]{kandel2000principles}
+Kandel, Eric~R, Schwartz, James~H, Jessell, Thomas~M, of~Biochemistry,
+  Department, Jessell, Molecular Biophysics~Thomas, Siegelbaum, Steven, \&
+  Hudspeth, AJ. 2000.
+\newblock {\em Principles of neural science}.
+\newblock  Vol. 4.
+\newblock McGraw-hill New York.
+
 \bibitem[\protect\citename{Lamme, }2015]{lamme2015predictive}
 Lamme, Victor. 2015.
 \newblock {\em Predictive coding is unconscious, so that consciousness happens
@@ -153,6 +161,11 @@ Lemon, RN, \& Edgley, SA. 2010.
 Luhmann, Niklas. 1995.
 \newblock Probleme mit operativer Schlie{\ss}ung.
 \newblock {\em Soziologische Aufkl{\"a}rung}, {\bf 6}, 12--24.
+
+\bibitem[\protect\citename{Malone \& Bernstein, }2015]{malone2015handbook}
+Malone, Thomas~W, \& Bernstein, Michael~S. 2015.
+\newblock {\em Handbook of collective intelligence}.
+\newblock MIT Press.
 
 \bibitem[\protect\citename{Mathis \& Mozer, }1995]{mathis1995computational}
 Mathis, Donald~W, \& Mozer, Michael~C. 1995.
