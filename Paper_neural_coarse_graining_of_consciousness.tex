@@ -1,7 +1,6 @@
 \documentclass[utf8]{article}
 
 
-
 %% Language and font encodings
 \usepackage[english]{babel}
 %\usepackage[utf8]{inputenc}
@@ -28,6 +27,7 @@
 \usepackage{authblk}
 \usepackage{float}
 \usepackage{tikz}
+\usepackage[threshold=2, autopunct=true, autostyle=true]{csquotes}
 
 
 
@@ -43,9 +43,11 @@
 
 
 % The name of our theory
-\newcommand{\tnamefull}{[TheoryNameFull]}
-\newcommand{\tname}{[TheoryNameShort]}
+% ----------------------------------------------------------------------------
+\newcommand{\tnamefull}{The Neural Coarse-graining Theory of Consciousness} 
+\newcommand{\tname}{NCGT} 	% TheoryNameShort
 \newacro{\tname}{\tnamefull}
+%\newacro{NCGT}{the neural coarse-graining theory of consciousness}
 
 
 
@@ -194,78 +196,33 @@
 	% ============================================================================ %
 	
 	
-	\section{Introduction}
+	\section{Introduction}	
 	
-	
-		\begin{ants}
+		%% Story about a cell
+		Imagine you are a neuron in Alice's brain. Your daily work is to collect neurotransmitters through dendrites from other neurons, accumulate membrane potential, and finally send signals to other neurons through action potentials along axons. However, you have no idea that you are one of neurons in Bill's supplementary motor area and involved in many motor control processes for Alice's action, for example, grabbing a cup. You are totally ignorant of intentions, goals, and motor plans that Alice has at every moment even though you are part of the physiological substrate responsible for all those actions. 
+		
+		A similar story also happens to Alice's conscious mind. To grab a cup, for example, Alice is conscious of her intention and visuosensory experience of this action. However, her conscious experience does not show the dynamic of your membrane potential and about action potentials you send to other neurons every second. That is, information in Alice's conscious experience does not contain information involved in your information processing. 
 			
-			%% Story about a cell
-				@ Imagining you are a neuron in Bill's brain. Your daily work is to collect neurotransmitters through dendrites from other neurons, accumulate membrane potential, and finally send signals to other neurons through action potentials. 
-				
-				@ You have no idea that you are one of neurons in Bill's supplementary motor area and is now involved in motor control processing while Bill is reaching his hand to grab a cup. 
-				
-				@ You are totally ignorant of the intension, the goal, and the motor plan that Bill is having now even thought you are part of the physiological substrate responsible for this action. 
-				
-				@ The same story also happens to Bill's conscious mind. In his conscious experience, he is unaware of everything you do and even not able to know your existence if Bill never studies neuroscience.
-				
-				@ It seems that information you are processing and information shows in Bill's conscious percept are divorced from each other. 
-				
-				@ \idea{Need a ending sentence here}				
-				
-													
-				% @ Strikingly, not only you are ignorance of Bill's intention but also Bill has no conscious awareness of your behaviour. If your work contributes some part of Bill's conscious perception or intention to act. 
+		\toWrite{maybe need a transition sentence here}
+		
+		%% scale
+		It seems to be true that we are unable to consciously access information processed at every scale in the neural system. Only information at certain levels of coarse-graining can become conscious contents. At microscopic levels of neural systems, information processing in individual neurons is highly noisy and state transitions of neurons are extremely stochastic \citep{Goldwyn2011, White2000}. However, instead of stochastic action potentials and fluctuation of random noise at microscopic levels, what we are aware of in our conscious contents shows astonishing stability and high robustness against to ubiquitous noise in the neural system \citep{mathis1995computational}. Likewise, conscious experience does not associate with states of the whole brain level because we have known that some parts of the neural system may contributes conscious experience very little (cerebellum for example \citep{lemon2010life}). Additionally, we don't experience "super-consciousness" when we have massive inter-individual interactions with other human-beings. Even though evidence has shown several types of collective information processing at human social groups levels \citep{malone2015handbook}. information processed at this level seems to depart from our individual conscious contents.
+		
+		
+		%% our argument			
+		In this article, we propose a new theory of consciousness, called \ac{\tname}. This proposal states that consciousness does not rest to particular neural architectures or location of the neural system. Instead, we argue that consciousness correlates information processing at a certain coarse-grained level where the neural system creates a high degree of non-trivial informational closure (NTIC). We further postulate that the \textit{level} of consciousness corresponds to the degree of NTIC and the \textit{contents} of consciousness corresponds to the state of the NTIC process (for level versus content of consciousness see \cite{laureys2005neural, overgaard2010neural}).
 			
-			
-			%% scale
-				@ ============ About scale ===========
+		%% About this paper			
+		Our theory rests on two core concepts: non-trivial informational closure and neural coarse-graining. In this article, we first introduce non-trivial informational closure and its importance to information processing for human scale agents. We next argue that through coarse-graining the human neural system can achieves non-trivial informational closure at a specific coarse-grained level. We then propose that the state of the informational closure correlates the state of consciousness for both levels and contents which can be explained, quantified, and predicted computationally by this theory. We also address how this theory can concisely explain empirical results from previous studies and reconcile several current major theories of consciousness. Finally, we provide predictions and testable approaches for this theory.
+		
 				
-				@ It seems to be true that we are unable to consciously access information processed at every scale in the neural system. Only information at certain levels of coarse-graining is able to be parts of conscious contents. 
+%				@ \todo{Do I need a figure?}
+%					\begin{figure}
+%						\includegraphicsTodo[width=\textwidth]{WritingMaterials/PDFXCview_2018-06-11_13-37-34.png}
+%						\cite{pennartz2017consciousness}
+%						\caption{xxxx}
+%	   			   	\end{figure}
 				
-				@ When we focus on microscopic level of neural systems, information processing in individual neurons is highly noisy and state transitions of neurons are highly stochastic \citep{Goldwyn2011, White2000}. However, instead of stochastic action potentials and fluctuation of random noise at microscopic levels, what we are aware of in our conscious contents shows astonishing stability and high robustness against to ubiquitous noise in the neural system \citep{mathis1995computational}.
-				
-				
-				% Neurons fires all the time. However, those massive action potentials do not appear in our  conscious contents. 
-			
-				@ Likewise, at the macroscopic level, conscious experience does not associate with joint states of the full neural system because we have known that some parts of the neural system process information unconsciously (cerebellum for example \citep{lemon2010life}). 				
-			
-				@ Meanwhile, we don't experience "super-consciousness" when we have massive inter-individual interactions with other human-beings. Even though evidence has shown several types of collective information processing at human social groups levels \needref{collective intelligent in human, collective memory, collective behavioural, etc.}, those processes seem to depart from our individual conscious contents.
-				
-				
-				@ \idea{Need a ending sentence here}
-
-
-
-			
-			%% our argument
-				@ =========== our argument ===========
-				
-				@ In this article, we propose new theory of consciousness, called \ac{\tname}, which states that consciousness \highlightAndComment[YellowGreen]{correlates}{Is this proper?} information processing at a certain coarse-grained level where the neural system creates a high degree of non-trivial informational closure (NTIC). We further postulate that the \textit{level} of consciousness corresponds to the degree of NTIC and the \textit{contents} of consciousness corresponds to the state of the NTIC process (for level versus content of consciousness see \cite{laureys2005neural, overgaard2010neural}).
-
-				
-				
-			%% About this paper
-				@ ========= About this paper =========
-				
-				@ Since this theory rests on two core concepts: non-trivial informational closure and neural coarse-graining, in the following sections, we first introduce non-trivial informational closure and its importance to information processing for human scale agents. 
-				
-				@ We next argue that through coarse-graining the human neural system can achieves non-trivial informational closure at a specific coarse-grained level.
-				
-				@ We then propose that the state of the informational closure correlates the state of consciousness for both levels and contents which can be explained and computationally quantified and predicted by this theory. 
-				
-				@ We also address how this theory can concisely explain empirical results from previous studies and reconcile several current major theories of consciousness. 
-				
-				@ Finally, we provide predictions and testable approaches for this theory.
-			
-				
-				@ \todo{Do I need a figure?}
-					\begin{figure}
-						\includegraphicsTodo[width=\textwidth]{WritingMaterials/PDFXCview_2018-06-11_13-37-34.png}
-						\cite{pennartz2017consciousness}
-						\caption{xxxx}
-	   			   	\end{figure}
-				
-		\end{ants}
-
 	
 		
 		%% backup point
@@ -289,12 +246,8 @@
 				@@ \cite{Stahl2015} \rewrite{
 					Given the overwhelming quantity of information available from the environment, how do young learners know what to learn about and what to ignore? We found that 11-month-old infants (N = 110) used violations of prior expectations as special opportunities for learning. The infants were shown events that violated expectations about object behavior or events that were nearly identical but did not violate expectations. The sight of an object that violated expectations enhanced learning and promoted information-seeking behaviors; specifically, infants learned more effectively about objects that committed violations, explored those objects more, and engaged in hypothesis-testing behaviors that reflected the particular kind of violation seen. Thus, early in life, expectancy violations offer a wedge into the problem of what to learn.}
 			
-			@ Intuitive physics \needref{Intuitive physics}
-			
-			@ However, sensory signal are always noisy. 			
-			
-			
-			@ We propose that consciousness is not related to particular neural architectures or location of the neural system.			
+			@ Intuitive physics \needref{Intuitive physics}			
+		
 		\end{comment}
 	
 	
@@ -304,46 +257,41 @@
 	
 
 	\section{Non-trivial informational closure\martin{todo}}
-		\ideaBox{Not easy. Should we go for NTIC without describe an intuition about consciousness? Or we should start from intuition? Or explain the intuition in Chapter 4?}
-	
-		\subsection{Meaning of informational closure}
-			\begin{ants}
-				@ In systems theory the concept of closure \citep{maturana1991autopoiesis, rosen1991life, pattee2012evolving, luhmann1995probleme}
-							
-				
-				@ The notion of non-trivial informational closure (NTIC) is proposed by \cite{BERTSCHINGER.2006}. 
-				
-				@ The concept of closure is closely related to system identification in systems theory. One can define a system from its environment by computing the closureness of the system. 
-				
-				a prominent role in systems theory where it is used to identify or define the system in distinction from its environment
-				
-				@ Consciousness as an intrinsic information. Therefore, information should be self-define. This means the boundary of conscious content should be related to informational closure. 
-				
-				@ ============================================================================
-				
-				
-				@ \rewrite{
-					The notion of closure plays a prominent role in systems theory where it is used to identify or define the system in distinction from its environment} \cite{BERTSCHINGER.2006}
+		\ideaBox{I am still not sure we should go for NTIC without describe my intuition about consciousness and closure? Or we should start with my intuition. Or we should postpone to explain the intuition in Chapter 4?}
 		
-				@ \rewrite{
-					Our theoretical interest concerns the type of system that is a unity for and by itself and not only for an external observer distinguishing some entity from the rest of the world. This requires a system that can be described as a whole without reference to its environment. In systems theory, this property is usually referred to as closure.}\citep{BERTSCHINGER.2006}
-				
-				@ \rewrite{
-					These concepts of closure play an important role in the architecture of systems
-					theory, because they are used to
-					1. define the system (in distinction to its environment) and to 
-					2. explain the autonomy of the system.}\citep{BERTSCHINGER.2006}
-				
-				@ \rewrite{
-					Informational closure: The higher process is informationally closed, i.e., there is no information flow from the lower to the higher level. Knowledge of the microstate will not improve predictions of the macrostate.} \citep[p. 4]{PFANTE.2014}
-				
-								
-			\end{ants}
+		The notion of non-trivial informational closure (NTIC) is introduced by \cite{BERTSCHINGER.2006}. The concept of closure is closely related to system identification in systems theory. One can define a system from its environment by computing the closureness of the system \citep{maturana1991autopoiesis, rosen1991life, pattee2012evolving, luhmann1995probleme}. The closureness can be further quantified by information theory. 
+	
+		\begin{writingMaterials}			
+			@ Consciousness as an intrinsic information. Therefore, information should be self-define. This means the boundary of conscious content should be related to informational closure. 
+			
+			@ \idea{should we describe the intuition of boundary problem here?}
+			
+			@ ============================================================================
+			
+			
+			@ \rewrite{
+				The notion of closure plays a prominent role in systems theory where it is used to identify or define the system in distinction from its environment} \cite{BERTSCHINGER.2006}
+	
+			@ \rewrite{
+				Our theoretical interest concerns the type of system that is a unity for and by itself and not only for an external observer distinguishing some entity from the rest of the world. This requires a system that can be described as a whole without reference to its environment. In systems theory, this property is usually referred to as closure.}\citep{BERTSCHINGER.2006}
+			
+			@ \rewrite{
+				These concepts of closure play an important role in the architecture of systems
+				theory, because they are used to
+				1. define the system (in distinction to its environment) and to 
+				2. explain the autonomy of the system.}\citep{BERTSCHINGER.2006}
+			
+			@ \rewrite{
+				Informational closure: The higher process is informationally closed, i.e., there is no information flow from the lower to the higher level. Knowledge of the microstate will not improve predictions of the macrostate.} \citep[p. 4]{PFANTE.2014}
+			
+							
+		\end{writingMaterials}
 	
 	
-		\subsection{Definition of informational closure}
+		% Definition of informational closure				
+			\noindent
+			Information flow $J_{t}$ from the environment $E$ to a system $Y$ at time $t$ can be defined as the conditional mutual information $I$ between the system future state $Y_{t+1}$ and the current environment current state $E_{t}$ given the current system state $Y_{t}$
 				
-			\noindent Information flow $J_{t}$ from environment $E$ to a system $Y$ at time $t$ can be defined as			
 				\begin{equation}\label{eq:InformationFlow}
 				\left.\begin{array}
 				{rl}{J_{t}(E \rightarrow Y )} & {:= I(Y_{t+1};E_{t}|Y_{t})} \\
@@ -359,15 +307,20 @@
 					\caption{Figure adapted from \cite{BERTSCHINGER.2006}}
 					\label{fig:SystemAndEnv}	
 				\end{figure}
-			
+		
 			
 			\noindent
-			Based on the definition from \cite{BERTSCHINGER.2006}, a system is informational closured when information flow between the environment and the system is close to zero.
+			\cite{BERTSCHINGER.2006} defines that a system is informational closured when information flow from the environment to the system is close to zero.
+		
+				\begin{equation}
+				J_{t}(E \rightarrow Y )=0
+				\end{equation}
 
 
-		% trivial
+			% ------------------------------- trivial case ------------------------------- %
 			\noindent 
 			Achieving information closure (minimising $J_t$) could be trivial, which means the environment and the system are entirely independent of each other.
+			
 				\begin{equation}
 				\begin{aligned}
 				{I(Y_{t+1};E_{t})=0}&&{\Rightarrow}&&{J_{t}(E \rightarrow Y )=0}
@@ -375,9 +328,10 @@
 				\end{equation}
 
 
-		% non-trivial
+			% -------------------------------- non-trivial ------------------------------- %
 			\noindent 
 			However, informational closure can be achieved non-trivially. In the non-trivial case, the system trying to encode information about the environmental dynamics can also be informational closured. This means
+			
 				\begin{equation}
 				I(Y_{t+1};E_{t}) > 0
 				\end{equation}
@@ -390,7 +344,8 @@
 			
 			
 			
-			\noindent Therefore, non-trivial informational closure can be defined as 		
+			\noindent 
+			And, non-trivial informational closure can be defined as 		
 				\begin{equation}
 				\left.\begin{array}
 				{rl}{NTIC} & {:=I(Y_{t+1};Y_{t})-I(Y_{t+1};Y_{t}|E_{t})}\\
@@ -399,7 +354,8 @@
 				\end{equation}
 				
 				
-			\noindent And, Maximising NTIC is equivalent to
+			\noindent 
+			And, Maximising NTIC is equivalent to
 				\begin{equation}\label{eq:nticObjective}
 				\begin{aligned}
 				& \text{maximise} & { } & I(Y_{t+1};Y_{t}) & { } & \text{and} \\
@@ -407,41 +363,20 @@
 				\end{aligned}
 				\end{equation}
 				
+			\noindent
+			This implies the system contains in itself the information of its own future and the self-predictive information is gained from the information about the environment. Therefore, to achieve NTIC, the system can internalizes and synchronises the dynamics of the environment, i.e. modelling the environment. Furthermore, having high degrees of NTIC entails having high predictive power about the environment. This gives biological agents a great functional and evolutional advantage to achieve NTIC in their information processing systems. Practically, \cite{guttenberg2016neural} proposed that NTIC can be achieved by maximising the predictive power about the environment and the self-predictive information of the system concurrently.
+			
+			
+			% Biological evidence of informational closure in the neural system
+			Though the significant advantage for biological systems to achieve NTIC, to our knowledge, studies directly examining NTIC in biological systems are limited. However,  recent studies have showed relevant properties in the visual system of salamanders. By examining the salamander retina, in two studies \citep{Palmer2015, sederberg2018learning} the authors found that the a large groups of neural populations of retinal ganglion cells encoded predictive information about external stimuli also had high self-predictive information about their own future states (see Figure~\ref{fig:sederberg2018learning}), therefore, in line with the characteristic of NTIC. Therefore, the self-predictive information of the neural populations can guides prediction about external stimuli without reference to stimulus parameters explicitly. Moreover, the internal predictability can be generalised to different stimulus classes suggesting the tendency to internalise the information of environmental dynamics in the neural populations. \toWrite{Add Some ending sentences}
 				
-			\toWrite{need to elaborate this part more}
-			When a system achieve NTIC, the system internalizes and synchronises the dynamics of the environment, which also means modelling the environment. Having high degrees of NTIC entails predictive power about the environment. This gives biological agents a great functional meaning and an evolutional reason reason to achieve NTIC in their information processing systems. Practically, \cite{guttenberg2016neural} proposed that NTIC can be achieved by maximising the predictive power about the environment and the self-predictive information of the system concurrently . \callforhelp{Do we need to say we also maximise entropy of latent layers? }
-			
-			
-			
-		\subsection{Biological evidence of informational closure in the neural system}
 			\begin{figure}[H]
 				\includegraphicsTodo[width=\textwidth]{WritingMaterials/Palmer2015.png} 
 				\caption{Figure adapted from \cite{sederberg2018learning}}
 				\label{fig:sederberg2018learning}	
-			\end{figure}
-		
-		
-			\begin{ants}
-				@ So far, not much studies directly examine NTIC in biological systems. 
-				
-				@ Some very recent studies have showed relevant properties.\todo{Perhaps we should put a picture about this study here.}
-				
-				@ By examining salamander retina, \cite{Palmer2015, sederberg2018learning} found that neural populations of retinal ganglion cells encoded predictive information about external stimuli also had high self-predictive information about their own future states on two different classes of stimuli. 
-				
-				@ This property matches Eq. (\ref{eq:nticObjective})
-				
-				@ Therefore, self-predictive information of the neural populations can guides  prediction about external stimuli without reference to stimulus parameters explicitly. 
-				
-				@ efficient readouts of one type of information were likely to be efficient readouts of the other. The generalization of internal predictability across stimulus classes partially reflects the ability of the retina to adapt to the statistics of stimuli.
-				
-				@ \rewrite{ Internal predictability reflects the timescale of correlation in the stimulus }
-				
-				
-				@ The two studies provides a empirical evidence that NTIC may serve as an objective in the neural system. 
-			\end{ants}
-				
-				
-			\begin{writingMaterials}
+			\end{figure}			
+			
+			\begin{comment}
 				@ ===
 				
 				@ \rewrite{
@@ -485,7 +420,7 @@
 				
 				
 				 
-			\end{writingMaterials}
+			\end{comment}
 		
 
 
@@ -521,6 +456,8 @@
 				
 				@ Previous research has been showing that the neural system are suffered from multiple noise sources  during information processing, including sensory, cellular, electrical, synaptic noises and have large trial-to-trial variability at the cellular level. \citep{faisal2008noise}. neurons are noisy: the same pattern of activity never occurs twice, even when the same stimulus is presented.
 				
+				@ \rewrite{Neurons are subject to thermal fluctuations and other physical noise (Faisal et al., 2008).} \cite{faisal2008noise}					
+				
 	
 				@ These noises sabotaged the predictability of future states and prevent the neural system from creating NTIC processes at the cellular level. 
 				
@@ -534,10 +471,27 @@
 	
 	
 	
-		\begin{writingMaterials}									
+		\begin{writingMaterials}				
 		
-			%% About coarse-graining			
-			@ One consequence of coarse-graining is that it makes it permissible to ignore certain causal factors that would be relevant at more fine-grained level of description. \cite{price2007causation}
+			@ One way to encode a stable information in neural system is to encode the information in the coarse-grained variables. 
+
+			@ \rewrite{
+				Coarse-graining: a method of reducing the complexity of a system by treating groups of atoms/molecules as single quasi-particles CG: coarse-grained}
+			
+			
+			@ \rewrite{
+				a number of different microstates,First, typically a number of different microstates, will realize the same value of the macro-variables of upper level causal theories.}			
+			
+			@ This is a common strategy that we can see in large number of previous physiological studies.  
+			
+			@ neural system use population coding and temporal coding to fight against noise.
+			
+			
+			@ Therefore, even though the low level information processing is noisy, it is possible that the neural system achieve NTIC at a coarse-grained level. 
+			
+			@ This implies that the information about the environmental dynamic should be represented at a certain coarse-grained level rather then other levels. 
+			
+			@ It is important to note that NTIC should not be a monotonic function of scale of coarse-graining. For the extreme case xxxxx								
 			
 			
 			
@@ -584,29 +538,46 @@
 	
 		\subsection{Coarse-graining in neural system}
 			\begin{ants}
-				@ 
 				
+				@ Coarse-graining can be defined as a function that maps multiple microscopic states to a macroscopic states. 
 				
-				@ \rewrite{Neurons are subject to thermal fluctuations and other physical noise (Faisal et al., 2008).} \cite{faisal2008noise}				
+				@ One way to encode a stable information in neural system is to encode the information in the coarse-grained variables. 
+				
+				@ Studies have shown that coarse-graining is a common way that the neural system cope with inevitable noise at microscopic levels. 
 				
 				@ We have known that the neural system uses various coding strategies to encode information at coarse-grained levels. 
-				
+
 				@ \rewrite{Because the sequence of action potentials generated by a given stimulus varies from trial to trial, neuronal responses are typically treated statistically or probabilistically}
 				
-				@ \toWrite{For examples}
-				 
-				 
-				 
-				%% temporal 
-				@ temporal coarse-graining
+				@ In the temporal domain, rate coding can be seem as coarse-graining on temporal events at the neuronal level \cite{stein2005neuronal}.
 				
-					@@ Rate coding
-						\cite{stein2005neuronal}
+				@ contained in the firing rate of the neuron 
+				
+				@ Firing rate of sensory neurons correlate stimulus intensities.  \citep{kandel2000principles}
+				
+				@ This coding strategy is highly robust against noise causing variation of interspike intervals. 
+				
+				@ Another example is population coding. 
+						
+				@ Population coding is 
+				
+				the idea that nervous systems signal and compute parameters using large populations of imprecise neurons, rather than one or a few precise neurons. 		
+				
+				@ \rewrite{
+						Population code (also ensemble code) denotes a code by which neural information is encoded in the spatiotemporal activity patterns of many neurons.
+					} \cite{binder2009encyclopedia}					
+				
+				@ In such case, single neurons are not informative. Instead, coarse-grained variables such as population averaging encode the information. 
+				
 
-					
+				@ Encoding information at coarse-grained levels allow the neural system ignores certain causal interactions relevant to fine-grained level of description. \cite{price2007causation}
 				
-				
+				@ Note that, information processing related to consciousness should not be situated at this level. Otherwise our conscious percept should be very noisy and unstable.
 
+			\end{ants}
+				
+				
+			\begin{writingMaterials}
 				@ Population coding
 				
 					@@ review ref
@@ -625,10 +596,6 @@
 					
 					@@ \rewrite{A distributed representation of information of this type is more robust to the effects of noise.}
 				
-					@@ Population coding is the idea that nervous systems signal and compute parameters using large populations of imprecise neurons, rather than one or a few precise neurons. 
-	
-					@@ \rewrite{
-						As single neurons are not very informative, to obtain accurate information about sensory or motor variables some sort of population averaging must be performed.}
 					
 					
 					@@ \rewrite{
@@ -639,10 +606,7 @@
 					@@ \rewrite{
 						How a neural population represents information is partly determined by the diverse selectivity of individual neurons \cite{Shamir2014}}
 					
-					@@ \rewrite{
-						Population code (also ensemble code) denotes a code by which neural information is encoded in the spatiotemporal activity patterns of many neurons.
-					} \cite{binder2009encyclopedia}		
-				
+					
 				
 				@ sensory hierarchy		
 					@@ sensory hierarchy also shows characteristic of coarse-graining
@@ -655,7 +619,7 @@
 				
 					@@ Through coarse-graining, \highlightAndComment{higher level}{might be confusing, need to think about the terminology here} cortical areas can integrate those partial information to infer hidden causes. 					
 				
-			\end{ants}		
+			\end{writingMaterials}
 		
 		
 		
@@ -670,53 +634,49 @@
 		
 		
 			\begin{ants}
+				@ NTIC can be more easily achieved by coarse-graining. 
+				
 				@ \citep{guttenberg2016neural} proposed an architecture, called neural coarse-graining (NCG), which aims to captures the emergent large-scale dynamics in the environment. 
 				
 				@ Achieving NTIC is the key objective to to extract out latent control parameters in the environment.
 				
-				@ During training, the objective of the architecture is to XXXXX\martin{todo}
+				@ Through two objectives during training, the model can achieve NTIC. \martin{todo}
 				
-				 
-				@ \rewrite{
-					The transform can learn to discard uninformative and unpredictable components of the signal in favor of the features which are both highly predictive and highly predictable.}\citep{guttenberg2016neural}
-							
+				@ this can be achieved by maximising the self-predictive power of deep layers and its entropy through all training data. 
 				
+				@ With the objectives, NCG network learns to coarse-grain input signals and  extract latent parameters which are both predictive and predictable in the input signal and therefore achieves NTIC by building a higher-level representation of the underlying dynamics in the deep layers.		
 				
-				@ \rewrite{
-					The result is a semi-supervised algorithm which is capable of extracting latent parameters, segmenting sections of time-series with diﬀering statistics, and building a higher-level representation of the underlying dynamics from unlabeled data}\citep{guttenberg2016neural}
-				
+				@ Agents can process information and act at abstract levels		
 			\end{ants}
 		
 		
 		
 			
 		\subsection{The advantage of NCG}
-			\begin{comment}
-				@ Resistant to noise
-				@ Predictive power
-				@ Agents can process information and act at abstract levels
-			\end{comment}
+			\begin{ants}
+				@ At the physical scale which human being live, the environmental dynamics is nearly deterministic following the laws of classical physics. This means that it is possible for agents living at this physical scale to build NTIC process internally. 
+				
+				@ When the information in individual sensory channel is noisy and partial, coarse-graining becomes necessary for achieve NTIC. 							
+			\end{ants}
+	
 			
 			
 		\subsection{NTIC at specific levels of neural coarse-graining\callforhelp{any reference?}}
-			\ideaBox{Do we need to discuss Hoel's theory here?}
 			\begin{ants}
-				@ The relation between the degrees of NTIC and coarse-graining is not monotonic.
+				@ It is important to note that the relationship between degrees of NTIC and coarse-graining is not monotonic.
 				
 				@ Overly coarse-graining a system can lead to low degrees of NTIC.
 				
-				@ Imagining an extreme scenario that all microscopic states are mapped to a macroscopic state, the macroscopic process losses all the information can be used to make self-prediction. 
+				@ Imagining an extreme scenario that all microscopic states map to a single macroscopic state, the macroscopic process losses all the predictive information about the environment. 
 				
-				@ \cite{sederberg2018learning} showed similar results in salamander retina neural populations. 
+				@ This is evidenced by empirical data as well. 	
 				
-				@ They found that 
+				@ Study by \cite{sederberg2018learning} found that self-predictive information of 4-cell sets readout by an optimal perceptron is higher than 7 and 10-cell sets. 
 				
-				@ \rewrite{
-					We found that while the efficiency of the learned readouts relative to optimal single-bit readouts remained high the efficiency relative to the full input group decreased, such that readouts of groups of 10 cells typically preserved 30\% of the total predictive information}
-				
-				@ \rewrite{
-					In other words, reading out from groups of four cells can be accomplished with high absolute efficiency. Perhaps the best way to combine more than four cells is to break down the readout into indivisible units of four cells, which are later recombined in subsequent processing.}
+				@ The authors indicated that \blockquote[{\citep{sederberg2018learning}}]{reading out from groups of four cells can be accomplished with high absolute efficiency. Perhaps the best way to combine more than four cells is to break down the readout into indivisible units of four cells, which are later recombined in subsequent processing.}
 			\end{ants}
+		
+\blockquote{reading out from groups of four cells can be accomplished with high absolute efficiency. Perhaps the best way to combine more than four cells is to break down the readout into indivisible units of four cells, which are later recombined in subsequent processing.}\citep{sederberg2018learning}
 			
 
 
