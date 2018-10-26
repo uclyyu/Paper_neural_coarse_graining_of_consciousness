@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210) (preloaded format=xelatex 2018.4.18)  26 OCT 2018 14:41
+This is XeTeX, Version 3.14159265-2.6-0.99996 (MiKTeX 2.9.6210) (preloaded format=xelatex 2018.4.18)  26 OCT 2018 20:14
 entering extended mode
 **./Paper_neural_coarse_graining_of_consciousness.tex
 (Paper_neural_coarse_graining_of_consciousness.tex
@@ -959,40 +959,41 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\todo' on input line 477.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 512--514
+Underfull \hbox (badness 10000) in paragraph at lines 502--504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 516--518
+Underfull \hbox (badness 10000) in paragraph at lines 506--508
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 547--549
+Underfull \hbox (badness 10000) in paragraph at lines 537--539
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 574--575
 
  []
 
 [8]
-Underfull \hbox (badness 10000) in paragraph at lines 584--585
-
- []
-
 Missing character: There is no – in font ecrm1000!
 Missing character: There is no – in font ecrm1000!
 Missing character: There is no – in font ecrm1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 631--632
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 635--637
+Underfull \hbox (badness 10000) in paragraph at lines 625--627
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 640--642
+Underfull \hbox (badness 10000) in paragraph at lines 630--632
 
  []
 
@@ -1002,21 +1003,21 @@ File: WritingMaterials/PDFXCview_2018-06-08_14-24-03.png Graphic file (type QTm
  <use  "WritingMaterials/PDFXCview_2018-06-08_14-24-03.png" > [10]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\todo' on input line 698.
+(hyperref)                removing `\todo' on input line 688.
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 781--782
+Underfull \hbox (badness 10000) in paragraph at lines 771--772
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 783--784
+Underfull \hbox (badness 10000) in paragraph at lines 773--774
 
  []
 
 File: CGandIC.png Graphic file (type QTm)
 <use  "CGandIC.png" >
-Overfull \hbox (34.14322pt too wide) in paragraph at lines 797--797
+Overfull \hbox (34.14322pt too wide) in paragraph at lines 787--787
 [][] 
  []
 
@@ -1029,21 +1030,21 @@ Missing character: There is no – in font ecrm1000!
 File: WritingMaterials/PDFXCview_2018-06-01_17-44-30.png Graphic file (type QTm
 )
  <use  "WritingMaterials/PDFXCview_2018-06-01_17-44-30.png" >
-Overfull \hbox (263.53624pt too wide) in paragraph at lines 847--848
+Overfull \hbox (263.53624pt too wide) in paragraph at lines 837--838
 [] []\T1/cmr/m/n/10 use [] 
  []
 
 File: WritingMaterials/PDFXCview_2018-06-04_19-18-12.png Graphic file (type QTm
 )
 <use  "WritingMaterials/PDFXCview_2018-06-04_19-18-12.png" >
-Overfull \hbox (4.67307pt too wide) in paragraph at lines 849--850
+Overfull \hbox (4.67307pt too wide) in paragraph at lines 839--840
 [] []\T1/cmr/m/n/10 or use [] 
  []
 
 [14]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\todo' on input line 887.
+(hyperref)                removing `\todo' on input line 877.
 
 File: hierarchy.pdf Graphic file (type QTm)
 <use  "hierarchy.pdf" >
@@ -1051,13 +1052,13 @@ File: WritingMaterials/SeperationOfCGandCortHierachy.pdf Graphic file (type QTm
 )
 
 <use  "WritingMaterials/SeperationOfCGandCortHierachy.pdf" > [15]
-Overfull \hbox (257.66763pt too wide) in paragraph at lines 932--932
+Overfull \hbox (257.66763pt too wide) in paragraph at lines 922--922
  []\T1/cmr/bx/n/10 more in-for-ma-tion the-ory and phi-los-o-phy rel-e-vance[] 
 [] 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 951--952
+Underfull \hbox (badness 10000) in paragraph at lines 941--942
 
  []
 
@@ -1089,34 +1090,34 @@ Missing character: There is no ﬂ in font ecrm1000!
 Missing character: There is no “ in font ecti1000!
 Missing character: There is no ” in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1094--1095
+Underfull \hbox (badness 10000) in paragraph at lines 1084--1085
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1096--1097
+Underfull \hbox (badness 10000) in paragraph at lines 1086--1087
 
  []
 
 Missing character: There is no ’ in font ecti1000!
 Missing character: There is no ’ in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1098--1099
+Underfull \hbox (badness 10000) in paragraph at lines 1088--1089
 
  []
 
 [19]
-Overfull \hbox (172.34679pt too wide) in paragraph at lines 1113--1115
+Overfull \hbox (172.34679pt too wide) in paragraph at lines 1103--1105
 []\T1/cmr/m/n/10 ==============================================================
 ==============
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1113--1115
+Underfull \hbox (badness 10000) in paragraph at lines 1103--1105
 
  []
 
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1132
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 1122
 .
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\t1cmtt.fd"
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -1151,7 +1152,7 @@ Missing character: There is no ” in font ecrm1000!
 Missing character: There is no “ in font ecrm1000!
 Missing character: There is no ” in font ecrm1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1324--1325
+Underfull \hbox (badness 10000) in paragraph at lines 1314--1315
 
  []
 
@@ -1164,7 +1165,7 @@ Missing character: There is no ’ in font ecti1000!
 Missing character: There is no ﬁ in font ecti1000!
 Missing character: There is no ﬁ in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1329--1330
+Underfull \hbox (badness 10000) in paragraph at lines 1319--1320
 
  []
 
@@ -1176,12 +1177,12 @@ Missing character: There is no ’ in font ecti1000!
 Missing character: There is no ‘ in font ecti1000!
 Missing character: There is no ’ in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1331--1332
+Underfull \hbox (badness 10000) in paragraph at lines 1321--1322
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1333--1334
+Underfull \hbox (badness 10000) in paragraph at lines 1323--1324
 
  []
 
@@ -1192,7 +1193,7 @@ Missing character: There is no ’ in font ecti1000!
 Missing character: There is no ‘ in font ecti1000!
 Missing character: There is no ’ in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1335--1336
+Underfull \hbox (badness 10000) in paragraph at lines 1325--1326
 
  []
 
@@ -1201,98 +1202,98 @@ Missing character: There is no ” in font ecti1000!
 Missing character: There is no “ in font ecti1000!
 Missing character: There is no ” in font ecti1000!
 
-Underfull \hbox (badness 10000) in paragraph at lines 1337--1338
+Underfull \hbox (badness 10000) in paragraph at lines 1327--1328
 
  []
 
 Package acronym Info: Label `acro:ntic' newly defined as it shall be overridden
 
-although it is yet undefined on input line 1352.
+although it is yet undefined on input line 1342.
 
-Overfull \hbox (24.49512pt too wide) in paragraph at lines 1352--1352
+Overfull \hbox (24.49512pt too wide) in paragraph at lines 1342--1342
 [] 
  []
 
 Package acronym Info: Label `acro:cged' newly defined as it shall be overridden
 
-although it is yet undefined on input line 1355.
+although it is yet undefined on input line 1345.
 Missing character: There is no – in font ecrm1000!
 Missing character: There is no – in font ecrm1000!
 [23]
 Package acronym Info: Label `acro:ic' newly defined as it shall be overridden
-although it is yet undefined on input line 1367.
+although it is yet undefined on input line 1357.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\todo' on input line 1391.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\todo' on input line 1401.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\todo' on input line 1411.
-
 [24] (Paper_neural_coarse_graining_of_consciousness.bbl [25]
 Missing character: There is no – in font ecrm1000!
  [26] [27])
-Underfull \hbox (badness 10000) in paragraph at lines 1509--1511
+Underfull \hbox (badness 10000) in paragraph at lines 1499--1501
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1512--1514
+Underfull \hbox (badness 10000) in paragraph at lines 1502--1504
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1515--1517
+Underfull \hbox (badness 10000) in paragraph at lines 1505--1507
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1518--1520
+Underfull \hbox (badness 10000) in paragraph at lines 1508--1510
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1521--1523
+Underfull \hbox (badness 10000) in paragraph at lines 1511--1513
 
  []
 
 Missing character: There is no – in font ecti1000!
 Missing character: There is no – in font ecti1000!
+
+Underfull \hbox (badness 10000) in paragraph at lines 1514--1516
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1519--1521
+
+ []
+
 
 Underfull \hbox (badness 10000) in paragraph at lines 1524--1526
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1529--1531
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1534--1536
 
  []
 
 Missing character: There is no Δ in font ecti1000!
 Missing character: There is no Δ in font ecti1000!
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 1540--1542
+Underfull \hbox (badness 10000) in paragraph at lines 1530--1532
 
  []
 
 [29] [30]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1647.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1647.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1637.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1637.
  (Paper_neural_coarse_graining_of_consciousness.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1647.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1647.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1647.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1637.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 1637.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1637.
  ) 
 Here is how much of TeX's memory you used:
  25476 strings out of 428408
  444532 string characters out of 3159511
- 649444 words of memory out of 3000000
+ 650436 words of memory out of 3000000
  28517 multiletter control sequences out of 15000+200000
  19218 words of font info for 45 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191

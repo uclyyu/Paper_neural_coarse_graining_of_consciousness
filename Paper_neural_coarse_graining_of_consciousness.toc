@@ -4,11 +4,10 @@
 \contentsline {subsection}{\numberline {2.1}Informational closure and level identification \todo [color=Thistle!50!white, size=\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip ]{maybe not necessary}}{7}{section*.10}
 \contentsline {subsection}{\numberline {2.2}Biological Creature may try to achieve closure even the environment is not \todo [color=Thistle!50!white, size=\relax \fontsize {9}{11}\selectfont \abovedisplayskip 8.5\p@ plus3\p@ minus4\p@ \abovedisplayshortskip \z@ plus2\p@ \belowdisplayshortskip 4\p@ plus2\p@ minus2\p@ \def \leftmargin \leftmargini \parsep 4\p@ plus2\p@ minus\p@ \topsep 8\p@ plus2\p@ minus4\p@ \itemsep 4\p@ plus2\p@ minus\p@ {\leftmargin \leftmargini \topsep 4\p@ plus2\p@ minus2\p@ \parsep 2\p@ plus\p@ minus\p@ \itemsep \parsep }\belowdisplayskip \abovedisplayskip ]{Maybe not necessary}}{7}{section*.11}
 \contentsline {section}{\numberline {3}Neural coarse-graining}{7}{section.3}
-\contentsline {subsection}{\numberline {3.1}intro}{7}{subsection.3.1}
-\contentsline {subsection}{\numberline {3.2}Coarse-graining in neural system}{8}{subsection.3.2}
-\contentsline {subsection}{\numberline {3.3}Neural coarse-graining}{10}{subsection.3.3}
-\contentsline {subsection}{\numberline {3.4}The advantage of NCG}{11}{subsection.3.4}
-\contentsline {subsection}{\numberline {3.5}NTIC at specific levels of neural coarse-graining\todo [color=SpringGreen]{[Call For Help]: any reference?}}{11}{section*.14}
+\contentsline {subsection}{\numberline {3.1}Coarse-graining in neural system}{8}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Neural coarse-graining}{10}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}The advantage of NCG}{10}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}NTIC at specific levels of neural coarse-graining\todo [color=SpringGreen]{[Call For Help]: any reference?}}{11}{section*.14}
 \contentsline {section}{\numberline {4}A neural coarse graining theory of consciousness}{11}{section.4}
 \contentsline {subsection}{\numberline {4.1}Measure of conscious level}{14}{subsection.4.1}
 \contentsline {subsection}{\numberline {4.2}Conscious contents}{15}{subsection.4.2}
