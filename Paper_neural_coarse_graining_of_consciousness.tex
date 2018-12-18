@@ -474,10 +474,7 @@
 		\subsection{Informational closure and level identification \ideaCallout{maybe not necessary}}
 
 
-		\subsection{Biological Creature may try to achieve closure even the environment is not \ideaCallout{Maybe not necessary}}1
-
-
-
+		\subsection{Biological Creature may try to achieve closure even the environment is not \ideaCallout{Maybe not necessary}}
 
 
 
@@ -486,34 +483,40 @@
 		%% stochasticity at microscopic levels
 		Nevertheless, to achieve information closure (so as NTIC) in highly stochastic systems (e.g., the neural system) is challenging. The current states of the system have low predictability of its future states due to the stochasticity. Information processing in the neural system is suffered from multiple noise sources throughout, including sensory, cellular, electrical, and synaptic noises. Previous studies have shown that states of neurons have large trial-to-trial variability at the cellular level. That is, the same pattern of activity never occurs twice even when the same stimulus is presented. Neurons are inevitably subject to thermal fluctuations and other physical noises \citep{faisal2008noise}. Furthermore, environmental information is always only partial observable to individual sensors and neurons which only receive little amount of information from the environment. Therefore, self and environmental predictive information is difficult to be represented at the cellular level. It is implausible to construct NTIC processes at microscopic levels.
 
-
-		%% encoding information via coarse-graining
-		However, to overcome the difficulty, one way to encode a stable information in neural system is to encode information in coarse-grained variables. Coarse-graining here is referred to many-to-one functions that map microscopic states to macroscopic states.\needref{Do we need reference?}
+        %% Our argument
+		However, we argue that, by coarse-graining microscopic neural states, the neural system is able to achieve NTIC at certain coarse-grained macroscopic levels. To encode information in coarse-grained variables is a way to encode stable and robust information in neural system and overcome the difficulties to achieve NTIC at microscopic levels. Coarse-graining in this paper is referred to many-to-one functions that map microscopic states to macroscopic states.\needref{Do we need reference?}. In other words, a number of different micro-states realise the same value of the macro-variable \citep{price2007causation}. This is a common strategy that we can see in large number of previous neurophysiological studies. For example, in the temporal domain, neural spikes across time can be coarse-grained as spiking rate variables, known as rate coding \citep{adrian1926impulses, gerstner2002spiking, maass2001pulsed, panzeri2015neural, stein2005neuronal}. Neurons encode stimulus intensity by increasing or decreasing firing rate. \citep{kandel2000principles}. In this coding scheme, individual neural spikes in a transient time span is not meaningful and stochastic \citep{stein2005neuronal}. In contrast, rate codes are relative stable and are highly robust against noise causing variation of inter-spike intervals. 
 		
+		% population code
+		Another example of coding strategy using coarse-graining is population coding. In this coding scheme, information is represented by joint spatiotemporal activities of several neurons. Therefore, the information is encoded in coarse-grained variables whose values are jointly determined by neural activation patterns within a neural population \citep{kristan1997population, pouget2000information, binder2009encyclopedia, QuianQuiroga2009}. In such case, activities of every single neuron is not informative and stochastic. Instead, coarse-grained variables (such as population averaging and population vector) are able to represent information stably. Encoding information at coarse-grained levels allow the neural system ignores certain causal interactions relevant to fine-grained level of description \citep{Woodward2007-WOOCWA}.
+			
+			
+		% neural coarse-graining by Nic
+		It has been empirically implemented that NTIC can be achieved by coarse-graining snesory inputs in artificial neural networks. \citep{guttenberg2016neural} proposed a "neural coarse-graining (NCG)" architecture (fig.\ref{fig:NCG}) which aims to captures the emergent large-scale dynamics in the environment. The NCG network learns to coarse-grain input signals and extract latent parameters which are both predictive and predictable in the input signal and therefore achieves NTIC by building a higher-level representation of the underlying dynamics in the deep layers. More importantly, using this architecture, agents can process information and act at coarse-grained macroscopic levels.
 		
-		%% Our argument 
+		\begin{figure}
+			\includegraphicsTodo[width=0.8\textwidth]{WritingMaterials/PDFXCview_2018-06-08_14-24-03.png}
+			\caption{NCG \idea{I need to simplify this figure}\citep{guttenberg2016neural}}
+			\label{fig:NCG}
+		\end{figure}		
 		
-		
-
 
 		%% not monotonic
 		It is important to note that NTIC should not be a monotonic function of scale of coarse-graining. Overly coarse-graining system states can lead to low degrees of NTIC. For example, in an extreme scenario, when all microscopic states map to a single macroscopic variable, the macroscopic level does not have enough information capacity and thus losses  the self and environmental predictive power. This notion is also supported by empirical evidence. \cite{sederberg2018learning} showed that the efficiency of reading out  self-predictive information of neural population is higher when cell number in populations is 4 than 7 and 10-cell sets. This implies an optimal coarse-graining scale for NTIC processes. % Perhaps the best way to combine more than four cells is to break down the readout into indivisible units of four cells, which are later recombined in subsequent processing.}\citep{sederberg2018learning}
 
 
+        %% Link to consciousness
+        
+        At the physical scale which human being live in, the environmental dynamics is nearly deterministic following the laws of classical physics. It gives agents living at this physical scale great advantages if the agents can build NTIC process internally. Therefore, to coarse-grain microscopic states is necessary 
+        
+        %This means that it is possible for agents to live at this physical scale to build NTIC process internally.
+        % More importantly, the information processing related to consciousness should not be situated at this level. Otherwise our conscious percept should be very noisy and unstable.
+        
+
 
 
 		\begin{writingMaterials}
-
-			@ One way to encode a stable information in neural system is to encode the information in the coarse-grained variables.
-
 			@ \rewrite{
 				Coarse-graining: a method of reducing the complexity of a system by treating groups of atoms/molecules as single quasi-particles CG: coarse-grained}
-
-
-			@ \rewrite{
-				a number of different microstates,First, typically a number of different microstates, will realize the same value of the macro-variables of upper level causal theories.}
-
-			@ This is a common strategy that we can see in large number of previous physiological studies.
 
 			@ neural system use population coding and temporal coding to fight against noise.
 
@@ -524,22 +527,10 @@
 
 
 
-
-			%% Our argument
-			@ We argues that the human neural system to achieve NTIC at a certain level of coarse-graining.
-
-
-
 			%% Macroscale Deterministic
 			@ The environment that human scale agents interact with is approximately govern by Newton's law and therefore the state transitions are nearly deterministic.\callforhelp{Is there any good ref I can cite?}
 
 			@ \idea{Need something here}
-
-
-			%% Noise
-			@ However, information processing at the microscopic levels in the neural system is noisy.
-
-			@ Therefore, the dynamic of microscopic level is highly stochastic
 
 
 			%% coarse-graining is necessary
@@ -551,52 +542,20 @@
 				cells or noise in a small number of cells} \cite{eurich2000multidimensional}
 
 
-			%% About consicousness
-			@ More importantly, the information processing related to consciousness should not be situated at this level. Otherwise our conscious percept should be very noisy and unstable.
-
-
 		\end{writingMaterials}
 
 
-		\subsection{Coarse-graining in neural system}
-			\begin{ants}
-
-				@ Coarse-graining can be defined as a function that maps multiple microscopic states to a macroscopic states.
-
-				@ One way to encode a stable information in neural system is to encode the information in the coarse-grained variables.
-
-				@ Studies have shown that coarse-graining is a common way that the neural system cope with inevitable noise at microscopic levels.
-
-				@ We have known that the neural system uses various coding strategies to encode information at coarse-grained levels.
-
-				@ \rewrite{Because the sequence of action potentials generated by a given stimulus varies from trial to trial, neuronal responses are typically treated statistically or probabilistically}
-
-				@ In the temporal domain, rate coding can be seem as coarse-graining on temporal events at the neuronal level \cite{stein2005neuronal}.
-
-				@ contained in the firing rate of the neuron
-
-				@ Firing rate of sensory neurons correlate stimulus intensities.  \citep{kandel2000principles}
-
-				@ This coding strategy is highly robust against noise causing variation of interspike intervals.
-
-				@ Another example is population coding.
-
-				@ Population coding is
-
-				the idea that nervous systems signal and compute parameters using large populations of imprecise neurons, rather than one or a few precise neurons.
-
-				@ \rewrite{
-						Population code (also ensemble code) denotes a code by which neural information is encoded in the spatiotemporal activity patterns of many neurons.
-					} \cite{binder2009encyclopedia}
-
-				@ In such case, single neurons are not informative. Instead, coarse-grained variables such as population averaging encode the information.
+		\begin{comment}
 
 
-				@ Encoding information at coarse-grained levels allow the neural system ignores certain causal interactions relevant to fine-grained level of description. \cite{price2007causation}
+			@ Studies have shown that coarse-graining is a common way that the neural system cope with inevitable noise at microscopic levels.
 
-				@ Note that, information processing related to consciousness should not be situated at this level. Otherwise our conscious percept should be very noisy and unstable.
+			@ \rewrite{Because the sequence of action potentials generated by a given stimulus varies from trial to trial, neuronal responses are typically treated statistically or probabilistically}
 
-			\end{ants}
+
+			@ Note that, information processing related to consciousness should not be situated at this level. Otherwise our conscious percept should be very noisy and unstable.
+
+		\end{comment}
 
 
 			\begin{writingMaterials}
@@ -644,22 +603,7 @@
 			\end{writingMaterials}
 
 
-
-
-		\subsection{Neural coarse-graining}
-			\begin{figure}
-				\includegraphicsTodo[width=0.8\textwidth]{WritingMaterials/PDFXCview_2018-06-08_14-24-03.png}
-				\caption{NCG \idea{I need to simplify this figure}\citep{guttenberg2016neural}}
-				\label{fig:NCG}
-			\end{figure}
-
-
-
-			\begin{ants}
-				@ NTIC can be more easily achieved by coarse-graining.
-
-				@ \citep{guttenberg2016neural} proposed an architecture, called neural coarse-graining (NCG), which aims to captures the emergent large-scale dynamics in the environment.
-
+			\begin{comment}
 				@ Achieving NTIC is the key objective to to extract out latent control parameters in the environment.
 
 				@ Through two objectives during training, the model can achieve NTIC.
@@ -669,39 +613,14 @@
 				@ With the objectives, NCG network learns to coarse-grain input signals and  extract latent parameters which are both predictive and predictable in the input signal and therefore achieves NTIC by building a higher-level representation of the underlying dynamics in the deep layers.
 
 				@ Agents can process information and act at abstract levels
-			\end{ants}
+			\end{comment}
 
 
-
-
-		\subsection{The advantage of NCG}
-			\begin{ants}
+			\begin{comment}
 				@ At the physical scale which human being live, the environmental dynamics is nearly deterministic following the laws of classical physics. This means that it is possible for agents living at this physical scale to build NTIC process internally.
 
 				@ When the information in individual sensory channel is noisy and partial, coarse-graining becomes necessary for achieve NTIC.
-			\end{ants}
-
-
-
-		\subsection{NTIC at specific levels of neural coarse-graining\callforhelp{any reference?}}
-			\begin{ants}
-				@ It is important to note that the relationship between degrees of NTIC and coarse-graining is not monotonic.
-
-				@ Overly coarse-graining a system can lead to low degrees of NTIC.
-
-				@ Imagining an extreme scenario that all microscopic states map to a single macroscopic state, the macroscopic process losses all the predictive information about the environment.
-
-				@ This is evidenced by empirical data as well.
-
-				@ Study by \cite{sederberg2018learning} found that self-predictive information of 4-cell sets readout by an optimal perceptron is higher than 7 and 10-cell sets.
-
-				@ The authors indicated that \blockquote[{\citep{sederberg2018learning}}]{reading out from groups of four cells can be accomplished with high absolute efficiency. Perhaps the best way to combine more than four cells is to break down the readout into indivisible units of four cells, which are later recombined in subsequent processing.}
-			\end{ants}
-
-\blockquote{reading out from groups of four cells can be accomplished with high absolute efficiency. Perhaps the best way to combine more than four cells is to break down the readout into indivisible units of four cells, which are later recombined in subsequent processing.}\citep{sederberg2018learning}
-
-
-
+			\end{comment}
 
 
 
