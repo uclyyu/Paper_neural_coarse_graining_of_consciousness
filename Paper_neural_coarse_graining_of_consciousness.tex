@@ -55,7 +55,10 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[at]{easylist}
 \usepackage{tcolorbox}
+\tcbuselibrary{skins}
 \usepackage{comment}
+\usepackage[framemethod=tikz]{mdframed}
+\usetikzlibrary{shadows}
 
 
 % Meaning of colours --------------------------------------------------------- %
@@ -81,17 +84,84 @@
 	% Writing Materials
 \newenvironment{writingMaterials} %
 	{
-	\begin{tcolorbox}[size=small, colframe=black!20!white, toprule=1mm]
-		Writing Materials
-	\end{tcolorbox}
-	\begin{easylist}[itemize]
+        \begin{tcolorbox}[enhanced,
+            title=-,
+            size=small,
+            colbacktitle=Aquamarine,
+            drop fuzzy shadow,
+            fontupper=\small,
+            boxrule=0.4pt,
+            colback=Aquamarine!10!white,
+            sharp corners]
+            Writing Materials
+        \end{tcolorbox}
+        \begin{easylist}[itemize]
 	}
 	{
-	\end{easylist}
-	\begin{tcolorbox}[size=small, bottomrule=1mm, halign=flush right, colframe=black!20!white]
-		Writing Materials
-	\end{tcolorbox}
-	}
+        \end{easylist}  
+        \begin{tcolorbox}[enhanced,
+            halign=flush right,
+            halign title=right,
+            size=small,
+            colbacktitle=Aquamarine,
+            drop fuzzy shadow,
+            fontupper=\small,
+            boxrule=0.4pt,
+            colback=Aquamarine,
+            colupper=White,
+            sharp corners]
+            Writing Materials -
+        \end{tcolorbox}        
+	}	
+% 	\newenvironment{writingMaterials} %
+% 	{
+%         \begin{mdframed}[%
+%             frametitle=- Writing Materials,
+%             frametitlefont={\small\color{white}},
+%             middlelinecolor=Black,
+%             shadow=true,
+%             shadowsize=2mm,
+%             frametitlebackgroundcolor=Aquamarine,
+%             frametitlerule=true,
+%             backgroundcolor=Aquamarine!10!white]
+%         \noindent
+%         \begin{easylist}[itemize]
+% 	}
+% 	{
+%         \end{easylist}  
+%         \end{mdframed}
+% 	}
+% \newenvironment{writingMaterials} %
+% 	{
+%         \begin{tcolorbox}[enhanced,
+%         breakable,
+%         title=Writing Materials,
+%         colbacktitle=Aquamarine,
+%         drop fuzzy shadow,
+%         fontupper=\small,
+%         boxrule=0.4pt,
+%         colback=Aquamarine!10!white,
+%         sharp corners]
+        
+%         \begin{easylist}[itemize]
+% 	}
+% 	{
+%         \end{easylist}  
+%         \end{tcolorbox}	
+% 	}	
+% \newenvironment{writingMaterials} %
+% 	{
+% 	\begin{tcolorbox}[size=small, colframe=black!20!white, toprule=1mm]
+% 		Writing Materials
+% 	\end{tcolorbox}
+% 	\begin{easylist}[itemize]
+% 	}
+% 	{
+% 	\end{easylist}
+% 	\begin{tcolorbox}[size=small, bottomrule=1mm, halign=flush right, colframe=black!20!white]
+% 		Writing Materials
+% 	\end{tcolorbox}
+% 	}
 
 % Functional content
 	% Quotes: green
@@ -114,6 +184,15 @@
 				boxrule=1mm,
 				colback=white%
 				]{\includegraphics[#1]{#2}}}
+				
+		% figure todo callout
+        \newcommand{\needfig}[1]{%
+			\ifthenelse{\equal{#1}{}}{%
+				\todo[color=White, linecolor=Orange, bordercolor=RedOrange]{\textcolor{RedOrange}{Fig}}}{%
+				\todo[color=White, linecolor=Orange, bordercolor=RedOrange]{\textcolor{RedOrange}{Fig: #1}}%
+			}%
+		}	
+		
 
 		% rewording
 		\newcommand{\rewording}[1]{\textcolor{RawSienna}{[[ REWORDING | #1 ]]}}
@@ -128,16 +207,16 @@
 
 
 
-	% Highlight
+	% Highlight: Yellow or Red
 		% Highlight only
-		\newcommand{\highlight}[2][Thistle!50!white]{\colorbox{#1}{#2}}
+		\newcommand{\highlight}[2][Yellow!75!white]{\colorbox{#1}{#2}}
 
 		% Highlight and comment
-		\newcommand{\highlightAndComment}[3][Thistle!50!white]{\todo[color=#1]{#3}\colorbox{#1}{#2}}
+		\newcommand{\highlightAndComment}[3][Yellow!75!white]{\todo[color=#1, linecolor=Yellow]{#3}\fcolorbox{Black}{#1}{#2}}
 
 		% Critical point
 		\newcommand{\critical}[1]{%
-			\todo[color=OrangeRed!70!white]{#1}
+			\todo[color=OrangeRed!80!white]{#1}
 		}
 
 
@@ -150,15 +229,15 @@
 
 		% box idea
 			\newcommand{\ideaBox}[1]{
-				\begin{tcolorbox}[%
-					width=12cm,
-					sharp corners=downhill,
-					hyphenationfix,
-					arc=8pt,
-					colback=Thistle!50!white,
-					flush right,
-					halign=flush right,
-					]%
+				\begin{tcolorbox}[enhanced,%
+                    title=-,
+                    center,
+                    fontupper=\small,
+                    lifted shadow={1mm}{-2mm}{3mm}{0.1mm}{black!50!white},%
+                    boxrule=0.4pt,
+                    width=9cm,
+                    colback=Thistle!50!white,
+                    sharp corners]
 					#1
 				\end{tcolorbox}
 			}
@@ -206,7 +285,7 @@
 % ============================================================================ %
 %                                     Title                                    %
 % ============================================================================ %
-\title{A neural coarse graining theory of consciousness}
+\title{A neural coarse graining theory of consciousness/\newline Non-trivial Informational closure through neural coarse-graining as the Fundamental Informational Correlates of Consciousness }
 
 
 
@@ -237,11 +316,23 @@
 	\section*{Keywords:}
 	Keywords: theory of Consciousness, informational closure, neural coarse-graining, level of analysis
 
+    \newpage
+    \section*{Not decided terminology}
+        \begin{ants}
+            @ information * in the NTIC process
+            @ Full and short name of this theory
+            @ core "?" (entity) for conscious content 
+            @ our theory? framework? proposal? 
+            @ system? process?
+            @ variable? node? element? member?
+        \end{ants}
+    
+    
 	% ============================================================================ %
 	%                                     Start                                    %
 	% ============================================================================ %
 
-
+    \newpage
 	\section{Introduction}
 
 		%% Story about a cell
@@ -649,15 +740,24 @@
         
         We starts our argument from a presumptive fact that every human conscious precept is ex trimly informative. Our conscious experience always consists of high multidimensional information involved multiple modalities. Considering information as resolved uncertainty, every conscious percept rules out enormous other possible conscious states in the state space, therefore, gives huge amount of of information. This notion is similar to one of the axiom, \textit{information}, in Integrated Information Theory (IIT 3.0, \cite{oizumi2014phenomenology}) which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p. 2]{oizumi2014phenomenology}.
         
+        
+
+        
         Based on this presumptive fact, we further take a radical standpoint and postulate that consciousness fundamentally associate with information in the physical reality (information correlates of consciousness, \cite{chalmers1996conscious, tononi2004information, gamez2011information}) rather than neuronal states (neural correlates of consciousness). That is, consciousness should be information-based. The amount of information comprising a conscious percept should be equivalent to information we can obtain from a specific physical event.  
         
         Nevertheless, even though information involved in every conscious percept is extremely rich, it is still bounded, i.e. boundary exists. Presuming consciousness is information-based, we can deal with the boundary problem \cite{goff2006experiences} by information closure. Additionally, our conscious experience contains not merely trivial informational rather it always provides rich information about the environmental and our bodily states. Therefore, we argue that NTIC is the core entity \highlightAndComment{responsible}{Help me to think of a better term} for consciousness.
         
         
+        For example, in the physical world, if there exists two systems Alice and Bob, but there is no information flow between them (or we can say no causal influence from one to the other). If we assume that Alice has consciousness experience, the information enclosed in Alice's conscious contents must not include any information about Bob. 
+        
+        We can treat information as a common language between conscious experience and physical world. 
 
-		\begin{ants}
+        Through coarse-graining, to achieve NTIC processes becomes possible in the neural system at macroscopic levels. Therefore, coarse-graining becomes necessary because every individual sensor and neuron at the microscopic scale can only access and process very limited partial information (Fig. \ref{fig:LevelOfConsciousness}). In the following, ...
         
         
+
+		\begin{writingMaterials}
+		
         @ As we mentioned in Chapter 3, to form non-trivial informational closure has a huge evolutionary advantage for the creatures interacting with the environment at our scale. 
         
         @ The physical environment dynamic at the human scale are nearly deterministic.\needref{Do we need ref here?}
@@ -668,9 +768,7 @@
 		
         @ Therefore, NTIC emerges from evolutionary processes is functionally plausible. 
         
-        @ Importantly, at the microscopic level, it is impossible to achieve NTIC as we mentioned in chapter 2. 
-    
-		@ Therefore, coarse-graining becomes necessary because every individual sensor and neuron at the microscopic scale can only access and process a small part of information.
+        @ Importantly, at the microscopic level, it is impossible to achieve NTIC as we mentioned in chapter 2.
 
 		@ However, at a macroscopic scale, information processing can achieve non-trivial informational closure (Fig. \ref{fig:LevelOfConsciousness})
         
@@ -713,7 +811,7 @@
 			@ In the following part, we....\todo{todo}
 
 
-		\end{ants}
+		\end{writingMaterials}
 
 
 		\begin{writingMaterials}
@@ -758,116 +856,76 @@
 
 \rlstart{3}
 		\subsection{Measure of consciousness/information correlate of consciousness}	
+		Based on our core assumption that NTIC is the core informational entity correlating conscious experience, we propose conscious levels and contents can be derived by computes the properties of a NTIC process. \newline
 		
-			\begin{ants}
-			@ In this thesis, we postulate that NTIC is the core entity of information correlate of consciousness.
-			
-			@ We further propose properties of consciousness correlate properties of NTIC
-			
-			
-			quantitative hypotheses of conscious level and conscious content. 
-			
-			@ We first hypothesise that, at time $t$, levels of consciousness $C_{t}^{Level}$ corresponds to the degree of NTIC at coarse-grained levels $NTIC_{t}$.
-			
-				\begin{equation}\label{eq:cLevel}
-					C_{t}^{Level} = NTIC_{t}
-				\end{equation}
-			
-			
-			@ We second hypothesise that, the content of consciousness corresponds to the state of the NTIC process.
-				\begin{equation}\label{eq:cContent}
-					C_{t}^{Content} = Y_{t}
-				\end{equation}
-				
-			@ We discuss the implications of the two hypotheses in the following. 					
-			\end{ants}
-			`
-			
-			
-			
-
-			\subsubsection{Level of Consciousness correlates degrees of NTIC of a process}
-    			\begin{ants}
-    			@ Several key insights about the conscious level can be derived from our theory.
-    			
-    			@ Equation \ref{eq:nticObjective} implies that conscious level positive correlates the complexity of the environment that the NTIC process encoded. 
-    			
-    			@ This implies that an agent who forms an NTIC process to lives and adapt to a more complex environment should have a higher conscious level than another agent who lives in an environment with more simple dynamics. 
-    			
-    			@ Channel capacity between the current state and the future state of the NTIC process also determines the level of consciousness.
-    			
-    			@ \todo{Need an example here} A small creatures may live in a simple environment and forms a NTIC process. The predictive information for the next state of the process may be very low. It has consciousness but the levels of consciousness is low. 
-    			
-    			@ Another implication about levels of consciousness from Equation \ref{eq:nticObjective} predictability of the system future state given the current state is crucial for the conscious level. This indicates that the if the system dynamics are highly scholastic and much unpredictable, the conscious level should be low. This notion explicitly indicates that information processed at neuronal scales which encounter heavy noise and are highly scholastic cannot form high level of consciousness.
-    			
-    			@ Similarly, at macro-scales, if coarse-graining causes coarse-grained macro-variable lose predictive fine-grain information, the predictability become low and also the channel capacity between the current state and future state becomes very small, NTIC would be low as well. K
-    			
-    			@ \todo{modify this figure}
-    			
-    				\begin{figure}[H]				\includegraphics[width=\textwidth]{WritingMaterials/FoxitReader_2019-01-31_19-03-59.png}
-    				\label{fig:LevelOfConsciousness}
-    				\caption{Level of coarse-graining and level of consciousness. The degree of NTIC is not a monotonic function of coarse-graining levels, suggesting that high conscious level may exist at a certain coarse-grained level }
-    				\end{figure}
-    				
-    			@ This non-monotonic relationship bwetween the level of coarse-graining in the neural system and the degree of NTIC explains why only information processed at a certain level can become conscious contents.  
-    			
-    			
-    			\end{ants}
-
-    		\subsubsection{Coarse-graining states correlates conscious contents}
-    			\begin{ants}
-				@ We claim that conscious contents correspond to the state of the NTIC process.
-				
-				@ This implies that the complexity of conscious contents is determined by the amount of information encompassed in the NTIC process.
-				
-				@ Therefore, larger state space of the NTIC process has, richer  experience the process can be conscious of (e.g., a NTIC process with high dimensionality).
-				
-				@ Crucially, even experience of darkness is rich because it rules out other enormous potential state that the NTIC process can be in. Equivalently, knowing the state of the NTIC process when the process experiences darkness also mean acquisition of information of the system.\todo{bad wording}
-				
-    			@ This is similar to the the \textit{Information} axiom in integrated information theory which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p. 2]{oizumi2014phenomenology}
-
-			
-    			@ \todo{Need an example here} Follow the example in the last section, a small creatures may live in a simple environment and forms a NTIC process. The predictive information for the next state of the process may be very low. This also implies the richness of the conscious experience this agent has is very limited. 
-    			
-    			@ Our theory naturally explains why consciousness is compositional, because the joint states of entities in the NTIC process determine the contents of consciousness. \ideaCallout{think about it}
-    			
-
-				@ Importantly, note that because the closure is at a coarse-grained scale one state of the informational closure can be mapped to several states at microscopic scale.
-				
-				@ This supports multiple realisation thesis \needref{multiple realisation} which suggests same conscious experiences can be mapped to different physical implementations. 
-				
-				
-				
-			\end{ants}
-			
-			
-			
-	    \subsubsection{Reconcile level and content of consciousness}
-	        \begin{ants}
-	            @ Our theory link conscious level and conscious content together via the state space of the NTIC process.
-	            
-	            @ When the information encapsulate in the NTIC process is large and reaches a high NTIC, based on our definition, the system has high level of consciousness. Simultaneously, this provides a rich state space which is equivalent to encoding rich predictive environmental dynamic in the system. 
-	            
-	            @ levels and contents of consciousness are just two different measures of a NTIC process. 
-	            
-	            @ this indicates an important prediction in which the conscious level is determined by states that the NTIC process potentially can reach rather the current state of a system. 
-	            
-	            @ For example, some neural states may map to simple sensory experience, e.g. visual experience in a dark room. However, this does not degrade the conscious level. This experience still provides a huge amount of information because it excludes enormous possibilities of visual experience and decrease a large amount of uncertainty.
-	            
-    			@ Therefore, this framework well integrates the two key but debated concepts in consciousness research \citep{laureys2005neural, bayne2016there}. 
-    			
-
-				@ \rewording{Note that, our claim is that informational closure is a more fundamental property that correlates consciousness. A species acquiring advantage to model a complex environment through evolution and , therefore, achieving a high-level non-trivial informational closure has a high level of consciousness, is the consequence of the evolution process. }
+		\noindent
+		We first hypothesise that, at given time $t$, levels of consciousness $C_{t}^{Level}$ corresponds to the degree of  $NTIC_{t}$ at a coarse-grained level.
+			\begin{equation}\label{eq:cLevel}
+				C_{t}^{Level} = NTIC_{t}
+			\end{equation}
 		
-	        \end{ants}
+		\newline
+		\noindent 
+		We second hypothesise that, the content of consciousness corresponds to the state of the NTIC process.
+			\begin{equation}\label{eq:cContent}
+				C_{t}^{Content} = Y_{t}
+			\end{equation}
+		
+		We discuss the implications of the two hypotheses in the following. 	
+	    \subsection{Level of Consciousness correlates degrees of NTIC of a process}
+	    
+	    Our theory indicates that conscious levels are determined by two key elements based on the definition of NTIC (Equation \ref{eq:nticObjective}). First, to achieve high level of NTIC, one needs to maximise the channel capacity between the current internal state and the future internal state $I(Y_{t+1};Y_{t})$. This indicates that the richer self-predictive information the NTIC process contained the higher level of consciousness the agent has. Considering two hypothetical systems composed of binary nodes, one has only three nodes and the other one has 1 million notes. Even thought the first system can reach the maximal the channel capacity, the maximal level of NTIC is only 3 bits. Comparing the first system, even though the second system does not have full self-predictability about its future state, the level of NTIC of this system can still far higher than the first system. This outcome naturally explains why people intuitively associate levels of consciousness with complexity of systems.\todo{Need to end this part and may need a reference} \toWrite{I want to say something about animal consciousness here}. 
+	    
+	    Second, one can also minimise the conditional mutual information  $I(Y_{t+1};Y_{t}|E_{t})$. This suggests that conscious level positively correlates the level of information about the environment dynamic that the NTIC process encoded. Therefor, this implies that an agent who forms an NTIC process to lives and adapt to a more complex environment has a higher conscious level than an agent who interacts an environment with simpler dynamics. This also implies that agents who can explore, adapt model, and react to diverse environments should have higher level of consciousness. 
+	    
+	    Note that the non-monotonic relationship between levels of NTIC and scale of coarse-graining suggests that there exists a scale of coarse-graining with the maximal level of NTIC. The self-predictive information is the key to achieve high conscious level. If a system dynamics is highly scholastic and unpredictable, the level of consciousness should be low. As a result, information processed at neuronal scales which is heavily noisy and highly scholastic cannot form a high level of consciousness. Similarly, after coarse-graining, macro-variables lose predictive fine-grain information, the predictability become low and also the channel capacity between the current state and future state becomes very small, NTIC would be low as well. Consequently, human consciousness should be maximised at a certain coarse-grained level in the neural system. 
+        
+        Finally, which coarse-grained level can achieve high NTIC? 
+        agent-scale operation
+        At the physical scale which human being live in, the environmental dynamics is nearly deterministic following the laws of classical physics. It gives agents living at this physical scale great advantages if the agents can build NTIC process internally. Therefore, to coarse-grain microscopic states is necessary
+	    
+	    
+		\begin{ants}
 			
+			@ \todo{modify this figure}
+			
+				\begin{figure}[H]				\includegraphics[width=\textwidth]{WritingMaterials/FoxitReader_2019-01-31_19-03-59.png}
+				\label{fig:LevelOfConsciousness}
+				\caption{Level of coarse-graining and level of consciousness. The degree of NTIC is not a monotonic function of coarse-graining levels, suggesting that high conscious level may exist at a certain coarse-grained level }
+				\end{figure}
+		\end{ants}
+
+\rlend
+\rlstart{3}
+		\subsection{Conscious Contents Corresponding to Coarse-grained States}\needfig{maybe I need a figure here}
+        As we mentioned above, human conscious contents always consist of rich,  high dimensional, and integrated information. The state space of the correspondent physical system must have the same capacity of containing the same amount of information. We claim that conscious contents correspond to the state of the NTIC process. 
+        
+        This claim implies that the complexity of conscious contents correlates the amount of information encompassed in the NTIC process. Therefore, a crucial predict from our theory is that the larger state space of the NTIC process has the richer  conscious experience the process can have (e.g., a NTIC process involving a large amount of coarse-grained variables). Crucially, even experience of full darkness contains rich information because it rules out other enormous potential alternative states of conscious contents. Equivalently, in the physical system, to know the state of the NTIC process when there is no sensory input (darkness) also requires the same amount of information from the system. 
+        
+        Follow the example in the last section\todo{Do I have this example?}, a small creature lives in a simple environment with very limited environment dynamics. It may forms a simple NTIC process. However, in this situation, the self-predictive information is very low and the state space of the NTIC process is small. As the result, the richness of the conscious experience this agent has will be very limited. 
+        
+        Importantly, because the closure is at a coarse-grained scale one state of the informational closure can be mapped to several states at microscopic scale, our theory supports multiple realisation thesis \needref{multiple realisation} which suggests same conscious experiences can be mapped to different physical implementations. 
+        
+
+        
+		\begin{writingMaterials}
+            @ Our theory naturally explains the compositional nature of consciousness because the joint states of entities in the NTIC process determine the contents of consciousness.
+
+		\end{writingMaterials}
+			
+			
+			
+	    \subsection{Reconcile level and content of consciousness}
+	    Recently, the segregation of conscious level and conscious contents raise a debate \citep{bayne2016there, Fazekas2016}. Our framework reconciles conscious level and conscious content. When the information encapsulate in the NTIC process is large and reaches a high NTIC, based on our definition, the system has high level of consciousness. Simultaneously, this provides a rich state space which is equivalent to encoding rich predictive environmental dynamic in the system. From this perspective, levels and contents of consciousness are just two different properties of NTIC processes. An important prediction from our theory is that in which the conscious level is determined by the size of the state space of the NTIC process rather the transient state of a system. For example, when we experience monotonous environment (a dark room), this does not degrade the conscious level.
+	    
+	    Our framework also explains why in normal physiological states level and content are positively correlated \citep{laureys2005neural}\needfig{}. To achieve high NTIC, a system also needs to have high dimensionality and a large state space which guarantees rich and high dimensional information in conscious contents. Therefore, this framework well integrates the two key but debated concepts in consciousness research. 
 			
 			
 			
 			\begin{writingMaterials}
     			@ This implies that, based on the Equation \ref{eq:nticObjective}, the self-predictive information about the future states that the current state holds and the information about the environment encoded in the process determine the level of consciousness.
     			
-    			@ This also suggests that the richness of the environment being modelled by the			NTIC process has a direct contribution to the level of consciousness.
+    			@ This also suggests that the richness of the environment being modelled by the	NTIC process has a direct contribution to the level of consciousness.
     			
 
 				@ To have high level non-trivial informational closure, the states of the coarse-grained scale need to
@@ -887,34 +945,17 @@
 \rlend    
 
 
-\rlstart{1}
+\rlstart{2}
 		\subsection{sensory hierarchy and neural coarse-graining}\label{sec:SensoryHierarchy}
 
+        It's important to note that the coarse-graining direction is not necessary to be align with \critical{Just saying anatomical is not enough. Need better expression} anatomical sensory hierarchy in the neural system. Our theory is different from consciousness theories which focus on the anatomical hierarchy, for example the intermediate Level Theory \citep[see also \ref{IntermediateLevelTheory}]{prinz2007intermediate, jackendoff1987consciousness}. Due to the pervasive noise in the microscopic levels in the neural system reliable information processes need to be built upon the coarse-grained levels. Nevertheless, to exercise causal power in actuators and environments, to read out information from coarse-grained levels is necessary. \needfig{Maybe need a figure discribing brain to hand}. Therefore, the neural system still implement readout decoders for the subsequent signal output. In figure \ref{fig:hierarchy}, the blue arrows indicate the readout mechanisms implemented in the neural system. We argue that previous data suggesting the neural correlates of consciousness between microscopic neural activities and conscious contents may be misled. 
 
+        
 			\begin{figure}[H]
 				\includegraphics[width=\textwidth]{WritingMaterials/SeperationOfCGandCortHierachy.pdf}
 				\label{fig:hierarchy}
 			\end{figure}
 
-
-
-
-			\begin{ants}
-				@ It's important to note that the coarse-graining direction is not necessary to be align with \critical{Just saying anatomical is not enough. Need better expression} anatomical sensory hierarchy in the neural system.
-
-				@ the coarse-grained information is needed and computed only when the information is required for microscopic scale processing (readout). 
-				
-				@ Therefore, our theory is very different from consciousness theories focus on the anatomical hierarchy, for example the intermediate Level Theory \citep[see also \ref{IntermediateLevelTheory}]{prinz2007intermediate, jackendoff1987consciousness}.
-				
-				@ The truth is that due to the pervasive noise in the microscopic levels in the neural system reliable information processes need to be built upon the coarse-grained levels. 
-				
-				@ Nevertheless, to exercise causal power in actuators and environments, to read out information at coarse-grained levels is necessary. 
-				
-				@ In figure \ref{fig:hierarchy}, the blue arrows indicate the readout mechanisms implemented in the neural system. 
-				
-				@ We argue that the neural correlates of consciousness may not be the fundamental principles for consciousness. The data may contaminate the understanding of consciousness. 
-			\end{ants}
-        
 
             \begin{writingMaterials}
     			@ Of course, from evolutionary perspective, neural system should develop a better hardware to support neural coarse-graining
@@ -927,15 +968,17 @@
             \end{writingMaterials}
 \rlend
 
-        \subsection{About boundary}
-            \begin{ants}
-                @ boundary is fluid 
-            \end{ants}
+\rlstart{2}	
+        \subsection{Dynamical Boundary}
+        Our theory predicts that the physical boundary of a conscious system is dynamical. The boundary is determined by elements forming high NTIC. This implies that when the structure of interaction between elements changes the physical boundaries support consciousness should also change. If some coarse-grained variables encode environmental information, they may become necessary components to form high NTIC. In such case, these coarse-grained variables are "recruited" inside the boundary of conscious processes. Note that, due to synergetic information, even recruiting some new variables may largely increase the level of NTIC. 
+        This may explain why consciousness is tightly associated with binding and integration of information in human perception and cognition. Another crucial implication is that the same neural substrates may not be always involved in conscious processing rather it depends on whether it creates high NTIC with other members in the neural system. \needfig{Maybe I need a figure here as well}
+    
+\rlend
 
-
-\rlstart{1}
 	\section{Conscious versus unconscious processing}
-		\ideaBox{Now we can combine "Relation to empirical findings in neuroscience and studies of consciousness" and "About Phenomenology (conscious processing)" in to this}
+
+\rlstart{1}	
+		\ideaBox{The goal of this part is to combine empirical study and phenomenology}
 		
 		\begin{ants}
 		    @ Our theory indicates that conscious information needs to fulfil two necessary conditions. 
@@ -1546,6 +1589,16 @@
 
     \section{Limitation}
         \begin{ants}
+            @ Our theory does not intent to solve the Hard problems. 
+            @ Inverted spectrum Inverted Qualia \citep{Shoemaker1982-SHOTIS, Block1990-BLOIE, Locke1979-LOCTCE-2}
+            
+            @ Considering that a system has only two possible physical states $X$ and $Y$ mapping to three different qualia (we can label them as $"red"$ and $"blue"$ respectively). A system cannot rest on two states at any moment, therefore, knowing the system state at $X$ excludes the the other possible state $Y$ and receives 1 bit information. Similarly, if conscious percept is $"red"$, it rules out the $"blue"$. Therefore, information provides by the conscious percept is also 1 bit. 
+            
+            @ However, our theory cannot tell why $X$ and $Y$ map to $red$ and $blue$ ,respectively, rather than the other way around. 
+            
+            @ 
+            
+            
             @ Our theory does not explain the mapping
         \end{ants}
     
