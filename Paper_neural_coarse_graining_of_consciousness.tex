@@ -1,4 +1,4 @@
-\documentclass[utf8]{article}
+ \documentclass[utf8]{article}
 
 
 %% Language and font encoding
@@ -59,6 +59,7 @@
 \usepackage{comment}
 \usepackage[framemethod=tikz]{mdframed}
 \usetikzlibrary{shadows}
+\usepackage{soul}
 
 
 % Meaning of colours --------------------------------------------------------- %
@@ -82,86 +83,38 @@
 			} %
 
 	% Writing Materials
-\newenvironment{writingMaterials} %
-	{
-        \begin{tcolorbox}[enhanced,
-            title=-,
-            size=small,
-            colbacktitle=Aquamarine,
-            drop fuzzy shadow,
-            fontupper=\small,
-            boxrule=0.4pt,
-            colback=Aquamarine!10!white,
-            sharp corners]
-            Writing Materials
-        \end{tcolorbox}
-        \begin{easylist}[itemize]
-	}
-	{
-        \end{easylist}  
-        \begin{tcolorbox}[enhanced,
-            halign=flush right,
-            halign title=right,
-            size=small,
-            colbacktitle=Aquamarine,
-            drop fuzzy shadow,
-            fontupper=\small,
-            boxrule=0.4pt,
-            colback=Aquamarine,
-            colupper=White,
-            sharp corners]
-            Writing Materials -
-        \end{tcolorbox}        
-	}	
-% 	\newenvironment{writingMaterials} %
-% 	{
-%         \begin{mdframed}[%
-%             frametitle=- Writing Materials,
-%             frametitlefont={\small\color{white}},
-%             middlelinecolor=Black,
-%             shadow=true,
-%             shadowsize=2mm,
-%             frametitlebackgroundcolor=Aquamarine,
-%             frametitlerule=true,
-%             backgroundcolor=Aquamarine!10!white]
-%         \noindent
-%         \begin{easylist}[itemize]
-% 	}
-% 	{
-%         \end{easylist}  
-%         \end{mdframed}
-% 	}
-% \newenvironment{writingMaterials} %
-% 	{
-%         \begin{tcolorbox}[enhanced,
-%         breakable,
-%         title=Writing Materials,
-%         colbacktitle=Aquamarine,
-%         drop fuzzy shadow,
-%         fontupper=\small,
-%         boxrule=0.4pt,
-%         colback=Aquamarine!10!white,
-%         sharp corners]
-        
-%         \begin{easylist}[itemize]
-% 	}
-% 	{
-%         \end{easylist}  
-%         \end{tcolorbox}	
-% 	}	
-% \newenvironment{writingMaterials} %
-% 	{
-% 	\begin{tcolorbox}[size=small, colframe=black!20!white, toprule=1mm]
-% 		Writing Materials
-% 	\end{tcolorbox}
-% 	\begin{easylist}[itemize]
-% 	}
-% 	{
-% 	\end{easylist}
-% 	\begin{tcolorbox}[size=small, bottomrule=1mm, halign=flush right, colframe=black!20!white]
-% 		Writing Materials
-% 	\end{tcolorbox}
-% 	}
+    \newenvironment{writingMaterials} %
+    	{
+            \begin{tcolorbox}[enhanced,
+                title=-,
+                size=small,
+                colbacktitle=Aquamarine,
+                drop fuzzy shadow,
+                fontupper=\small,
+                boxrule=0.4pt,
+                colback=Aquamarine!10!white,
+                sharp corners]
+                Writing Materials
+            \end{tcolorbox}
+            \begin{easylist}[itemize]
+    	}
+    	{
+            \end{easylist}  
+            \begin{tcolorbox}[enhanced,
+                halign=flush right,
+                halign title=right,
+                size=small,
+                colbacktitle=Aquamarine,
+                drop fuzzy shadow,
+                fontupper=\small,
+                boxrule=0.4pt,
+                colback=Aquamarine,
+                colupper=White,
+                sharp corners]
+                Writing Materials -
+            \end{tcolorbox}        
+    	}	
+
 
 % Functional content
 	% Quotes: green
@@ -212,13 +165,12 @@
 		\newcommand{\highlight}[2][Yellow!75!white]{\colorbox{#1}{#2}}
 
 		% Highlight and comment
-		\newcommand{\highlightAndComment}[3][Yellow!75!white]{\todo[color=#1, linecolor=Yellow]{#3}\fcolorbox{Black}{#1}{#2}}
+        \newcommand{\highlightAndComment}[3][Yellow]{\sethlcolor{#1}\hl{#2}\todo[color=#1, linecolor=Yellow]{#3}}
 
 		% Critical point
 		\newcommand{\critical}[1]{%
 			\todo[color=OrangeRed!80!white]{#1}
 		}
-
 
 
 
@@ -229,6 +181,7 @@
 
 		% box idea
 			\newcommand{\ideaBox}[1]{
+			    \vspace{2mm}
 				\begin{tcolorbox}[enhanced,%
                     title=-,
                     center,
@@ -240,6 +193,7 @@
                     sharp corners]
 					#1
 				\end{tcolorbox}
+				\vspace{2mm}
 			}
 
 		% call-out idea
@@ -735,22 +689,23 @@
 
 	\section{A neural coarse graining theory of consciousness}
 	
-\rlstart{3}
-        In this section, we formally introduce our theory \tnamefull \todo{We need a good name}.
+\rlstart{4}
+        In this section, we propose a new theoretical framework of consciousness \{\tnamefull\} \todo{We need a good name}. This framework proposes that NTIC is the fundamental properties for information processing to be conscious. Additionally, coarse-graining is necessary to achieve NTIC in various of different systems. 
         
-        We starts our argument from a presumptive fact that every human conscious precept is ex trimly informative. Our conscious experience always consists of high multidimensional information involved multiple modalities. Considering information as resolved uncertainty, every conscious percept rules out enormous other possible conscious states in the state space, therefore, gives huge amount of of information. This notion is similar to one of the axiom, \textit{information}, in Integrated Information Theory (IIT 3.0, \cite{oizumi2014phenomenology}) which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p. 2]{oizumi2014phenomenology}.
+        We starts our argument from a presumptive fact that every human conscious precept is highly informative. Our conscious experience always consists of high multidimensional information and usually involves information from multiple modalities. If we consider information as resolved uncertainty, every conscious percept rules out other enormous possible conscious states that we are able to experience. Therefore, every conscious percept resolves a huge amount of uncertainty and provides considerable information. 
         
+        This notion is in agreement with one of the axiom, \textit{information}, in Integrated Information Theory (IIT 3.0) which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p. 2]{oizumi2014phenomenology}.
         
-
+        Based on this presumptive fact, we postulate that the amount of information possessed of a conscious percept should be equivalent to information that we can obtain from a particular physical event in the physical reality. For example, considering two physical systems (Alice and Bob) and there is no interaction (or information passing) in between. Assuming that Alice is conscious, the conscious experience that Alice has should not involve any information about Bob. 
         
-        Based on this presumptive fact, we further take a radical standpoint and postulate that consciousness fundamentally associate with information in the physical reality (information correlates of consciousness, \cite{chalmers1996conscious, tononi2004information, gamez2011information}) rather than neuronal states (neural correlates of consciousness). That is, consciousness should be information-based. The amount of information comprising a conscious percept should be equivalent to information we can obtain from a specific physical event.  
+        \todo{Considering putting this para}
+        Similarly, we can apply this scenario to brain processing between two regions. We can consider a thought experiment. 
+        Imagining that in the future, one poor subject attend this experiment. We remove the subject's visual cortex from other brain areas. However, we keep all the connection between the two parts of the brain intact by replacing dendrites and axons between the two parts with micro electronic cables. Because these cables are very long, we can move the visual cortex to the surface of Mars. Now the experimenters give visual cortex a input signal. If the signal travels with the speed of light, it still takes three seconds to reach the other part on the earth. We can ask: Between the experimenters send the input signal and the information reach the part on the earth, what visual conscious content does the subject experience in the three seconds? We presume that in this three seconds subject's conscious experience should not contain any information about the visual input. Otherwise, the subject may be able to use the information to perform subsequent actions. This violates physics. This may look like a trivial questions.
         
-        Nevertheless, even though information involved in every conscious percept is extremely rich, it is still bounded, i.e. boundary exists. Presuming consciousness is information-based, we can deal with the boundary problem \cite{goff2006experiences} by information closure. Additionally, our conscious experience contains not merely trivial informational rather it always provides rich information about the environmental and our bodily states. Therefore, we argue that NTIC is the core entity \highlightAndComment{responsible}{Help me to think of a better term} for consciousness.
+        We further take a radical standpoint and postulate that consciousness fundamentally associates with information in the physical reality, i.e. information correlates of consciousness (ICC), \cite{chalmers1996conscious, tononi2004information, gamez2011information}) and discard the notion of neural correlates of consciousness(NCC). In sum, we consider consciousness is an information-based phenomenon and information is a common language between conscious experience and the physical world.
         
+        We next consider the boundary problems of consciousness \cite{goff2006experiences}. Even though information involved in every conscious percept is extremely rich, it is still bounded, i.e. the boundaries of information exist in every conscious percept. Presuming consciousness is information-based, we can identify the boundaries by measures from information theory. Particularly in this case, boundaries can be defined by information closure. More importantly, our conscious experience always contains not merely trivial informational. Rather, it always provides rich information about the environmental and our bodily states. Therefore, we postulate that NTIC is a fundamental informational property associated with consciousness.
         
-        For example, in the physical world, if there exists two systems Alice and Bob, but there is no information flow between them (or we can say no causal influence from one to the other). If we assume that Alice has consciousness experience, the information enclosed in Alice's conscious contents must not include any information about Bob. 
-        
-        We can treat information as a common language between conscious experience and physical world. 
 
         Through coarse-graining, to achieve NTIC processes becomes possible in the neural system at macroscopic levels. Therefore, coarse-graining becomes necessary because every individual sensor and neuron at the microscopic scale can only access and process very limited partial information (Fig. \ref{fig:LevelOfConsciousness}). In the following, ...
         
@@ -971,26 +926,23 @@
 \rlstart{2}	
         \subsection{Dynamical Boundary}
         Our theory predicts that the physical boundary of a conscious system is dynamical. The boundary is determined by elements forming high NTIC. This implies that when the structure of interaction between elements changes the physical boundaries support consciousness should also change. If some coarse-grained variables encode environmental information, they may become necessary components to form high NTIC. In such case, these coarse-grained variables are "recruited" inside the boundary of conscious processes. Note that, due to synergetic information, even recruiting some new variables may largely increase the level of NTIC. 
-        This may explain why consciousness is tightly associated with binding and integration of information in human perception and cognition. Another crucial implication is that the same neural substrates may not be always involved in conscious processing rather it depends on whether it creates high NTIC with other members in the neural system. \needfig{Maybe I need a figure here as well}
+        This may explain why consciousness is tightly associated with binding and integration of information in human perception and cognition. Another crucial implication is that the same neural substrates may not be always involved in conscious processing rather it depends on whether it creates high NTIC with other members in the neural system. \needfig{Maybe I need a figure h  ere as well}
     
 \rlend
 
-	\section{Conscious versus unconscious processing}
+	\section{Conscious versus Unconscious Processing}
 
-\rlstart{1}	
+\rlstart{2}	
 		\ideaBox{The goal of this part is to combine empirical study and phenomenology}
+		Our theory suggests two necessary conditions to make information conscious in the neural system.
+		\begin{enumerate}
+		    \item The information needs to be encode in NTIC processes
+		    \item \highlightAndComment{The information exists at coarse-grained levels which creates a high degree of NTIC and reduces stochasticity}{Need better expressions} 
+		\end{enumerate}
 		
-		\begin{ants}
-		    @ Our theory indicates that conscious information needs to fulfil two necessary conditions. 
-		    
-		    @ 1. The information is processed at a certain coarse-grained 
-		    
-		    @ 2. encoded in the NTIC process
-		    
-		    @ Based on the two conditions, we can classify brain processes into conscious and unconscious processing based on the two conditions. 
-		    
-
-		\end{ants}
+		In this section, we discussed the implication of the two conditions for the empirical data in the literature of consciousness. 
+		
+	
 		
 		\subsection{Conscious Processing}
 		    \begin{ants}
@@ -999,6 +951,15 @@
 		        @ The current state of the process contains the information about its future state. Therefore, the neural system can build forward models to predict the future state of the environment using the information encoded in the NTIC process. 
 		        
 		        @ Cognitive functions recruiting forward models built upon it are conscious. (E.g., planning, imagination, dreaming)
+		        
+		        @ It is important to note that we do suggest any functionalism of consciousness. Rather, we believe that information is fundamentally linked to consciousness. The reason why consciousness is accompanied with some specific cognitive function is because NTIC is a powerful property that brings creatures a lot of advantage in the evolution. 
+		        
+		        @@ Predictive information about the environment.
+		        
+		        @@ Stability 
+		        
+		        @@ simulation environmental dynamics 
+		        
 		    \end{ants}
 		
 		\subsection{Unconscious Processing}
