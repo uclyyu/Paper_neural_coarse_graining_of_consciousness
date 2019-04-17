@@ -55,7 +55,12 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage[at]{easylist}
 \usepackage{tcolorbox}
+\tcbuselibrary{skins}
 \usepackage{comment}
+\usepackage[framemethod=tikz]{mdframed}
+\usetikzlibrary{shadows}
+\usepackage{soul}
+\usepackage{version}
 
 
 % Meaning of colours --------------------------------------------------------- %
@@ -79,19 +84,40 @@
 			} %
 
 	% Writing Materials
-\newenvironment{writingMaterials} %
-	{
-	\begin{tcolorbox}[size=small, colframe=black!20!white, toprule=1mm]
-		Writing Materials
-	\end{tcolorbox}
-	\begin{easylist}[itemize]
-	}
-	{
-	\end{easylist}
-	\begin{tcolorbox}[size=small, bottomrule=1mm, halign=flush right, colframe=black!20!white]
-		Writing Materials
-	\end{tcolorbox}
-	}
+    \newenvironment{WritingMaterials} %
+    	{
+            \begin{tcolorbox}[enhanced,
+                title=-,
+                size=small,
+                colbacktitle=Aquamarine,
+                drop fuzzy shadow,
+                fontupper=\small,
+                boxrule=0.4pt,
+                colback=Aquamarine!10!white,
+                sharp corners]
+                Writing Materials
+            \end{tcolorbox}
+            \begin{easylist}[itemize]
+    	}
+    	{
+            \end{easylist}  
+            \begin{tcolorbox}[enhanced,
+                halign=flush right,
+                halign title=right,
+                size=small,
+                colbacktitle=Aquamarine,
+                drop fuzzy shadow,
+                fontupper=\small,
+                boxrule=0.4pt,
+                colback=Aquamarine,
+                colupper=White,
+                sharp corners]
+                Writing Materials -
+            \end{tcolorbox}        
+    	}	
+    	
+    % \excludeversion{WritingMaterials}
+
 
 % Functional content
 	% Quotes: green
@@ -103,17 +129,27 @@
 		\newcommand{\toWrite}[1]{\noindent
 			\textcolor{Orange}{\textbf{[[ #1 ]]}}}
 
-		% figure todo
-		\newcommand{\includegraphicsTodo}[2][]{%
-			\tcbox[%
-				adjusted title=\LARGE To Be Modified,
-				halign title=right,
-				colbacktitle=Orange!75!White,
-				coltitle=Black,
-				colframe=Red!60!White,
-				boxrule=1mm,
-				colback=white%
-				]{\includegraphics[#1]{#2}}}
+	% figure todo
+        \newcommand{\includegraphicsTodo}[2][]{%
+            \tcbox[enhanced,
+                center,
+            	adjusted title=\large To Be Modified ...,
+            	halign title=center,
+            	attach boxed title to top left={yshift=-3mm, xshift=1cm,yshifttext=-1mm}, boxed title style={drop fuzzy shadow},
+            	colbacktitle=RedOrange!70!black,
+            	coltitle=white,
+            	colframe=RedOrange!50!black,
+            	colback=white
+        	]{\includegraphics[#1]{#2}}}
+				
+		% figure todo callout
+        \newcommand{\needfig}[1]{%
+			\ifthenelse{\equal{#1}{}}{%
+				\todo[color=White, linecolor=Orange, bordercolor=RedOrange]{\textcolor{RedOrange}{Fig}}}{%
+				\todo[color=White, linecolor=Orange, bordercolor=RedOrange]{\textcolor{RedOrange}{Fig: #1}}%
+			}%
+		}	
+		
 
 		% rewording
 		\newcommand{\rewording}[1]{\textcolor{RawSienna}{[[ REWORDING | #1 ]]}}
@@ -128,18 +164,17 @@
 
 
 
-	% Highlight
+	% Highlight: Yellow or Red
 		% Highlight only
-		\newcommand{\highlight}[2][Thistle!50!white]{\colorbox{#1}{#2}}
+		\newcommand{\highlight}[2][Yellow!75!white]{\colorbox{#1}{#2}}
 
 		% Highlight and comment
-		\newcommand{\highlightAndComment}[3][Thistle!50!white]{\todo[color=#1]{#3}\colorbox{#1}{#2}}
+        \newcommand{\highlightAndComment}[3][Yellow]{\sethlcolor{#1}\hl{#2}\todo[color=#1, linecolor=Yellow]{#3}}
 
 		% Critical point
 		\newcommand{\critical}[1]{%
-			\todo[color=OrangeRed!70!white]{#1}
+			\todo[color=OrangeRed!80!white]{#1}
 		}
-
 
 
 
@@ -150,17 +185,19 @@
 
 		% box idea
 			\newcommand{\ideaBox}[1]{
-				\begin{tcolorbox}[%
-					width=12cm,
-					sharp corners=downhill,
-					hyphenationfix,
-					arc=8pt,
-					colback=Thistle!50!white,
-					flush right,
-					halign=flush right,
-					]%
+			    \vspace{2mm}
+				\begin{tcolorbox}[enhanced,%
+                    title=-,
+                    center,
+                    fontupper=\small,
+                    lifted shadow={1mm}{-2mm}{3mm}{0.1mm}{black!50!white},%
+                    boxrule=0.4pt,
+                    width=9cm,
+                    colback=Thistle!50!white,
+                    sharp corners]
 					#1
 				\end{tcolorbox}
+				\vspace{2mm}
 			}
 
 		% call-out idea
@@ -169,7 +206,7 @@
 
 	% communication: green
 		% call for help
-			\newcommand{\callforhelp}[1]{\todo[color=SpringGreen]{[Call For Help]: #1}}
+			\newcommand{\needhelp}[1]{\todo[color=SpringGreen]{[Need Help]: #1}}
 
 
 		% comment
@@ -185,7 +222,41 @@
 			% It's a \addcomment[beautiful]{Acer}{need a reference} day
 
 
-
+    % backup: 
+    \newenvironment{backup}
+    {
+        
+        \begin{tcolorbox}[enhanced,
+            title=-,
+            size=small,
+            colbacktitle=black!70!white,
+            colback=black!10!white,            
+            drop fuzzy shadow,
+            fontupper=\small,
+            boxrule=0.4pt,
+            sharp corners]
+            Backup
+        \end{tcolorbox}
+    }
+    {
+        \begin{tcolorbox}[enhanced,
+            halign=flush right,
+            halign title=right,
+            size=small,
+            colbacktitle=black!10!white,
+            colback=black!70!white,
+            drop fuzzy shadow,
+            fontupper=\small,
+            boxrule=0.4pt,
+            colupper=White,
+            sharp corners]
+            Backup -
+        \end{tcolorbox}    
+    }
+    % \excludeversion{backup}
+    
+    
+    
 % review loop annotation
     \usepackage[xcolor, outerbars]{changebar}
     \cbcolor{red}
@@ -206,7 +277,7 @@
 % ============================================================================ %
 %                                     Title                                    %
 % ============================================================================ %
-\title{A neural coarse graining theory of consciousness}
+\title{A neural coarse graining theory of consciousness/\newline Non-trivial Informational closure through neural coarse-graining as the Fundamental Informational Correlates of Consciousness }
 
 
 
@@ -237,11 +308,23 @@
 	\section*{Keywords:}
 	Keywords: theory of Consciousness, informational closure, neural coarse-graining, level of analysis
 
+    \newpage
+    \section*{Not decided terminology}
+        \begin{ants}
+            @ information * in the NTIC process
+            @ Full and short name of this theory
+            @ core "?" (entity) for conscious content 
+            @ our theory? framework? proposal? 
+            @ system? process?
+            @ variable? node? element? member?
+        \end{ants}
+    
+    
 	% ============================================================================ %
 	%                                     Start                                    %
 	% ============================================================================ %
 
-
+    \newpage
 	\section{Introduction}
 
 		%% Story about a cell
@@ -312,7 +395,7 @@
 
 		The notion of non-trivial informational closure (NTIC) is introduced by \cite{BERTSCHINGER.2006}. The concept of closure is closely related to system identification in systems theory. One can define a system from its environment by computing the closureness of the system \citep{maturana1991autopoiesis, rosen1991life, pattee2012evolving, luhmann1995probleme}. The closureness can be further quantified by information theory.
 
-		\begin{writingMaterials}
+		\begin{WritingMaterials}
 			@ Consciousness as an intrinsic information. Therefore, information should be self-define. This means the boundary of conscious content should be related to informational closure.
 
 			@ \idea{should we describe the intuition of boundary problem here?}
@@ -336,7 +419,7 @@
 				Informational closure: The higher process is informationally closed, i.e., there is no information flow from the lower to the higher level. Knowledge of the microstate will not improve predictions of the macrostate.} \citep[p. 4]{PFANTE.2014}
 
 
-		\end{writingMaterials}
+		\end{WritingMaterials}
 
 
 		% Definition of informational closure
@@ -531,7 +614,7 @@
 
 
 
-		\begin{writingMaterials}
+		\begin{WritingMaterials}
 			@ \rewrite{
 				Coarse-graining: a method of reducing the complexity of a system by treating groups of atoms/molecules as single quasi-particles CG: coarse-grained}
 
@@ -545,7 +628,7 @@
 
 
 			%% Macroscale Deterministic
-			@ The environment that human scale agents interact with is approximately govern by Newton's law and therefore the state transitions are nearly deterministic.\callforhelp{Is there any good ref I can cite?}
+			@ The environment that human scale agents interact with is approximately govern by Newton's law and therefore the state transitions are nearly deterministic.\needhelp{Is there any good ref I can cite?}
 
 			@ \idea{Need something here}
 
@@ -559,10 +642,10 @@
 				cells or noise in a small number of cells} \cite{eurich2000multidimensional}
 
 
-		\end{writingMaterials}
+		\end{WritingMaterials}
 
 
-		\begin{comment}
+		\begin{WritingMaterials}
 
 
 			@ Studies have shown that coarse-graining is a common way that the neural system cope with inevitable noise at microscopic levels.
@@ -572,10 +655,10 @@
 
 			@ Note that, information processing related to consciousness should not be situated at this level. Otherwise our conscious percept should be very noisy and unstable.
 
-		\end{comment}
+		\end{WritingMaterials}
 
 
-			\begin{writingMaterials}
+			\begin{WritingMaterials}
 				@ Population coding
 
 					@@ review ref
@@ -617,10 +700,10 @@
 
 					@@ Through coarse-graining, \highlightAndComment{higher level}{might be confusing, need to think about the terminology here} cortical areas can integrate those partial information to infer hidden causes.
 
-			\end{writingMaterials}
+			\end{WritingMaterials}
 
 
-			\begin{comment}
+			\begin{WritingMaterials}
 				@ Achieving NTIC is the key objective to to extract out latent control parameters in the environment.
 
 				@ Through two objectives during training, the model can achieve NTIC.
@@ -630,34 +713,51 @@
 				@ With the objectives, NCG network learns to coarse-grain input signals and  extract latent parameters which are both predictive and predictable in the input signal and therefore achieves NTIC by building a higher-level representation of the underlying dynamics in the deep layers.
 
 				@ Agents can process information and act at abstract levels
-			\end{comment}
+			\end{WritingMaterials}
 
 
-			\begin{comment}
+			\begin{WritingMaterials}
 				@ At the physical scale which human being live, the environmental dynamics is nearly deterministic following the laws of classical physics. This means that it is possible for agents living at this physical scale to build NTIC process internally.
 
 				@ When the information in individual sensory channel is noisy and partial, coarse-graining becomes necessary for achieve NTIC.
-			\end{comment}
+			\end{WritingMaterials}
 
 
 
 
 	\section{A neural coarse graining theory of consciousness}
 	
-\rlstart{3}
-        In this section, we formally introduce our theory \tnamefull \todo{We need a good name}.
+\rlstart{5}
+
+
+        In this section, we propose a new theoretical framework of consciousness \{\tnamefull\} \todo{We need a good name}. This framework proposes that NTIC is the fundamental properties for information processing to be conscious. Additionally, coarse-graining is necessary to achieve NTIC in various of different systems. 
+
+        We starts our argument from the first presumptive fact that every human conscious precept is highly informative. Our conscious experience always consists of high multidimensional information and usually involves information from multiple modalities. The notion of information referred to in this article is considered as resolved uncertainty. Being a certain conscious state rules out other enormous possible conscious experience in the state space of conscious experience. Therefore, every conscious percept resolves a huge amount of uncertainty and provides considerable information. 
         
-        We starts our argument from a presumptive fact that every human conscious precept is ex trimly informative. Our conscious experience always consists of high multidimensional information involved multiple modalities. Considering information as resolved uncertainty, every conscious percept rules out enormous other possible conscious states in the state space, therefore, gives huge amount of of information. This notion is similar to one of the axiom, \textit{information}, in Integrated Information Theory (IIT 3.0, \cite{oizumi2014phenomenology}) which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p. 2]{oizumi2014phenomenology}.
+        This notion is in agreement with one of the axiom, \textit{information}, in Integrated Information Theory (IIT 3.0) which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p. 2]{oizumi2014phenomenology}.
         
-        Based on this presumptive fact, we further take a radical standpoint and postulate that consciousness fundamentally associate with information in the physical reality (information correlates of consciousness, \cite{chalmers1996conscious, tononi2004information, gamez2011information}) rather than neuronal states (neural correlates of consciousness). That is, consciousness should be information-based. The amount of information comprising a conscious percept should be equivalent to information we can obtain from a specific physical event.  
+        Based on this presumptive fact, we postulate that the amount of information possessed of a conscious percept should be equivalent to information involved in a particular event or entity in the physical reality. Strictly speaking, we recognise information is a common language between conscious experience and the physical reality. We further take a radical standpoint and postulate that consciousness is fundamentally associated with information, i.e. information correlates of consciousness (ICC), \cite{chalmers1996conscious, tononi2004information, gamez2011information, Gamez2016}) and discard the notion of neural correlates of consciousness(NCC). 
         
-        Nevertheless, even though information involved in every conscious percept is extremely rich, it is still bounded, i.e. boundary exists. Presuming consciousness is information-based, we can deal with the boundary problem \cite{goff2006experiences} by information closure. Additionally, our conscious experience contains not merely trivial informational rather it always provides rich information about the environmental and our bodily states. Therefore, we argue that NTIC is the core entity \highlightAndComment{responsible}{Help me to think of a better term} for consciousness.
+        Next, we next consider the second presumptive fact that the information in consciousness is bound. Even though information involved in every conscious percept is extremely rich, it is still limited and we do not consciously feel everything in this universe. This leads to the boundary problems of consciousness \cite{goff2006experiences}. There should exist information boundaries for every conscious entity. Presuming consciousness is information-based phenomenon, we can identify the boundaries with measures from information theory. Particularly, in this case, boundaries can be defined by information closure. Therefore, information closure should be observed in conscious entities in the physical reality. 
         
+        \rewording{informational closure also suggests that there is no information flow from the lower to the higher level. Knowledge of the microscopic levels will not improve predictions of the future states of the macroscopic levels \citep{PFANTE.2014}}. This indicates that informational closed macroscopic levels can be treated as a complete reality. 
+        
+        Finally, our conscious experience always reflects some degree of information about environment and bodily states, i.e. non-trivial information. To account for the information-based considerations, we propose that NTIC is a fundamental informational property associated with consciousness. 
+        
+        \begin{WritingMaterials}
+        For example, considering two physical systems (Alice and Bob) and there is no interaction (or information passing) in between. Assuming that Alice is conscious, the conscious experience that Alice has should not involve any information about Bob. 
+        
+        \todo{Considering putting this para}
+        Similarly, we can apply this scenario to brain processing between two regions. We can consider a thought experiment. 
+        Imagining that in the future, one poor subject attend this experiment. We remove the subject's visual cortex from other brain areas. However, we keep all the connection between the two parts of the brain intact by replacing dendrites and axons between the two parts with micro electronic cables. Because these cables are very long, we can move the visual cortex to the surface of Mars. Now the experimenters give visual cortex a input signal. If the signal travels with the speed of light, it still takes three seconds to reach the other part on the earth. We can ask: Between the experimenters send the input signal and the information reach the part on the earth, what visual conscious content does the subject experience in the three seconds? We presume that in this three seconds subject's conscious experience should not contain any information about the visual input. Otherwise, the subject may be able to use the information to perform subsequent actions. This violates physics. This may look like a trivial questions.
         
 
-		\begin{ants}
+        However, in many systems, it is difficult to achieve NTIC at microscopic levels due to stochasticity. Through coarse-graining, NTIC processes become possible at macroscopic levels. Therefore, coarse-graining is necessary for many biological systems to implement NTIC processes, especially for the neural system (Fig. \ref{fig:LevelOfConsciousness}). In the following, we explained this framework and provide mathematical definitions and implications of ICC.  
+        \end{WritingMaterials}
         
-        
+
+		\begin{WritingMaterials}
+		
         @ As we mentioned in Chapter 3, to form non-trivial informational closure has a huge evolutionary advantage for the creatures interacting with the environment at our scale. 
         
         @ The physical environment dynamic at the human scale are nearly deterministic.\needref{Do we need ref here?}
@@ -668,9 +768,7 @@
 		
         @ Therefore, NTIC emerges from evolutionary processes is functionally plausible. 
         
-        @ Importantly, at the microscopic level, it is impossible to achieve NTIC as we mentioned in chapter 2. 
-    
-		@ Therefore, coarse-graining becomes necessary because every individual sensor and neuron at the microscopic scale can only access and process a small part of information.
+        @ Importantly, at the microscopic level, it is impossible to achieve NTIC as we mentioned in chapter 2.
 
 		@ However, at a macroscopic scale, information processing can achieve non-trivial informational closure (Fig. \ref{fig:LevelOfConsciousness})
         
@@ -713,13 +811,6 @@
 			@ In the following part, we....\todo{todo}
 
 
-		\end{ants}
-
-
-		\begin{writingMaterials}
-		
-		
-
 			@ This is the same as "if a tree falls in a forest" thought experiment.
 
 			@ Therefore, to understand this system, you don't need more information from external environment.
@@ -745,7 +836,7 @@
 
         
 
-		\end{writingMaterials}
+		\end{WritingMaterials}
 
 
 \rlend
@@ -758,122 +849,97 @@
 
 \rlstart{3}
 		\subsection{Measure of consciousness/information correlate of consciousness}	
+		Based on our core assumption that NTIC is the core informational entity correlating conscious experience, we propose conscious levels and contents can be derived by computes the properties of a NTIC process. \newline
 		
-			\begin{ants}
-			@ In this thesis, we postulate that NTIC is the core entity of information correlate of consciousness.
-			
-			@ We further propose properties of consciousness correlate properties of NTIC
-			
-			
-			quantitative hypotheses of conscious level and conscious content. 
-			
-			@ We first hypothesise that, at time $t$, levels of consciousness $C_{t}^{Level}$ corresponds to the degree of NTIC at coarse-grained levels $NTIC_{t}$.
-			
-				\begin{equation}\label{eq:cLevel}
-					C_{t}^{Level} = NTIC_{t}
-				\end{equation}
-			
-			
-			@ We second hypothesise that, the content of consciousness corresponds to the state of the NTIC process.
-				\begin{equation}\label{eq:cContent}
-					C_{t}^{Content} = Y_{t}
-				\end{equation}
-				
-			@ We discuss the implications of the two hypotheses in the following. 					
-			\end{ants}
-			`
-			
-			
-			
-
-			\subsubsection{Level of Consciousness correlates degrees of NTIC of a process}
-    			\begin{ants}
-    			@ Several key insights about the conscious level can be derived from our theory.
-    			
-    			@ Equation \ref{eq:nticObjective} implies that conscious level positive correlates the complexity of the environment that the NTIC process encoded. 
-    			
-    			@ This implies that an agent who forms an NTIC process to lives and adapt to a more complex environment should have a higher conscious level than another agent who lives in an environment with more simple dynamics. 
-    			
-    			@ Channel capacity between the current state and the future state of the NTIC process also determines the level of consciousness.
-    			
-    			@ \todo{Need an example here} A small creatures may live in a simple environment and forms a NTIC process. The predictive information for the next state of the process may be very low. It has consciousness but the levels of consciousness is low. 
-    			
-    			@ Another implication about levels of consciousness from Equation \ref{eq:nticObjective} predictability of the system future state given the current state is crucial for the conscious level. This indicates that the if the system dynamics are highly scholastic and much unpredictable, the conscious level should be low. This notion explicitly indicates that information processed at neuronal scales which encounter heavy noise and are highly scholastic cannot form high level of consciousness.
-    			
-    			@ Similarly, at macro-scales, if coarse-graining causes coarse-grained macro-variable lose predictive fine-grain information, the predictability become low and also the channel capacity between the current state and future state becomes very small, NTIC would be low as well. K
-    			
-    			@ \todo{modify this figure}
-    			
-    				\begin{figure}[H]				\includegraphics[width=\textwidth]{WritingMaterials/FoxitReader_2019-01-31_19-03-59.png}
-    				\label{fig:LevelOfConsciousness}
-    				\caption{Level of coarse-graining and level of consciousness. The degree of NTIC is not a monotonic function of coarse-graining levels, suggesting that high conscious level may exist at a certain coarse-grained level }
-    				\end{figure}
-    				
-    			@ This non-monotonic relationship bwetween the level of coarse-graining in the neural system and the degree of NTIC explains why only information processed at a certain level can become conscious contents.  
-    			
-    			
-    			\end{ants}
-
-    		\subsubsection{Coarse-graining states correlates conscious contents}
-    			\begin{ants}
-				@ We claim that conscious contents correspond to the state of the NTIC process.
-				
-				@ This implies that the complexity of conscious contents is determined by the amount of information encompassed in the NTIC process.
-				
-				@ Therefore, larger state space of the NTIC process has, richer  experience the process can be conscious of (e.g., a NTIC process with high dimensionality).
-				
-				@ Crucially, even experience of darkness is rich because it rules out other enormous potential state that the NTIC process can be in. Equivalently, knowing the state of the NTIC process when the process experiences darkness also mean acquisition of information of the system.\todo{bad wording}
-				
-    			@ This is similar to the the \textit{Information} axiom in integrated information theory which claims that \myQuote{...an experience of pure darkness is what it is by differing, in its particular way, from an immense number of other possible experiences...} \citep[p. 2]{oizumi2014phenomenology}
-
-			
-    			@ \todo{Need an example here} Follow the example in the last section, a small creatures may live in a simple environment and forms a NTIC process. The predictive information for the next state of the process may be very low. This also implies the richness of the conscious experience this agent has is very limited. 
-    			
-    			@ Our theory naturally explains why consciousness is compositional, because the joint states of entities in the NTIC process determine the contents of consciousness. \ideaCallout{think about it}
-    			
-
-				@ Importantly, note that because the closure is at a coarse-grained scale one state of the informational closure can be mapped to several states at microscopic scale.
-				
-				@ This supports multiple realisation thesis \needref{multiple realisation} which suggests same conscious experiences can be mapped to different physical implementations. 
-				
-				
-				
-			\end{ants}
-			
-			
-			
-	    \subsubsection{Reconcile level and content of consciousness}
-	        \begin{ants}
-	            @ Our theory link conscious level and conscious content together via the state space of the NTIC process.
-	            
-	            @ When the information encapsulate in the NTIC process is large and reaches a high NTIC, based on our definition, the system has high level of consciousness. Simultaneously, this provides a rich state space which is equivalent to encoding rich predictive environmental dynamic in the system. 
-	            
-	            @ levels and contents of consciousness are just two different measures of a NTIC process. 
-	            
-	            @ this indicates an important prediction in which the conscious level is determined by states that the NTIC process potentially can reach rather the current state of a system. 
-	            
-	            @ For example, some neural states may map to simple sensory experience, e.g. visual experience in a dark room. However, this does not degrade the conscious level. This experience still provides a huge amount of information because it excludes enormous possibilities of visual experience and decrease a large amount of uncertainty.
-	            
-    			@ Therefore, this framework well integrates the two key but debated concepts in consciousness research \citep{laureys2005neural, bayne2016there}. 
-    			
-
-				@ \rewording{Note that, our claim is that informational closure is a more fundamental property that correlates consciousness. A species acquiring advantage to model a complex environment through evolution and , therefore, achieving a high-level non-trivial informational closure has a high level of consciousness, is the consequence of the evolution process. }
+		\noindent
+		We first hypothesise that, at given time $t$, levels of consciousness $C_{t}^{Level}$ corresponds to the degree of  $NTIC_{t}$ at a coarse-grained level.
+			\begin{equation}\label{eq:cLevel}
+				C_{t}^{Level} = NTIC_{t}
+			\end{equation}
 		
-	        \end{ants}
+		\newline
+		\noindent 
+		We second hypothesise that, the content of consciousness corresponds to the state of the NTIC process.
+			\begin{equation}\label{eq:cContent}
+				C_{t}^{Content} = Y_{t}
+			\end{equation}
+		
+		We discuss the implications of the two hypotheses in the following. 	
+	    \subsection{Level of Consciousness correlates degrees of NTIC of a process}
+	    
+	    Our theory indicates that conscious levels are determined by two key elements based on the definition of NTIC (Equation \ref{eq:nticObjective}). First, to achieve high level of NTIC, one needs to maximise the channel capacity between the current internal state and the future internal state $I(Y_{t+1};Y_{t})$. This indicates that the richer self-predictive information the NTIC process contained the higher level of consciousness the agent has. Considering two hypothetical systems composed of binary nodes, one has only three nodes and the other one has 1 million notes. Even thought the first system can reach the maximal the channel capacity, the maximal level of NTIC is only 3 bits. Comparing the first system, even though the second system does not have full self-predictability about its future state, the level of NTIC of this system can still far higher than the first system. This outcome naturally explains why people intuitively associate levels of consciousness with complexity of systems.\todo{Need to end this part and may need a reference} \toWrite{I want to say something about animal consciousness here}. 
+	    
+	    Second, one can also minimise the conditional mutual information  $I(Y_{t+1};Y_{t}|E_{t})$. This suggests that conscious level positively correlates the level of information about the environment dynamic that the NTIC process encoded. Therefor, this implies that an agent who forms an NTIC process to lives and adapt to a more complex environment has a higher conscious level than an agent who interacts an environment with simpler dynamics. This also implies that agents who can explore, adapt model, and react to diverse environments should have higher level of consciousness. 
+	    
+	    Note that the non-monotonic relationship between levels of NTIC and scale of coarse-graining suggests that there exists a scale of coarse-graining with the maximal level of NTIC. The self-predictive information is the key to achieve high conscious level. If a system dynamics is highly scholastic and unpredictable, the level of consciousness should be low. As a result, information processed at neuronal scales which is heavily noisy and highly scholastic cannot form a high level of consciousness. Similarly, after coarse-graining, macro-variables lose predictive fine-grain information, the predictability become low and also the channel capacity between the current state and future state becomes very small, NTIC would be low as well. Consequently, human consciousness should be maximised at a certain coarse-grained level in the neural system. 
+        
+        Finally, which coarse-grained level can achieve high NTIC? 
+        agent-scale operation
+        At the physical scale which human being live in, the environmental dynamics is nearly deterministic following the laws of classical physics. It gives agents living at this physical scale great advantages if the agents can build NTIC process internally. Therefore, to coarse-grain microscopic states is necessary
+	    
+	    
+		\begin{ants}
+			
+			@ \todo{modify this figure}
+			
+				\begin{figure}[H]				
+				\includegraphics[width=\textwidth]{WritingMaterials/FoxitReader_2019-01-31_19-03-59.png}
+				\label{fig:LevelOfConsciousness}
+				\caption{Level of coarse-graining and level of consciousness. The degree of NTIC is not a monotonic function of coarse-graining levels, suggesting that high conscious level may exist at a certain coarse-grained level }
+				\end{figure}
+		\end{ants}
+
+\rlend
+\rlstart{3}
+		\subsection{Conscious Contents Corresponding to Coarse-grained States}\needfig{maybe I need a figure here}
+        As we mentioned above, human conscious contents always consist of rich,  high dimensional, and integrated information. The state space of the correspondent physical system must have the same capacity of containing the same amount of information. We claim that conscious contents correspond to the state of the NTIC process. 
+        
+        This claim implies that the complexity of conscious contents correlates the amount of information encompassed in the NTIC process. Therefore, a crucial predict from our theory is that the larger state space of the NTIC process has the richer  conscious experience the process can have (e.g., a NTIC process involving a large amount of coarse-grained variables). Crucially, even experience of full darkness contains rich information because it rules out other enormous potential alternative states of conscious contents. Equivalently, in the physical system, to know the state of the NTIC process when there is no sensory input (darkness) also requires the same amount of information from the system. 
+        
+        Follow the example in the last section\todo{Do I have this example?}, a small creature lives in a simple environment with very limited environment dynamics. It may forms a simple NTIC process. However, in this situation, the self-predictive information is very low and the state space of the NTIC process is small. As the result, the richness of the conscious experience this agent has will be very limited. 
+        
+        Importantly, because the closure is at a coarse-grained scale one state of the informational closure can be mapped to several states at microscopic scale, our theory supports multiple realisation thesis \needref{multiple realisation} which suggests same conscious experiences can be mapped to different physical implementations. 
+        
+		\begin{figure}[H]
+			\includegraphicsTodo[width=0.8\textwidth]{WritingMaterials/LimitCycle/PhaseCycle.pdf}
+			\label{fig:limitCycle}
+			\caption{Example of coarse-graining by a limit cycle process}
+		\end{figure}
+		
+
+		\begin{equation}\label{eq:LimitCycleExample}
+            \begin{array}{l}{\dot{y_1}=y_1-y_2-y_1\left(y_1^{2}+y_2^{2} \right)+\epsilon_{y_1}} \\ {\dot{y_2}=y_1+y_2-y_2\left(y_1^{2}+y_2^{2}\right)+\epsilon_{y_2}}\end{array}
+		\end{equation}    		
+		
+		The noise sources, $\epsilon_{y_1}$ and $\epsilon_{y_2}$, are i.i.d with a normal distribution with mean $\mu=0$ a and varance $\sigma^{2}=1$     
+		
+        
+		\begin{WritingMaterials}
+            @ Our theory naturally explains the compositional nature of consciousness because the joint states of entities in the NTIC process determine the contents of consciousness.
+
+		\end{WritingMaterials}
 			
 			
 			
+	    \subsection{Reconcile level and content of consciousness}
+	    Recently, the segregation of conscious level and conscious contents raise a debate \citep{bayne2016there, Fazekas2016}. Our framework reconciles conscious level and conscious content. When the information encapsulate in the NTIC process is large and reaches a high NTIC, based on our definition, the system has high level of consciousness. Simultaneously, this provides a rich state space which is equivalent to encoding rich predictive environmental dynamic in the system. From this perspective, levels and contents of consciousness are just two different properties of NTIC processes. An important prediction from our theory is that in which the conscious level is determined by the size of the state space of the NTIC process rather the transient state of a system. For example, when we experience monotonous environment (a dark room), this does not degrade the conscious level.
+	    
+	    Our framework also explains why in normal physiological states level and content are positively correlated \citep{laureys2005neural}\needfig{}. To achieve high NTIC, a system also needs to have high dimensionality and a large state space which guarantees rich and high dimensional information in conscious contents. Therefore, this framework well integrates the two key but debated concepts in consciousness research. 
 			
-			\begin{writingMaterials}
+			
+			
+			\begin{WritingMaterials}
     			@ This implies that, based on the Equation \ref{eq:nticObjective}, the self-predictive information about the future states that the current state holds and the information about the environment encoded in the process determine the level of consciousness.
     			
-    			@ This also suggests that the richness of the environment being modelled by the			NTIC process has a direct contribution to the level of consciousness.
+    			@ This also suggests that the richness of the environment being modelled by the	NTIC process has a direct contribution to the level of consciousness.
     			
 
 				@ To have high level non-trivial informational closure, the states of the coarse-grained scale need to
 
 				@ First, maximise the mutual information between environment and the representation.
 				This term implies that the agent need to maximise predictive power of environmental state. This also suggest that the environmental complexity is a crucial factor to the level of consciousness. The more rich and complex environment the agent try to predict the higher level of consciousness the agent has.
+				
+				@ Consciousness and complexity \cite{Tononi1998}
 
 
 				@ Second, to minimise the mutual information between environment and the representation conditional on the past state of the representation. This term suggests that the representation is self-predicable and it mimics the environmental transition.
@@ -881,42 +947,25 @@
 				@ Therefore, this theory predicts that level of consciousness determined by the environment that the agent adapts to. To form a high non-trivial informational closure, the agent will need to live in a complex environment and model the environmental transition precisely.
 
 
-			\end{writingMaterials}
+			\end{WritingMaterials}
 
 
 \rlend    
 
 
-\rlstart{1}
+\rlstart{2}
 		\subsection{sensory hierarchy and neural coarse-graining}\label{sec:SensoryHierarchy}
 
+        It's important to note that the coarse-graining direction is not necessary to be align with \critical{Just saying anatomical is not enough. Need better expression} anatomical sensory hierarchy in the neural system. Our theory is different from consciousness theories which focus on the anatomical hierarchy, for example the intermediate Level Theory \citep[see also \ref{IntermediateLevelTheory}]{prinz2007intermediate, jackendoff1987consciousness}. Due to the pervasive noise in the microscopic levels in the neural system reliable information processes need to be built upon the coarse-grained levels. Nevertheless, to exercise causal power in actuators and environments, to read out information from coarse-grained levels is necessary. \needfig{Maybe need a figure discribing brain to hand}. Therefore, the neural system still implement readout decoders for the subsequent signal output. In figure \ref{fig:hierarchy}, the blue arrows indicate the readout mechanisms implemented in the neural system. We argue that previous data suggesting the neural correlates of consciousness between microscopic neural activities and conscious contents may be misled. 
 
+        
 			\begin{figure}[H]
 				\includegraphics[width=\textwidth]{WritingMaterials/SeperationOfCGandCortHierachy.pdf}
 				\label{fig:hierarchy}
 			\end{figure}
 
 
-
-
-			\begin{ants}
-				@ It's important to note that the coarse-graining direction is not necessary to be align with \critical{Just saying anatomical is not enough. Need better expression} anatomical sensory hierarchy in the neural system.
-
-				@ the coarse-grained information is needed and computed only when the information is required for microscopic scale processing (readout). 
-				
-				@ Therefore, our theory is very different from consciousness theories focus on the anatomical hierarchy, for example the intermediate Level Theory \citep[see also \ref{IntermediateLevelTheory}]{prinz2007intermediate, jackendoff1987consciousness}.
-				
-				@ The truth is that due to the pervasive noise in the microscopic levels in the neural system reliable information processes need to be built upon the coarse-grained levels. 
-				
-				@ Nevertheless, to exercise causal power in actuators and environments, to read out information at coarse-grained levels is necessary. 
-				
-				@ In figure \ref{fig:hierarchy}, the blue arrows indicate the readout mechanisms implemented in the neural system. 
-				
-				@ We argue that the neural correlates of consciousness may not be the fundamental principles for consciousness. The data may contaminate the understanding of consciousness. 
-			\end{ants}
-        
-
-            \begin{writingMaterials}
+            \begin{WritingMaterials}
     			@ Of course, from evolutionary perspective, neural system should develop a better hardware to support neural coarse-graining
 
 				@ For example, pooling layers in CNN is an implementation of coarse-graining function. It' is very plausible visual processing hierarchy in the neural system realises pooling layers.
@@ -924,66 +973,111 @@
 
 				@ It is possible that the neural system represents higher-level information processing by low level physical subtract. For example, studies have found representation for summery statistics of signal and neural. population.\needref{neural representation for summery statistics}\\
 				From this point of view, sensory hierarchy may extend along with levels of coarse-graining.
-            \end{writingMaterials}
+            \end{WritingMaterials}
+        
+
+        
+               
 \rlend
 
-        \subsection{About boundary}
-            \begin{ants}
-                @ boundary is fluid 
-            \end{ants}
+\rlstart{2}	
+        \subsection{Dynamical Boundary}
+        Our theory predicts that the physical boundary of a conscious system is dynamical. The boundary is determined by elements forming high NTIC. This implies that when the structure of interaction between elements changes the physical boundaries support consciousness should also change. If some coarse-grained variables encode environmental information, they may become necessary components to form high NTIC. In such case, these coarse-grained variables are "recruited" inside the boundary of conscious processes. Note that, due to synergetic information, even recruiting some new variables may largely increase the level of NTIC. 
+        This may explain why consciousness is tightly associated with binding and integration of information in human perception and cognition. Another crucial implication is that the same neural substrates may not be always involved in conscious processing rather it depends on whether it creates high NTIC with other members in the neural system. \needfig{Maybe I need a figure h  ere as well}
+    
+\rlend
 
+	\section{Conscious versus Unconscious Processing}
 
-\rlstart{1}
-	\section{Conscious versus unconscious processing}
-		\ideaBox{Now we can combine "Relation to empirical findings in neuroscience and studies of consciousness" and "About Phenomenology (conscious processing)" in to this}
+\rlstart{3}	
+		\ideaBox{The goal of this part is to combine empirical study and phenomenology}
+	    \ideaBox{I need to expend this section much more and more references}
+		Our theory suggests two necessary conditions to make information conscious in the neural system.
+		\begin{enumerate}
+		    \item The information needs to be encode in NTIC processes
+		    \item \highlightAndComment{The information exists at coarse-grained levels which creates a high degree of NTIC and reduces stochasticity}{Need better expressions} 
+		\end{enumerate}
 		
-		\begin{ants}
-		    @ Our theory indicates that conscious information needs to fulfil two necessary conditions. 
-		    
-		    @ 1. The information is processed at a certain coarse-grained 
-		    
-		    @ 2. encoded in the NTIC process
-		    
-		    @ Based on the two conditions, we can classify brain processes into conscious and unconscious processing based on the two conditions. 
-		    
-
-		\end{ants}
+		In this section, we discussed the implication of the two conditions for the empirical data in the literature of consciousness. 
+		
+	
 		
 		\subsection{Conscious Processing}
-		    \begin{ants}
-		        @ To achieve high NTIC has evolutionary advantage. 
-		        
-		        @ The current state of the process contains the information about its future state. Therefore, the neural system can build forward models to predict the future state of the environment using the information encoded in the NTIC process. 
-		        
-		        @ Cognitive functions recruiting forward models built upon it are conscious. (E.g., planning, imagination, dreaming)
-		    \end{ants}
+		So far, previous consciousness research has identified a set of perceptual and cognitive functions which not exclusively but frequently associate with consciousness. 
+		
+		\needhelp{I need some suggestions of conscious function here.}
+		\begin{ants}
+            @ response inhibition 
+            @ goal
+            @ planning            
+            @ conflict resolution
+            @ error detection         
+            @ task-switching
+            @ working memory
+            @ cognitive control 
+            @ overriding automatic responses
+            @ self-monitoring 
+            @ global availability 
+            @ integration             
+            @ stabilisation
+            @ information for off-line processing
+            @ flexible routing of information
+            @ integrates behaviour across time            
+            @ tasks for long duration
+            @ flexibility and the strategic use of that information for complex operations and decision-making 
+            @ flexible and adjust our behavior to different contexts and goals
+            @ complex visuomotor abilities
+            @ conscious thought, reflection, reasoning, and temporally extended sense of self. 
+            @ multiple alternative possibilities
+            @ simulate alternative realities 
+            @ imagination
+            @ dreaming 
+            @ anticipation
+            @ intending
+            @ replaying
+            @ interpreting
+            @ reflecting
+            @ reasoning
+            @ problem solving 
+            @ deciding            
+		\end{ants}
+		
+
+		
+		To achieve high NTIC has evolutionary advantage. When a process achieves NTIC, the current state of the process contains the information about its future state (Eq. (5)). Therefore, the neural system can build forward models to predict the future state of the environment using the information encoded in the NTIC process. Cognitive functions recruiting forward models built upon it are conscious. (E.g., planning and imagination)
+		
+		It is important to note that we do suggest any functionalism of consciousness. Rather, we believe that information is fundamentally linked to consciousness. The reason why consciousness is accompanied with some specific cognitive function is because NTIC is a powerful property that brings creatures a lot of advantage in the evolution \cite{Seth2009Encyclopediaofconsciousness}. 
+		 
+	    \begin{WritingMaterials}
+	        @ importantly, evidence suggests that those functions in some conditions do not require the involvement of consciousness. This evidences an important fact that consciousness is not necessay to these functions. 
+	        
+	        
+	        @@ Predictive information about the environment.
+	        
+	        @@ Stability 
+	        
+	        @@ simulation environmental dynamics 
+	        
+	        @ Replaying past events
+	        
+	        @ \rewrite{However, recent evidence also points out interesting dissociations between conscious and unconscious information processing when it comes to the duration, flexibility and the strategic use of that information for complex operations and decision-making} \cite{van2012role}
+	        
+	    \end{WritingMaterials}
+	    
+	    
 		
 		\subsection{Unconscious Processing}
-		    \begin{ants}
-    		    @ When processes fail to satisfy either of the two conditions, they remain unconscious. 
-    		    
-    		    @ When processes do not meet the first condition, i.e. the information processed not at the certain coarse-grained level, the information will not be included in conscious contents. 
-    		    
-    		    @ For example, we are never conscious of neural spike activities at microscopic levels (e.g. single cell activities) because information passing among individual neurons are not at the certain coarse-grained level. 
-    		    
-    		    @ Libet's free will experiment can be also explained by our theory. 
-    		    
-    		    @ The random neural fluctuation under Libet's free will experiment happens at the microscopic scale \citep{SchurgerE2904}. 
-    		    
-    		    
-    		    @ When processes do not meet the second condition, i.e. processes which do not achieve high NTIC will remain unconscious. 
-    		    
-    		    @ This can explain why many "policy-based" processes are not conscious. 
-    		    
-    		    @ Policy-based here features those processes taking sensory information as input and directly outputting actions. Therefore, the future states of policy-based processes largely depend on the environmental states and failed to achieve informational closure. 
-    		    
-    		    @ Several neural processes are included in this category, e.g. reflexive neural circuit, blindsight, procedure memory. 
-		    \end{ants}
+		When processes fail to satisfy either of the two conditions, they remain unconscious. First, when processes do not meet the first condition, i.e. the information processed not at the certain coarse-grained level, the information will not be included in conscious contents. For example, we are never conscious of neural spike activities at microscopic levels (e.g. single cell activities) because information passing among individual neurons are not at the certain coarse-grained level. \todo{Rewording}Libet's free will experiment can be also explained by our theory. The random neural fluctuation under Libet's free will experiment happens at the microscopic scale \citep{SchurgerE2904}. 
 		
-        \subsection*{}
-            \begin{ants}
-                @ To summarise, our theory can well explain the various findings with parsimonious assumptions. 
-            \end{ants}
+		Second, when processes do not meet the second condition, i.e. processes which do not achieve high NTIC will remain unconscious. This can explain why many "policy-based" processes are not conscious.\todo{Need a better term/way here} Policy-based here features those processes taking sensory information as input and directly outputting actions. Therefore, the future states of policy-based processes largely depend on the environmental states and failed to achieve informational closure. Neural processes are included in this category, e.g. reflexive neural circuit, blindsight, procedure memory. 
+		
+		To summarise, our theory can well explain the various findings with parsimonious assumptions. 
+		
+		
+	    \begin{ants}
+	        @ \rewrite{the nonsemantic processing of primes is enhanced and priming effects are boosted when the experimental context allows the formation of automatic stimulus–response mappings.}\cite{VandenBussche2009}
+	    \end{ants}
+		
         
 
 \rlend
@@ -991,111 +1085,72 @@
 
 	\section{Comparison with other theories}
 		\ideaBox{Main points should be same/diff, our advantages, and predictions}
-		\begin{ants}
-		    @ In this section, we will discuss the relationship between our theory and other popular modern theories of consciousness. 
-		\end{ants}
+		In this section, we will discuss the relationship between our theory and other popular modern theories of consciousness. 
 
-\rlstart{1}
+\rlstart{2}
 		\subsection{Theories about multilevel views on consciousness and cognition}
-			\begin{ants}
-			    @ Previously, multilevel views on consciousness and cognition have been proposed. 
-			    
-			    @ In the following, we discussed the differences between our theory and other theories about multilevel views.
-				
-			\end{ants}
+        Previously, multilevel views on consciousness and cognition have been proposed. We shortly describe two theories which is \todo{XXX and XXX} related to our current proposal.	% We discussed the differences between our theory and other theories about multilevel views.
+        
+            \subsubsection{level of Organisation \cite{wimsatt1994ontology}}
+                As mentioned previously, the level of coarse-graining is different from the anatomical level.
+                Pennartz focus more on multimodal representation as the most important factor (See the discussion in \cite{pennartz2015brain}). Our proposal is inline with Pennartz's Neurorepresentational  theory (Neurorepresentationalism) \cite{pennartz2018consciousness,pennartz2015brain}. However, it’s crucial to note that our theory claims only the level of coarse-graining achieving NTIC matters to consciousness rather than the anatomical level of sensory hierarchy. 
+                \ideaBox{Should I also deal with Marr's level of abstraction?}
+                
+                
 			
-			\begin{writingMaterials}
-			    @ LEVELS OF ORGANIZATION \cite{wimsatt1994ontology}
-			        
-			    @ As mentioned previously, the level of coarse-graining is different from the anatomical level.
-			    
-			    @ \ideaBox{Should I also deal with Marr's level of abstraction?}
-			    
-			    @ See the discussion in \cite{pennartz2015brain}. But Pennartz focus more on multimodal representation as the most important factor.  
-			    
-			    @ Our proposal is inline with Pennartz's Neurorepresentational theory (Neurorepresentationalism). \cite{pennartz2018consciousness,pennartz2015brain}.
-			    
-			   
-			    
-			    
-			    @ Some theories also address the relationship between level of processing and consciousness.
-			    
-			    @ However, it’s crucial to note that our theory claims only the level of coarsegraining achieving NTIC matters to connsciousness rather than the anatomical level of sensory hierarchy
-
-
-				@ We shortly describe two theories which is \todo{XXX and XXX} related to our current proposal.			    
-			\end{writingMaterials}
 
 			\subsubsection{Intermediate Level Theory} \label{IntermediateLevelTheory}
-				\begin{ants}
-				@ Intermediate Level Theory (ILT) proposes that conscious experience only correlates specific levels of representations in the sensory processing the hierarchy. This theory claims that consciousness only associates with the representation at  intermediate levels rather than the ones at lower-level or higher-level.
-
-
-				@ As mentioned previously, a critical difference between ILT and our theory is that our theory doesn't assume the direction of coarse-graining should align with the direction of anatomical processing levels along cortical hierarchies (see fig \ref{fig:hierarchy}).
-				\end{ants}
+                One important theory linking consciousness to multilevel views is the Intermediate Level Theory (ILT). ILT proposes that conscious experience only correlates specific levels of representations in the sensory processing the hierarchy. This theory claims that consciousness only associates with the representation at intermediate levels rather than the ones at lower-level or higher-level discribed as 2.5D. However, ILT focuses on the levels in terms of anatomical direction. As mentioned previously, a critical difference between ILT and our theory is that our theory doesn't assume the direction of coarse-graining should align with the direction of anatomical processing levels along cortical hierarchies (see fig \ref{fig:hierarchy}).
+                
+                Different from ILT which suggests that the neural substrates responsible for the 2.5D computation is conscious, we predict that if information that is carried by v1 neurons are necessary to complete informational closure, the states of V1 neurons should also co-vary with conscious contents. 
 				
 			\subsubsection{Pennartz's neurorepresentational theory (Neurorepresentationalism)}
-			    \begin{ants}
-			    @ Our theory shares some similar concepts with Pennartz's Neurorepresentationalism. 
+			    Our theory shares some similar concepts with Pennartz's Neurorepresentationalism. However, Neurorepresentationalism focuses on multimodal representation \cite{pennartz2018consciousness,pennartz2015brain}. Another focus of neurorepresentationalism is on "making sense" between representations\todo{Need something here}. Different from neurorepresentationalism, conscious contents in our framework are grounded by the informational relations between variables in NTIC because NTIC provides a closed relationship between states in a system. 
 			    
-		        @ However, Neurorepresentationalism focuses on multimodal representation.
+			    Similar to Neurorepresentationalism, our framwork is more close to Marr ’ s original distinction between the levels of (neural) implementation, algorithms, and computational theory [122], but focuses on how conscious representations correspond to computational operations at levels with lower complexity and representational capacity.\cite{pennartz2018consciousness,pennartz2015brain}
+			    
+			    Neurorepresentationalism is also a functionalist perspective. However, e don't assume any functional properties as the criteria of consciousness. Instead, we propose information as a more fundamental principle correlates consciousness.  
 		        
-		        @ Neurorepresentationalism also focuses on "making sense" between representation
 		        
-		        @ We focus on informational closure which suggests the closure of causal interaction in a system. 
-		        
-		        @ We don't assume any functional properties as the criteria of consciousness. Instead, we propose information as a more fundamental principle correlates consciousness.  
-			    \end{ants}
+		        \begin{WritingMaterials}
+				%% Back up materials
+				
+				@ Prinz suggested that \rewrite{as. Cells in V1 are not promising candidates, because they do not reliably respond in ways that are consistent with features that we experience consciously. } \cite{prinz2007inter    mediate}
+			    
+				@ \rewrite{
+					The intermediate level theory originally proposed by Ray Jackendoff and further defended and specified by Jesse Prinz proposes that within the hierarchy of representations that are used to describe the cognitive system, conscious experience occurs only for specific levels of representation. The theory is rooted in Jackendoff ’s analysis of different cognitive systems such as vision, language, and music and the subsequent observation that consciousness does not arise anywhere within these systems. According to Jackendoff, consciousness is not associated with low-level, nor with high-level representations, but rather with those implying intermediate levels of processing. For instance, in the domain of object recognition, it is assumed that the visual system comprises a low level with local computations of visual features, an intermediate level reflecting binding and object recognition, and a higher level computing viewpoint invariance and representing abstract categories. According to Jackendoff and Prinz, conscious experience is not comprised of a disunified picture of visual features, nor is it represented by viewinvariant categories. Rather it is composed of bound and specific instances of objects that are assumed to be computed at the intermediate level of representation. In an analogous manner, speech perception can be decomposed into three levels: an acoustic representation of speech sounds at the lower level, a high level involving abstract lexical and syntactic categories, and in between a word recognition level relying on phonological representations. This theory explains why the conscious experience associated with speech perception mostly involves phonological representations, rather than other levels of representations. In Jackendoff and Prinz’ theory,the privileged role of the intermediate level of processing is based on the need for real-time computational efficiency. Indeed, this level of representation is assumed to be the most relevant one regarding ecological and functional needs. Another important aspect of this theory concerns the central role of attention during conscious experience. Here, attention is defined as a selection process that acts as a gate to working memory mechanisms. It performs the function of selecting the relevant information that is amplified afterward and then becomes conscious. Indeed, Prinz acknowledges that activation of an intermediatelevel representation on its own cannot be a sufficient condition for consciousness, given that those representations can be activated during subliminal perception. However, this theory makes the crucial postulate that the amplification of intermediatelevel representations by attention is a necessary and sufficient condition for consciousness. In sum, for each domain of processing, the content of consciousness at a particular moment is supported by a representational structure of intermediate level for that domain, which is selected to enter short-term memory, and enriched by attentional processing.} \cite{banks2009encyclopedia}
+
+				@ \rewrite{
+					In 1987, Ray Jackendoff published Consciousness and the Computational Mind. In it, he posed an important Where question: Where, in the fl ow of information, does consciousness arise? Most cognitive scientists agree that the mind is, in some sense, a computer. It is a device that processes information by transforming representations in accordance with rules. Computational devices decompose into various interconnected subsystems, each of which performs some aspect of a complex task. Given such a decompositional analysis, we can ask: in which subsystems does consciousness arise? If we depict the mind as a vast fl ow chart, and highlight the boxes whose rules and representations are conscious, which boxes should we mark? Jackendoff ’s answer is simple and elegant. He noticed that many of our mental capacities, including our senses and our language systems, are organized hierarchically. In each of these hierarchies, it makes sense to talk about low- , intermediate- , and high- level processing systems. We break down tasks into stages. Appealing to prevailing models of these stages, Jackendoff observed that the intermediate level seems to be privileged with respect to consciousness. Consciousness seems to arise in intermediate- level processing systems and not elsewhere.} \cite{prinz2007intermediate}
+
+				@ \cite{jackendoff1987consciousness}
+				@ \cite{prinz2007intermediate}
+				@ 2.5D
 
 
-				\begin{writingMaterials}
-					%% Back up materials
-					
-					@ Prinz suggested that \rewrite{as. Cells in V1 are not promising candidates, because they do not reliably respond in ways that are consistent with features that we experience consciously. } \cite{prinz2007inter    mediate}
-
-				    @ Our prediction is, if information that is carried by v1 neurons are necessary to complete informational closure, the states of V1 neurons should also co-vary with conscious contents.
-				    
-					@ \rewrite{
-						The intermediate level theory originally proposed by Ray Jackendoff and further defended and specified by Jesse Prinz proposes that within the hierarchy of representations that are used to describe the cognitive system, conscious experience occurs only for specific levels of representation. The theory is rooted in Jackendoff ’s analysis of different cognitive systems such as vision, language, and music and the subsequent observation that consciousness does not arise anywhere within these systems. According to Jackendoff, consciousness is not associated with low-level, nor with high-level representations, but rather with those implying intermediate levels of processing. For instance, in the domain of object recognition, it is assumed that the visual system comprises a low level with local computations of visual features, an intermediate level reflecting binding and object recognition, and a higher level computing viewpoint invariance and representing abstract categories. According to Jackendoff and Prinz, conscious experience is not comprised of a disunified picture of visual features, nor is it represented by viewinvariant categories. Rather it is composed of bound and specific instances of objects that are assumed to be computed at the intermediate level of representation. In an analogous manner, speech perception can be decomposed into three levels: an acoustic representation of speech sounds at the lower level, a high level involving abstract lexical and syntactic categories, and in between a word recognition level relying on phonological representations. This theory explains why the conscious experience associated with speech perception mostly involves phonological representations, rather than other levels of representations. In Jackendoff and Prinz’ theory,the privileged role of the intermediate level of processing is based on the need for real-time computational efficiency. Indeed, this level of representation is assumed to be the most relevant one regarding ecological and functional needs. Another important aspect of this theory concerns the central role of attention during conscious experience. Here, attention is defined as a selection process that acts as a gate to working memory mechanisms. It performs the function of selecting the relevant information that is amplified afterward and then becomes conscious. Indeed, Prinz acknowledges that activation of an intermediatelevel representation on its own cannot be a sufficient condition for consciousness, given that those representations can be activated during subliminal perception. However, this theory makes the crucial postulate that the amplification of intermediatelevel representations by attention is a necessary and sufficient condition for consciousness. In sum, for each domain of processing, the content of consciousness at a particular moment is supported by a representational structure of intermediate level for that domain, which is selected to enter short-term memory, and enriched by attentional processing.} \cite{banks2009encyclopedia}
-
-					@ \rewrite{
-						In 1987, Ray Jackendoff published Consciousness and the Computational Mind. In it, he posed an important Where question: Where, in the fl ow of information, does consciousness arise? Most cognitive scientists agree that the mind is, in some sense, a computer. It is a device that processes information by transforming representations in accordance with rules. Computational devices decompose into various interconnected subsystems, each of which performs some aspect of a complex task. Given such a decompositional analysis, we can ask: in which subsystems does consciousness arise? If we depict the mind as a vast fl ow chart, and highlight the boxes whose rules and representations are conscious, which boxes should we mark? Jackendoff ’s answer is simple and elegant. He noticed that many of our mental capacities, including our senses and our language systems, are organized hierarchically. In each of these hierarchies, it makes sense to talk about low- , intermediate- , and high- level processing systems. We break down tasks into stages. Appealing to prevailing models of these stages, Jackendoff observed that the intermediate level seems to be privileged with respect to consciousness. Consciousness seems to arise in intermediate- level processing systems and not elsewhere.} \cite{prinz2007intermediate}
-
-					@ \cite{jackendoff1987consciousness}
-					@ \cite{prinz2007intermediate}
-					@ 2.5D
-
-
-					@ about why it is this level
-					@@ \rewrite{
-						Under the computational interpretation, the “why” question means: In what sense are intermediate level representations computationally important or distinctive? Th is is a tractable question, and it may lead to insights into the function of consciousness. Representations at the intermediate level are ideally suited for real- time deliberative behavioral responses. Low- level representations fail to bind features into coherent wholes. If we are going to interact with our environment, the low level is not a good guide. Th e high level is a good deal better for action, but also suboptimal. Th e high level tells us the category of the stimuli we perceive, but from an allocentric point of view. It abstracts away from stimulus features that are crucial for action. If we encounter a predator, the high- level visual representation does not tell us if it is facing toward us or away from us. Without that knowledge, we cannot decide what course of action to take. So, I propose that the intermediate level plays a distinctive role in information processing. It delivers representations that are coherent but viewpoint specifi c. Th ese representations are useful for determining what to do here and now.arg1} \cite{prinz2007intermediate}
-					@@ \rewrite{
-						I conclude that the intermediate level plays a distinctive and important computational role. Some researchers find this puzzling. In wondering why the intermediate level is privileged, they note the arbitrariness of the fact that perceptual hierarchies have three levels. Could they not have two? Or a hundred? Do the 50 or so areas that contribute to visual processing really divide neatly into three levels? I think these puzzles depend on a particular understanding of what the word “intermediate” amounts to. One might get caught up in the fact that the intermediate level is the second stage in a sequence. Call this the “serial understanding of the intermediate level.” Alternatively, one might think of the intermediate level semantically. On this reading, the intermediate level is one that is not abstract and categorical, but not piecemeal or disunifi ed. Th ese notions are all in need of some refi nement, but, as a fi rst approximation, the idea is that intermediate- level representations are neither too specifi c nor too general.}\cite{prinz2007intermediate}
+				@ about why it is this level
+				@@ \rewrite{
+					Under the computational interpretation, the “why” question means: In what sense are intermediate level representations computationally important or distinctive? Th is is a tractable question, and it may lead to insights into the function of consciousness. Representations at the intermediate level are ideally suited for real- time deliberative behavioral responses. Low- level representations fail to bind features into coherent wholes. If we are going to interact with our environment, the low level is not a good guide. Th e high level is a good deal better for action, but also suboptimal. Th e high level tells us the category of the stimuli we perceive, but from an allocentric point of view. It abstracts away from stimulus features that are crucial for action. If we encounter a predator, the high- level visual representation does not tell us if it is facing toward us or away from us. Without that knowledge, we cannot decide what course of action to take. So, I propose that the intermediate level plays a distinctive role in information processing. It delivers representations that are coherent but viewpoint specifi c. Th ese representations are useful for determining what to do here and now.arg1} \cite{prinz2007intermediate}
+				@@ \rewrite{
+					I conclude that the intermediate level plays a distinctive and important computational role. Some researchers find this puzzling. In wondering why the intermediate level is privileged, they note the arbitrariness of the fact that perceptual hierarchies have three levels. Could they not have two? Or a hundred? Do the 50 or so areas that contribute to visual processing really divide neatly into three levels? I think these puzzles depend on a particular understanding of what the word “intermediate” amounts to. One might get caught up in the fact that the intermediate level is the second stage in a sequence. Call this the “serial understanding of the intermediate level.” Alternatively, one might think of the intermediate level semantically. On this reading, the intermediate level is one that is not abstract and categorical, but not piecemeal or disunifi ed. Th ese notions are all in need of some refi nement, but, as a fi rst approximation, the idea is that intermediate- level representations are neither too specifi c nor too general.}\cite{prinz2007intermediate}
 
 
 
-					%% Our theory
-					@ However, as we mentioned in Section \ref{sec:SensoryHierarchy}, \rewrite{The notion of ‘ levels ’ deployed here is functional and very different from that of successive anatomical processing stages along cortical hierarchies [75] or from anatomic scales in the brain. The multi-level concept in [2] is more akin to Marr ’ s original distinction between the levels of (neural) implementation, algorithms, and computational theory [122], but focuses on how conscious representations correspond to computational operations at levels with lower complexity and representational capacity.}\cite{pennartz2018consciousness,pennartz2015brain}
-				\end{writingMaterials}
+				%% Our theory
+				@ However, as we mentioned in Section \ref{sec:SensoryHierarchy}, \rewrite{The notion of ‘ levels ’ deployed here is functional and very different from that of successive anatomical processing stages along cortical hierarchies [75] or from anatomic scales in the brain. The multi-level concept in [2] is more akin to Marr ’ s original distinction between the levels of (neural) implementation, algorithms, and computational theory [122], but focuses on how conscious representations correspond to computational operations at levels with lower complexity and representational capacity.}\cite{pennartz2018consciousness,pennartz2015brain}
+			\end{WritingMaterials}
 
 
 \rlend
 
-\rlstart{1}	
+\rlstart{2}	
 		\subsection{First-order theories}
+            The first-order theories suggest that consciousness is determined by early sensory information or neural activities\needref{First-order theories}. The first-orde view maintains that conscious awareness is determined by early sensory activity alone, independently of higher-order representations. \rewrite{According to first-order views, phenomenal consciousness consists in analog or fine-grained contents that are available to the first-order processes that guide thought and action. So a phenomenally-conscious percept of red, for example, consists in a state with the analog content red which is tokened in such a way as to feed into thoughts about red, or into actions that are in one way or another guided by redness.}
             
-            \begin{ants}
-                
-            
-		    @ The ﬁrst-order theories suggest that consciousness is determined by early sensory information or neural activities.\needref{First-order theories}
-		    
-		    @ We suggest that, if early sensory information or neural activities after coarse-graining take parts in the NTIC process, early sensory information or neural activities also contribute consciousness. 
-		    
-		    @ However, due to coarse-graining, changes of early sensory information or neural activities do not necessarily accompany with changes of conscious contents. 
+            We predict that, if early sensory information or neural activities after coarse-graining take parts in the NTIC process, early sensory information or neural activities also contribute consciousness. However, due to coarse-graining, changes of early sensory information or neural activities do not necessarily accompany with changes of conscious contents. \todo{Need more here, espectially more counterintuitive predictions}
 		
-		    \end{ants}
 		
-			\begin{writingMaterials}
+			\begin{WritingMaterials}
 				@ \rewrite{
 					The ﬁrst-order view maintains that conscious awareness is determined by early sensory activity alone, independently of higher-order representations. Thus the crucial difference between the ﬁrst-order and higher-order views is that the latter but not the former predict that conscious awareness is determined at least in part by prefrontal and parietal activity. Therefore, in the group of ﬁrst-order theorists we include here not only those commonly labeled as such in the philosophical literature [11] but also theorists, such as Ned Block [12,13], who hold that the phenomenal qualities of awareness depend on the biological substrate rather than merely the content of the ﬁrst-order representations, as well as scientists who hold that visual awareness depends on activity in content-speciﬁc regions of the extrastriate cortex [24,25] or on feedback from these regions to the primary visual cortex [26]. Most ﬁrst-order theories explain the difference between awareness and unawareness by positing that the latter is associated with weak information [29] or with representations in alternative (e.g. subcortical) sensory pathways. Thus this view suggests that conscious and unconscious processing will have different functional consequences. Whereas some ﬁrst-order theorists hold that some higher cognitive functions can be performed without conscious awareness [30–32], most ﬁrst-order theorists take a difference in perceptual task performance (e.g. ‘hits’ vs ‘misses’ in a detection task) as evidence for a difference in conscious awareness [12,13,25,26,33]. In other words, they typically associate task performance with awareness..} \cite{lau2011empirical}
 
@@ -1104,44 +1159,44 @@
 
 				@  According to first-order views, phenomenal consciousness consists in analog or fine-grained contents that are available to the first-order processes that guide thought and action. So a phenomenally-conscious percept of red, for example, consists in a state with the analog content red which is tokened in such a way as to feed into thoughts about red, or into actions that are in one way or another guided by redness.
 
-			\end{writingMaterials}
+			\end{WritingMaterials}
 
 \rlend
 
 \rlstart{1}
 		\subsection{Higher Order Thought theory of consciousness}
-			\idea{
-				People think a high order representation receives information from the first order representation. This may be a misunderstanding. This may be the result of neural coarse-graining. Because contents in informational closure look like watching fine-grained information, people may have an wrong impression about it}
-
-			============================================================================
-			\begin{ants}
-			    @ In contrast to first-order theories, higher-order thought theories suggest that consciousness depends on higher-order representations representing agents as being in particular internal states.
-			    
-			    @ Coarse-grained information can be summary statistics which may be misunderstood as higher-order representation.
-			    
-			    @ It is true that the neural system does create  meta-representation to represent xxx.\needref{Maybe come studies about confidence represenatation}
-			    
-			    @ The higher-order representation may resemble coarse-grained variables.
-			    
-			    @ This may cause misidentify the entity which correlates conscious experience.  
-			    
-			    
-			    
-			    @ ----------------------------------------------------------------------------
-			    
-				@ Information closure directly is critical for other systems to construct forward models.
-
-				@ Therefore, most of the high level cognition can utilise the state of informational closure.
-
-				@ For example, mental planning needs a precise forward model to infer the environmental dynamics.
-
-				@ \idea{This is way HOT always involve consciousness }
-
-				@ \cite{rosenthal2005consciousness}
-			\end{ants}
+		    In contrast to first-order theories, higher-order thought theories suggest that consciousness depends on higher-order representations representing agents as being in particular internal states. Meta-cognition is also associated with many conscious cognitive function. However, we propose a new perspective and indicate that HOT may be a misunderstanding \critical{Very bad writing. I need to rewrite this part}. This may be the result of neural coarse-graining. Because contents in informational closure look like watching fine-grained information, people may have an wrong impression about it. Coarse-grained information can be summary statistics which may be misunderstood as higher-order representation. It is true that the neural system does create  meta-representation to represent xxx\needref{Maybe come studies about confidence represenatation}. The higher-order representation may resemble coarse-grained variables. This may cause misidentify the entity which correlates conscious experience.  
+		    
+		    Moreover, the predictive information in NTIC is critical for other systems to build forward models for a wild range of tasks. Therefore, most of the high level cognition can utilise the state of informational closure. For example, mental planning needs a precise forward model to infer the environmental dynamics.
 
 
-            \begin{writingMaterials}
+			\begin{WritingMaterials}
+		    @ In contrast to first-order theories, higher-order thought theories suggest that consciousness depends on higher-order representations representing agents as being in particular internal states.
+		    
+		    @ Coarse-grained information can be summary statistics which may be misunderstood as higher-order representation.
+		    
+		    @ It is true that the neural system does create  meta-representation to represent xxx.\needref{Maybe come studies about confidence represenatation}
+		    
+		    @ The higher-order representation may resemble coarse-grained variables.
+		    
+		    @ This may cause misidentify the entity which correlates conscious experience.  
+		    
+		    
+		    
+		    @ ----------------------------------------------------------------------------
+		    
+			@ Information closure directly is critical for other systems to construct forward models.
+
+			@ Therefore, most of the high level cognition can utilise the state of informational closure.
+
+			@ For example, mental planning needs a precise forward model to infer the environmental dynamics.
+
+			@ \idea{This is way HOT always involve consciousness }
+
+			@ \cite{rosenthal2005consciousness}
+
+
+            @ ============================================================================
 			@ \rewrite{
 				Higher-order theories of consciousness argue that conscious awareness crucially depends on higher-order mental representations that represent oneself as being in particular mental states.} \cite{lau2011empirical}
 
@@ -1157,70 +1212,79 @@
 			@ \rewrite{
 					Metacognition: cognition that is about another cognitive process as opposed to about objects in the world. In this article we use it mainly to refer to sensory metacognition: a cognitive process that concerns the quality or efﬁcacy of a perceptual process. The capacity of sensory metacognition is sometimes empirically assessed by the correspondence between subjective report and task performance: how closely are they associated with each other on a trial-by-trial basis}\cite{lau2011empirical}
 					
-			\end{writingMaterials}
+			\end{WritingMaterials}
 
 				
 \rlend
 
 
-\rlstart{1}
+\rlstart{2}
 		\subsection{Global workspace theory}
+		Global workspace theory (GWT)\cite{baars1988cognitive, baars1997theatre, baars2002conscious} or Global Neuronal Workspace theory (GNWT)\cite{dehaene1998neuronal, dehaene2001towards, dehaene2011experimental} states that the neural system consists of many separate specialised modules and a central global workspace (GW) which integrates and passes information amount the modules. Only the information that is accessed by the global workspace can be conscious aware of. The modules competes with each other to gain the access to the global workspace and the information from the winner can trigger an all-or-none "ignition" in the global workspace and be globally broadcasted to other modules. Conscious contents then associates information which gains access to the internal global workspace \cite{Dehaene2017}. Our framework can well accommodate and interpret these claims by GWT.
+		
+		
+		Stability: Conscious perception necessitates representational stability. Our theory rests upon self-predictability which formally encompasses stability.
+		
+		
+		Broadcasting: When new sensory information from a modality is involved in NTIC, the information can be preserved in the following dynamic of NTIC. The neural system can extract the information for specific task goals. This is equivalent to the function of broadcasting. 
+		
+		Non-linear ignition: Because mapping microscopic to macroscopic states is many-to-one, it commonly shows a nonlinear relationship between microstates and macrostates. In our theory, new information presents in conscious perception corresponds to a transition in the state space of the NTIC process. This can cause a significant change of the brain states and resembles non-linear ignition of brain activities. Conscious access as an accumulation of evidence leading to an all-or-none ignition What, if anything, remains unique to conscious processing? Although many cognitive operations can be partially launched non-consciously, these operations rarely if ever run to completion in the absence of consciousness. A subliminal stimulus may induce above-chance performance, behavioural priming, and a small amount of brain activity in narrowly deﬁned brain networks, but these measures often increase dramatically as soon as the subject reports seeing the stimulus, especially in high-level areas [46 60,61  ]. Accumulation of evidence has been demonstrated with non-conscious stimuli [59], but only conscious stimuli cross the threshold beyond which an overt strategy can be ﬂexibly deployed. \todo{Cite similar opinion from other theories}
+		
+		A difference between our theory and GWT is that our theory does not suggest a neuronal core anatomical area for consciousness. \todo{Link to Section 4}. Coarse-grained information in NTIC is more crucial for consciousness rather than neural substrates supporting the global workspace.
+		
 
-			\begin{ants}
+		\begin{WritingMaterials}
+			%% Introduction
+			@ Global workspace theory (GWT)\cite{baars1988cognitive, baars1997theatre, baars2002conscious} or Global Neuronal Workspace theory (GNWT)\cite{dehaene1998neuronal, dehaene2001towards, dehaene2011experimental} states that the neural system consists of many separate specialised modules and a central global workspace (GW) which integrates and passes information amount the modules. Only the information that is accessed by the global workspace can be conscious aware of. The modules competes with each other to gain the access to the global workspace and the information from the winner can trigger an all-or-none "ignition" in the global workspace and be globally broadcasted to other modules. Conscious contents then associates information which gains access to the internal global workspace \cite{Dehaene2017}.
+			
+			@ Submodule access and NTIC
 
-				%% Introduction
-				@ Global workspace theory (GWT)\cite{baars1988cognitive, baars1997theatre, baars2002conscious} or Global Neuronal Workspace theory (GNWT)\cite{dehaene1998neuronal, dehaene2001towards, dehaene2011experimental} states that the neural system consists of many separate specialised modules and a central global workspace (GW) which integrates and passes information amount the modules. Only the information that is accessed by the global workspace can be conscious aware of. The modules competes with each other to gain the access to the global workspace and the information from the winner can trigger an all-or-none "ignition" in the global workspace and be globally broadcasted to other modules. Conscious contents then associates information which gains access to the internal global workspace \cite{Dehaene2017}.
-				
-				@ Submodule access and NTIC
-
-				%% Our theory
-				
-				@ Our theory can well accommodate several claims by GWT.
-				
-				@ Conscious perception necessitates representational stability: Our theory rests upon self-predictability which formally encompasses stability.
-				
-				@ Broadcasting: When new sensory information from a modality is involved in NTIC, the information can be preserved in the following dynamic of NTIC. The neural system can extract the information for specific task goals. This is equivalent to the function of broadcasting. 
-				
-				@ Non-linear ignition: Because mapping microscopic to macroscopic states is many-to-one, it commonly shows a nonlinear relationship between microstates and macrostates. In our theory, new information presents in conscious perception corresponds to a transition in the state space of the NTIC process. This can cause a significant change of the brain states and resembles non-linear ignition of brain activities.
-				
-				@ our theory re-explains the critical xxx from GWT. 
-				
-				@ The critical difference is that our theory does not suggest a neuronal core anatomical area for consciousness. We suggest coarse-grained information form NTIC is crucial for consciousness. 
-				
-				@ In sum, our theory is compatible with previous physiological evidence supporting GWT.  
-
-
-
-			\end{ants}
+			%% Our theory
+			
+			@ Our theory can well accommodate several claims by GWT.
+			
+			@ Conscious perception necessitates representational stability: Our theory rests upon self-predictability which formally encompasses stability.
+			
+			@ Broadcasting: When new sensory information from a modality is involved in NTIC, the information can be preserved in the following dynamic of NTIC. The neural system can extract the information for specific task goals. This is equivalent to the function of broadcasting. 
+			
+			@ Non-linear ignition: Because mapping microscopic to macroscopic states is many-to-one, it commonly shows a nonlinear relationship between microstates and macrostates. In our theory, new information presents in conscious perception corresponds to a transition in the state space of the NTIC process. This can cause a significant change of the brain states and resembles non-linear ignition of brain activities.
+			
+			@ our theory re-explains the critical xxx from GWT. 
+			
+			@ The critical difference is that our theory does not suggest a neuronal core anatomical area for consciousness. We suggest coarse-grained information form NTIC is crucial for consciousness. 
+			
+			@ In sum, our theory is compatible with previous physiological evidence supporting GWT.  
 
 
 
-			\subsubsection{Global availability and Broadcasting}
+		\end{WritingMaterials}
 
 
-			\subsubsection{Stability}
-				\begin{ants}
+
+% 			\subsubsection{Global availability and Broadcasting}
+% 			\subsubsection{Stability}
+				\begin{WritingMaterials}
 					@ the presence of contexts as stable coalitions shaping access to the workspace.
 
 					@ e ‘all-or-none’ behavior, whereby the incoming evidence either quickly dies out (corresponding to subliminal processing) or is accumulated and ampliﬁed non-linearly into a full-blown state of high-level activity. This global ‘ignition’ has been proposed as a marker of conscious perception [70]. Indeed, empirically, when stimulus strength is varied, the early stages of non-conscious processing typically show a linear variation in activation, whereas conscious access is often characterized by a late non-linear ampliﬁcation of activation which invades a distributed set of parietal, prefrontal and cingulate areas
-				\end{ants}
+				\end{WritingMaterials}
 
 
-			\subsubsection{Broadcasting}
+% 			\subsubsection{Broadcasting}
 
 
 
 
 			\subsubsection{Ignition}
-				\begin{writingMaterials}
-					@ Conscious access as an accumulation of evidence leading to an all-or-none ignition What, if anything, remains unique to conscious processing? Although many cognitive operations can be partially launched non-consciously, these operations rarely if ever run to completion in the absence of consciousness. A subliminal stimulus may induce above-chance performance, behavioural priming, and a small amount of brain activity in narrowly deﬁned brain networks, but these measures often increase dramatically as soon as the subject reports seeing the stimulus, especially in high-level areas [46 60,61  ]. Accumulation of evidence has been demonstrated with non-conscious stimuli [59], but only conscious stimuli cross the threshold beyond which an overt strategy can be ﬂexibly deployed
-				\end{writingMaterials}
+				\begin{WritingMaterials}
+					@ Conscious access as an accumulation of evidence leading to an all-or-none ignition What, if anything, remains unique to conscious processing? Although many cognitive operations can be partially launched non-consciously, these operations rarely if ever run to completion in the absence of consciousness. A subliminal stimulus may induce above-chance performance, behavioural priming, and a small amount of brain activity in narrowly deﬁned brain networks, but these measures often increase dramatically as soon as the subject reports seeing the stimulus, especially in high-level areas [46 60,61  ]. Accumulation of evidence has been demonstrated with non-conscious stimuli [59], but only conscious stimuli cross the threshold beyond which an overt strategy can be ﬂexibly deployed. 
+				\end{WritingMaterials}
 
 
 
 
 
-			\begin{ants}
+			\begin{WritingMaterials}
 				@ GWT is one of the current popular consciousness theories.
 
 				@ \rewrite{AI system and corresponds to our first functional definition of consciousness: global availability} \cite{Dehaene2017}
@@ -1237,11 +1301,14 @@
 
 
 
-			\end{ants}
+			\end{WritingMaterials}
 \rlend
 
 
 		\subsection{Sensorimotor contingency}
+		Sensorimotor contingency (SMC) theory of consciousness is proposed to account of conscious perception. It suggests that different types of SMCs give rise to different characteristics of conscious perception \cite{o2001sensorimotor}. The theory radically rejects the view that conscious contents is associated with information encoded in internal representations in the neural system. Rather, the quality of conscious perception depends on agents' mastery of SMCs. It emphasises the interactions between a system (the neural system) and its environment are crucial to form conscious perception 
+		
+		
 			\begin{ants}
 				%% SMC
 
@@ -1290,7 +1357,7 @@
 			\end{ants}
 
 
-			\begin{comment} % materials
+			\begin{WritingMaterials} % materials
 
 				%% Intro about this theory
 				@ O’Regan and Noë
@@ -1326,7 +1393,7 @@
 
 				@ It stipulates that for us to be conscious of something in the environment (or of our way of interacting with the environment)
 
-			\end{comment}
+			\end{WritingMaterials}
 
 
 
@@ -1394,7 +1461,7 @@
 
 
 
-			\begin{writingMaterials}
+			\begin{WritingMaterials}
 
 				%% About the unconscious Bayesian processing
 				@ \cite{lamme2015predictive}
@@ -1467,7 +1534,7 @@
 
 				@ Similarly, the neural system also has many circuits that show predictive power but do not have \ac{ic}.
 
-			\end{writingMaterials}
+			\end{WritingMaterials}
 
 
 			\subsubsection{statistical learning/prediction is not conscious}
@@ -1498,7 +1565,7 @@
 
 
 \rlstart{1}
-		\subsection{Integrated information theory\callforhelp{Help from Jun?}}
+		\subsection{Integrated information theory\needhelp{Help from Jun?}}
 			\begin{ants}
 			
 			@ One common principle between our theory and IIT is that instead of NCC, both theories suggest information is the fundamental entity which correlates consciousness. \needref{cite David Chalmers}
@@ -1518,7 +1585,7 @@
 			\end{ants}
 
 
-			\subsubsection{Hoel's theory\callforhelp{Help from Martin?}}
+			\subsubsection{Hoel's theory\needhelp{Help from Martin?}}
 				\ideaBox{This is very important. Need to be careful here.}
 
 
@@ -1545,7 +1612,25 @@
 
 
     \section{Limitation}
+    
+    \subsection{Finding potential coarse-graining functions}
+    To empirically verify the current theory, it is important to know what coarse-graining functions which maps microscopic variables to macroscopic variables in the neural system. So far, in this article, we have not speculated potential candidates of the coarse-graining function (or functions) that creates NTIC in the neural system. 
+    
+    \cite{Gamez2016} has systematically describe a similar issue in terms of finding data correlates of consciousness amount different 
+    level of abstraction. 
+    
+    
         \begin{ants}
+            @ Our theory does not intent to solve the Hard problems. 
+            @ Inverted spectrum Inverted Qualia \citep{Shoemaker1982-SHOTIS, Block1990-BLOIE, Locke1979-LOCTCE-2}
+            
+            @ Considering that a system has only two possible physical states $X$ and $Y$ mapping to three different qualia (we can label them as $"red"$ and $"blue"$ respectively). A system cannot rest on two states at any moment, therefore, knowing the system state at $X$ excludes the the other possible state $Y$ and receives 1 bit information. Similarly, if conscious percept is $"red"$, it rules out the $"blue"$. Therefore, information provides by the conscious percept is also 1 bit. 
+            
+            @ However, our theory cannot tell why $X$ and $Y$ map to $red$ and $blue$ ,respectively, rather than the other way around. 
+            
+            @ 
+            
+            
             @ Our theory does not explain the mapping
         \end{ants}
     
@@ -1602,7 +1687,12 @@
 	\bibliographystyle{authordate1}
 	\bibliography{ref}
 
-	\section*{=== backup ===}
+
+\newpage
+\begin{backup}
+\part*{Backup}
+\addcontentsline{toc}{part}{Backup}
+\setcounter{section}{0}
 	\section*{Biological evidence of informational closure in neural system}
 		\begin{ants}
 			% ============================================================================ %
@@ -1753,7 +1843,7 @@
 
 * However, our theory suggests that if the cut largely destroy the \ac{ic}, then both part may not be conscious.
 
-
+\end{backup}
 
 
 
